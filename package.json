@@ -1,0 +1,61 @@
+{
+  "name": "vidiproject",
+  "version": "1.0.0",
+  "description": "Front Desk Vidi Project Studio",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gitlab.com/vidiproject/project-vidiproject.com.git"
+  },
+  "keywords": [
+    "frontend",
+    "developers",
+    "html5",
+    "css3",
+    "javascript",
+    "native",
+    "script",
+    "web",
+    "componentsdesigner",
+    "react",
+    "ionic"
+  ],
+  "author": {
+    "name": "Mifan Twan Ardana",
+    "homepage": "https://mifan.website"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/vidiproject/project-vidiproject.com/issues"
+  },
+  "homepage": "https://gitlab.com/vidiproject/project-vidiproject.com#README",
+  "devDependencies": {
+    "bootstrap": "4.0.0-beta",
+    "browser-sync": "^2.18.13",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-copy": "^1.0.0",
+    "gulp-cssnano": "^2.1.2",
+    "gulp-csso": "^3.0.0",
+    "gulp-imagemin": "^3.3.0",
+    "gulp-jshint": "^2.0.4",
+    "gulp-nunjucks-render": "^2.2.1",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.0",
+    "gulp-uglify": "^3.0.0",
+    "gulp-watch": "^4.3.11",
+    "gulp-zip": "^4.0.0",
+    "jquery": "^3.2.1",
+    "jshint": "^2.9.4",
+    "mathsass": "^0.10.1",
+    "modularscale-sass": "^3.0.3",
+    "popper.js": "^1.12.5",
+    "typi": "^3.1.0",
+    "yarn": "^0.27.5"
+  },
+  "dependencies": {}
+}
