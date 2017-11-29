@@ -41,12 +41,8 @@ gulp.task('sass', function() {
   return gulp.src("./src/sass/**/*.scss")
     .pipe(sourcemaps.init())
 		.pipe(sass({outputStyle: 'expanded', errLogToConsole: true}).on('error', sass.logError))
-//		.pipe(cssnano({autoprefixer: {browsers: browser_support, add: true} }))	
-//    .pipe(csso({autoprefixer: {browsers: browser_support, add: true} }))
-//    .pipe(autoprefixer: {browsers: browser_support, add: true} )
     .pipe(autoprefixer({ browsers: ['last 2 versions'], cascade: false }))
 		.pipe(concat('style.min.css'))
-//    .pipe(cssnano({autoprefixer: {browsers: browser_support, add: true} }))	
     .pipe(csso({autoprefixer: {browsers: browser_support, add: true} }))	
     .pipe(sourcemaps.write('../maps'))
     .pipe(gulp.dest("./src/assets/css/"))
@@ -55,7 +51,7 @@ gulp.task('sass', function() {
 // javascript task
 gulp.task('javascript', function() {
   return gulp.src('./src/js/**/*.js')
-    .pipe(jshint())
+    .pipe(jshint('./.jshintrc'))
     .pipe(jshint.reporter('default'))
     .pipe(jshint.reporter('fail'))
     .pipe(sourcemaps.init())

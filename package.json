@@ -1,14 +1,14 @@
 {
-  "name": "vidiproject",
+  "name": "Frontend-Tools",
   "version": "1.0.0",
-  "description": "Front Desk Vidi Project Studio",
+  "description": "Frontend Tools",
   "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@gitlab.com/vidiproject/project-vidiproject.com.git"
+    "url": "git+ssh://git@github.com:rzariy/fronted-tools.git"
   },
   "keywords": [
     "frontend",
@@ -24,14 +24,14 @@
     "ionic"
   ],
   "author": {
-    "name": "Mifan Twan Ardana",
-    "homepage": "https://mifan.website"
+    "name": "Reza Riyadhi",
+    "homepage": "https://github.com/rzariy"
   },
   "license": "ISC",
   "bugs": {
-    "url": "https://gitlab.com/vidiproject/project-vidiproject.com/issues"
+    "url": "https://github.com/rzariy/fronted-tools/issues"
   },
-  "homepage": "https://gitlab.com/vidiproject/project-vidiproject.com#README",
+  "homepage": "https://github.com/rzariy/fronted-tools/blob/master/README.md",
   "devDependencies": {
     "bootstrap": "4.0.0-beta",
     "browser-sync": "^2.18.13",
