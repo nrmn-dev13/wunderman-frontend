@@ -38,7 +38,7 @@ var sass          = require('gulp-sass'),
     zip           = require('gulp-zip');
 // css task 
 gulp.task('sass', function() {
-  return gulp.src("./src/sass/**/*.scss")
+  return gulp.src("./src/source/sass/**/*.scss")
     .pipe(sourcemaps.init())
 		.pipe(sass({outputStyle: 'expanded', errLogToConsole: true}).on('error', sass.logError))
     .pipe(autoprefixer({ browsers: ['last 2 versions'], cascade: false }))
@@ -50,10 +50,10 @@ gulp.task('sass', function() {
 });
 // javascript task
 gulp.task('javascript', function() {
-  return gulp.src('./src/js/**/*.js')
-    .pipe(jshint('./.jshintrc'))
-    .pipe(jshint.reporter('default'))
-    .pipe(jshint.reporter('fail'))
+  return gulp.src('./src/source/js/**/*.js')
+    // .pipe(jshint('./.jshintrc'))
+    // .pipe(jshint.reporter('default'))
+    // .pipe(jshint.reporter('fail'))
     .pipe(sourcemaps.init())
 		.pipe(concat('script.min.js'))
     .pipe(uglify())
@@ -63,9 +63,9 @@ gulp.task('javascript', function() {
 });
 // template engine
 gulp.task('nunjucks', function() {
-	return gulp.src('./src/components/pages/**/*.+(html|nunjucks|njk)')
+	return gulp.src('./src/source/templates/pages/**/*.+(html|nunjucks|njk)')
 		.pipe(nunjucksRender({
-		path: ['./src/components/templates']
+		path: ['./src/source/templates/components']
 	}))
 		.pipe(gulp.dest('./src'))
 		.pipe(browserSync.stream())
@@ -78,7 +78,7 @@ gulp.task('html', function() {
 });
 // image optimizing
 gulp.task('images', function(){
-	return gulp.src(['./src/img/*.+(png|jpg|gif|svg)', './src/img/**/*.+(png|jpg|gif|svg)'])
+	return gulp.src(['./src/source/img/*.+(png|jpg|gif|svg)', './src/source/img/**/*.+(png|jpg|gif|svg)'])
 		.pipe(imagemin())
 		.pipe(gulp.dest('./src/assets/img'))
 		.pipe(browserSync.stream())
@@ -88,19 +88,19 @@ gulp.task('default', function() {
   browserSync.init({
     server: "./src"
   });
-  gulp.watch('src/sass/**/*.scss', function (event) {
+  gulp.watch('src/source/sass/**/*.scss', function (event) {
     console.log(event);
     gulp.start('sass');
   });
-  gulp.watch('src/js/**/*.js', function (event) {
+  gulp.watch('src/source/js/**/*.js', function (event) {
     console.log(event);
     gulp.start('javascript');
   });
-	gulp.watch(['src/img/**/*.+(png|jpg|gif|svg)'], function (event) {
+	gulp.watch(['src/source/img/**/*.+(png|jpg|gif|svg)'], function (event) {
 		console.log(event);
 		gulp.start('images');
 	});
-	gulp.watch(['src/components/pages/**/*.+(html|nunjucks|njk)', 'src/components/templates/**/*.+(html|nunjucks|njk)'], function (event) {
+	gulp.watch(['src/source/templates/pages/**/*.+(html|nunjucks|njk)', 'src/source/templates/components/**/*.+(html|nunjucks|njk)'], function (event) {
 			console.log(event);
 			gulp.start('nunjucks');
 		});
@@ -111,13 +111,13 @@ gulp.task('default', function() {
 });
 // staging
 gulp.task('staging', function(){
-	return gulp.src(['!./src/img/', '!./src/img/**', '!./src/sass/', '!./src/sass/**', '!./src/components/', '!./src/components/**', '!./src/templates/', '!./src/templates/**', '!./src/pages/', '!./src/pages/**', '!./src/js/', '!./src/js/**', './src/**/*'])
+	return gulp.src(['!./src/img/', '!./src/img/**', '!./src/sass/', '!./src/sass/**', '!./src/components/', '!./src/components/**', '!./src/templates/', '!./src/templates/**', '!./src/pages/', '!./src/pages/**', '!./src/js/', '!./src/js/**', '!./src/source/**', './src/**/*'])
     .pipe(gulp.dest('./staging/public_view/'))
 });
 
 // delivery & compress ( integrated with web & apps )
 gulp.task('dist', function(){
-	return gulp.src(['!./src/img/', '!./src/img/**', '!./src/sass/', '!./src/sass/**', '!./src/components/', '!./src/components/**', '!./src/templates/', '!./src/templates/**', '!./src/pages/', '!./src/pages/**', '!./src/js/', '!./src/js/**', './src/**/*'])
+	return gulp.src(['!./src/img/', '!./src/img/**', '!./src/sass/', '!./src/sass/**', '!./src/components/', '!./src/components/**', '!./src/templates/', '!./src/templates/**', '!./src/pages/', '!./src/pages/**', '!./src/js/', '!./src/js/**', '!./src/source/**', './src/**/*'])
 		.pipe(zip( 'prod_'+ 'dist' + '_' + date +'.zip'))
     .pipe(gulp.dest('./dist'))
 });

@@ -1,6 +1,6 @@
 {
   "name": "Frontend-Tools",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Frontend Tools",
   "main": "gulpfile.js",
   "scripts": {
@@ -53,7 +53,7 @@
     "jshint": "^2.9.5",
     "mathsass": "^0.10.1",
     "modularscale-sass": "^3.0.4",
-    "popper.js": "^1.13.0",
+    "popper.js": "^1.12.9",
     "typi": "^3.1.2"
   },
   "dependencies": {}

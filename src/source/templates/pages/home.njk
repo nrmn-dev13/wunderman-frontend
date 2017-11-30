@@ -3,9 +3,9 @@
 
 {% block content %}
 
-{% import 'macros/nav-macro.njk' as nav %} {{nav.active('')}}
+  {% import 'macros/nav-macro.njk' as nav %} {{nav.active('home')}}
 
-	<!-- Sample Content to Plugin to Template -->
+  <!-- Sample Content to Plugin to Template -->
 	<h1>CSS Basic Elements</h1>
 
 	<p>The purpose of this HTML is to help determine what default settings are with CSS and to make sure that all possible HTML Elements are included in this HTML so as to not miss any possible Elements when designing a site.</p>
@@ -158,6 +158,7 @@
 
 	<small><a href="#wrapper">[top]</a></small>
 	<!-- End of Sample Content -->
+
 
 {% endblock %}
 
