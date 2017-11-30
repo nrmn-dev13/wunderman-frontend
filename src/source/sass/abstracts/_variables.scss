@@ -57,14 +57,16 @@ $typi: (
 	base: (
 		null: (14px, 1.4), 
 		small: 16px, 
-		large: 18px 
+		large: 16px 
 	),
-	h1: (
-    null: (ms(4), vr(2.5)),
-    small: (ms(4), vr(2.5)),
-    large: (ms(4), vr(2.5))
-	)
+	// h1: (
+  //   null: (ms(4), vr(2.5)),
+  //   small: (ms(4), vr(2.5)),
+  //   large: (ms(4), vr(2.5))
+	// )
 );
+
+
 
 $ms-base: 1em;
 $ms-ratio: 1.618;

@@ -1,1 +1,1 @@
-console.log('var error');
+console.log('var test');
