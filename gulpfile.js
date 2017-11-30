@@ -1,4 +1,4 @@
-'use strict';
+// 'use strict';
 //global variable
 var sources       = require('./package.json'),
     gulp          = require('gulp'),
@@ -29,7 +29,7 @@ var sass          = require('gulp-sass'),
     autoprefixer  = require('gulp-autoprefixer'),
 //js-task variable
     concat        = require('gulp-concat'),
-    jshint        = require('gulp-jshint'),
+    // jshint        = require('gulp-jshint'),
     uglify        = require('gulp-uglify'),
 //image-task variable
 		imagemin 			= require('gulp-imagemin'),
