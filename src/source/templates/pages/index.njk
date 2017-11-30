@@ -1,10 +1,11 @@
 <!-- index.njk -->
 {% extends "layout.njk" %}
 
-{% block content -%}
+{% block content %}
 
-	{% import 'macros/nav-macro.njk' as nav -%} {{nav.active('')}}
+	{% import 'macros/nav-macro.njk' as nav %} {{nav.active('')}}
 	
+
 	<main role="main">
 
 		{% include 'partials/carousel.njk' %}
@@ -44,6 +45,6 @@
 
     </main>
 
-{%- endblock %}
+{% endblock %}
 
 

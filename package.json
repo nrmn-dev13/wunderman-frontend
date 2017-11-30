@@ -56,5 +56,7 @@
     "popper.js": "^1.12.9",
     "typi": "^3.1.2"
   },
-  "dependencies": {}
+  "dependencies": {
+    "html5shiv": "^3.7.3"
+  }
 }
