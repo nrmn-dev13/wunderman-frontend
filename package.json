@@ -52,7 +52,7 @@
     "jquery": "^3.2.1",
     "jshint": "^2.9.5",
     "mathsass": "^0.10.1",
-    "modularscale-sass": "^3.0.4",
+    "modularscale-sass": "^2.1.1",
     "popper.js": "^1.12.9",
     "typi": "^3.1.2"
   },

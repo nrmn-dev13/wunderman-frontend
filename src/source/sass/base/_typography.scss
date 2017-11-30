@@ -6,7 +6,11 @@ body {
 	@include typi('base');
 }
 
-h1, h2, h3, h4, h5, h {
+h1, h2, h3, h4, h5, h6, dt, th {
+  font-weight: 300;
+}
+
+dt, th {
   font-weight: 500;
 }
 
