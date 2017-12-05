@@ -28,3 +28,22 @@
 @function font($path, $base: $base-url) {
   @return asset($base, 'fonts/', $path);
 }
+
+//  convert px to relative size em or rem
+// example:
+// font-size: em(12px);
+//
+// nested example:
+//.fine-print {
+//	$font-size: 10px;
+//	font-size: em($font-size);
+//	.title {
+//		font-size: em(10px, $font-size);
+//	}
+//}
+@function em($px, $base: $base-font-size) {
+	@return ($px / $base) * 1em;
+}
+@function rem($px, $base: $base-font-size) {
+	@return ($px / $base) * 1rem;
+}
