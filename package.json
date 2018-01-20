@@ -2,13 +2,11 @@
   "name": "Frontend-Tools",
   "version": "2.0.0",
   "description": "Frontend Tools",
-  "main": "gulpfile.js",
+  "main": "index.js",
   "scripts": {
-    "hugo": "gulp hugo",
-    "webpack": "gulp webpack",
-    "build": "gulp build",
-    "build-preview": "gulp build-preview",
-    "start": "gulp server",
+    "build": "gulp dist",
+    "archive": "gulp archive",
+    "start": "gulp",
     "lint": "eslint src"
   },
   "repository": {

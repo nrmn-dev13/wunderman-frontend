@@ -1,9 +1,9 @@
 import gulp from "gulp";
 import cp from "child_process";
 import gutil from "gulp-util";
-import postcss from "gulp-postcss";
-import cssImport from "postcss-import";
-import cssnext from "postcss-cssnext";
+// import postcss from "gulp-postcss";
+// import cssImport from "postcss-import";
+// import cssnext from "postcss-cssnext";
 import BrowserSync from "browser-sync";
 import webpack from "webpack";
 import webpackConfig from "./webpack.conf";
@@ -17,6 +17,7 @@ import sourcemaps from "gulp-sourcemaps";
 import autoprefixer from "gulp-autoprefixer";
 import sass from "gulp-sass";
 import csso from "gulp-csso";
+import nunjucksRender from "gulp-nunjucks-render";
 // import cssnano from "gulp-cssnano";
 import concat from "gulp-concat";
 import uglify from "gulp-uglify";
@@ -25,52 +26,28 @@ import hash from "gulp-hash";
 import del from "del";
 import copy from "gulp-copy";
 import zip from "gulp-zip";
+import sources from "./package.json";
 
-const browserSync = BrowserSync.create();
-const hugoBin = `./bin/hugo.${process.platform === "win32" ? "exe" : process.platform}`;
-const defaultArgs = ["-d", "../dist", "-s", "site"];
 
-var browser_support = [
-  'last 2 versions', 
-  '> 5%', 
-  'Firefox ESR',
-  "ie >= 10",
-  "ie_mob >= 10",
-  "ff >= 30",
-  "chrome >= 34",
-  "safari >= 7",
-  "opera >= 23",
-  "ios >= 7",
-  "android >= 4.4",
-  "bb >= 10"
-];
-
-if (process.env.DEBUG) {
-  defaultArgs.unshift("--debug")
-}
-
-// hugo task
-gulp.task("hugo", (cb) => buildSite(cb));
-gulp.task("hugo-preview", (cb) => buildSite(cb, ["--buildDrafts", "--buildFuture"]));
-// gulp.task("build", ["css", "js", "cms-assets", "hugo"]);
-gulp.task("build", ["sass", "js", "cms-assets", "hugo"]);
-// gulp.task("build-preview", ["css", "js", "cms-assets", "hugo-preview"]);
-gulp.task("build-preview", ["sass", "js", "cms-assets", "hugo-preview"]);
-
-// post css task
-gulp.task("css", () => (
-  gulp.src("./src/css/*.css")
-    .pipe(postcss([
-      cssImport({from: "./src/css/main.css"}),
-      cssnext(),
-      cssnano(),
-    ]))
-    .pipe(gulp.dest("./dist/css"))
-    .pipe(browserSync.stream())
-));
+const browserSync   = BrowserSync.create();
+const date        = new Date().toISOString().slice(0,10);
+const browser_support = [
+      'last 2 versions', 
+      '> 5%', 
+      'Firefox ESR',
+      "ie >= 10",
+      "ie_mob >= 10",
+      "ff >= 30",
+      "chrome >= 34",
+      "safari >= 7",
+      "opera >= 23",
+      "ios >= 7",
+      "android >= 4.4",
+      "bb >= 10"
+    ];
 
 // sass task 
-gulp.task('sass', () => {
+gulp.task('sass', function() {
   return gulp.src("./src/sass/**/*.scss")
     .pipe(sourcemaps.init())
 		.pipe(sass({outputStyle: 'expanded', errLogToConsole: true}).on('error', sass.logError))
@@ -78,22 +55,23 @@ gulp.task('sass', () => {
 		.pipe(concat('style.min.css'))
     .pipe(csso({autoprefixer: {browsers: browser_support, add: true} }))	
     .pipe(sourcemaps.write('../maps'))
-    // .pipe(hash())
-    .pipe(gulp.dest("./dist/css/"))
-     //Create a hash map
-    //  .pipe(hash.manifest("hash.json"))
-    //  .pipe(gulp.dest("data/css"))
+    .pipe(gulp.dest("./site/assets/css/"))
     .pipe(browserSync.stream())
 });
 
-// cms task
-gulp.task("cms-assets", () => (
-  gulp.src("./node_modules/netlify-cms/dist/*.{woff,eot,woff2,ttf,svg,png}")
-    .pipe(gulp.dest("./dist/css"))
-))
-
 // javascript task
-gulp.task("js", (cb) => {
+gulp.task('javascript', function() {
+  // return gulp.src('./src/js/**/*.js')
+  //   // .pipe(jshint('./.jshintrc'))
+  //   // .pipe(jshint.reporter('default'))
+  //   // .pipe(jshint.reporter('fail'))
+  //   .pipe(sourcemaps.init())
+	// 	.pipe(concat('script.min.js'))
+  //   .pipe(uglify())
+  //   .pipe(sourcemaps.write('../maps'))
+  //   .pipe(gulp.dest('./site/assets/js/'))
+  //   .pipe(browserSync.stream())
+
   const myConfig = Object.assign({}, webpackConfig);
 
   webpack(myConfig, (err, stats) => {
@@ -102,52 +80,71 @@ gulp.task("js", (cb) => {
       colors: true,
       progress: true
     }));
-    browserSync.reload();
-    cb();
+    // browserSync.reload();
   });
 });
 
-// svg task
-gulp.task("svg", () => {
-  const svgs = gulp
-    .src("site/static/img/icons-*.svg")
-    .pipe(svgmin())
-    .pipe(svgstore({inlineSvg: true}));
-
-  function fileContents(filePath, file) {
-    return file.contents.toString();
-  }
-
-  return gulp
-    .src("site/layouts/partials/svg.html")
-    .pipe(inject(svgs, {transform: fileContents}))
-    .pipe(gulp.dest("site/layouts/partials/"));
+// template engine
+gulp.task('nunjucks', function() {
+	return gulp.src('./src/templates/pages/**/*.+(html|nunjucks|njk)')
+		.pipe(nunjucksRender({
+		path: ['./src/templates/components']
+	}))
+		.pipe(gulp.dest('./site'))
+		.pipe(browserSync.stream())
 });
 
-// gulp.task("server", ["hugo", "css", "cms-assets", "js", "svg"], () => {
-gulp.task("server", ["hugo", "sass", "cms-assets", "js", "svg"], () => {
+// html task
+gulp.task('html', function() {
+  return gulp.src('./site/*.html')
+    .pipe(gulp.dest('./site'))
+    .pipe(browserSync.stream())
+});
+
+// image optimizing
+gulp.task('images', function(){
+	return gulp.src(['./src/img/*.+(png|jpg|gif|svg)', './src/img/**/*.+(png|jpg|gif|svg)'])
+		.pipe(imagemin())
+		.pipe(gulp.dest('./site/assets/img'))
+		.pipe(browserSync.stream())
+});
+
+// static server & task watch
+gulp.task('default', function() {
   browserSync.init({
-    server: {
-      baseDir: "./dist"
-    }
+    server: "./site"
   });
-  gulp.watch("./src/js/**/*.js", ["js"]);
-  // gulp.watch("./src/css/**/*.css", ["css"]);
-  gulp.watch("./src/sass/**/*.scss", ["sass"]);
-  gulp.watch("./site/static/img/icons-*.svg", ["svg"]);
-  gulp.watch("./site/**/*", ["hugo"]);
+  gulp.watch('src/sass/**/*.scss', function (event) {
+    console.log(event);
+    gulp.start('sass');
+  });
+  gulp.watch('src/js/**/*.js', function (event) {
+    console.log(event);
+    gulp.start('javascript');
+  });
+	gulp.watch(['src/img/**/*.+(png|jpg|gif|svg)'], function (event) {
+		console.log(event);
+		gulp.start('images');
+	});
+	gulp.watch(['src/templates/pages/**/*.+(html|nunjucks|njk)', 'src/templates/components/**/*.+(html|nunjucks|njk)'], function (event) {
+			console.log(event);
+			gulp.start('nunjucks');
+		});
+  gulp.watch('site/*.html', function (event) {
+    console.log(event);
+    gulp.start('html').on('change', browserSync.reload);
+  });
 });
 
-function buildSite(cb, options) {
-  const args = options ? defaultArgs.concat(options) : defaultArgs;
+// staging
+// gulp.task('dist', function(){
+// 	return gulp.src(['!./src/img/', '!./src/img/**', '!./src/sass/', '!./src/sass/**', '!./src/components/', '!./src/components/**', '!./src/templates/', '!./src/templates/**', '!./src/pages/', '!./src/pages/**', '!./src/js/', '!./src/js/**', '!./src/source/**', './src/**/*'])
+//     .pipe(gulp.dest('./dist/'))
+// });
 
-  return cp.spawn(hugoBin, args, {stdio: "inherit"}).on("close", (code) => {
-    if (code === 0) {
-      browserSync.reload("notify:false");
-      cb();
-    } else {
-      browserSync.notify("Hugo build failed :(");
-      cb("Hugo build failed");
-    }
-  });
-}
+// delivery & compress ( integrated with web & apps )
+gulp.task('archive', function(){
+	return gulp.src('./site/**/*')
+		.pipe(zip( 'prod_'+ 'dist' + '_' + date +'.zip'))
+    .pipe(gulp.dest('./archive'))
+});
