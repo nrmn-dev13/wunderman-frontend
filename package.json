@@ -1,17 +1,10 @@
 {
   "name": "Frontend-Tools",
-  "version": "2.0.0",
+  "version": "1.0.0",
   "description": "Frontend Tools",
   "main": "index.js",
   "scripts": {
-<<<<<<< HEAD
-    "build": "gulp dist",
-    "archive": "gulp archive",
-    "start": "gulp",
-    "lint": "eslint src"
-=======
     "test": "echo \"Error: no test specified\" && exit 1"
->>>>>>> parent of 7c2a688... update package
   },
   "repository": {
     "type": "git",
@@ -23,12 +16,9 @@
     "html5",
     "css3",
     "javascript",
-    "native",
     "script",
     "web",
-    "componentsdesigner",
-    "react",
-    "ionic"
+    "componentsdesigner"
   ],
   "author": {
     "name": "Reza Riyadhi",
@@ -40,9 +30,9 @@
   },
   "homepage": "https://github.com/rzariy/fronted-tools/blob/master/README.md",
   "devDependencies": {
-    "bootstrap": "^4.0.0-beta",
+    "bootstrap": "^4.0.0",
     "browser-sync": "^2.18.13",
-    "gulp": "^3.9.1",
+    "gulp": "3.9.0",
     "gulp-autoprefixer": "^4.0.0",
     "gulp-concat": "^2.6.1",
     "gulp-copy": "^1.0.1",
@@ -57,11 +47,7 @@
     "gulp-watch": "^4.3.11",
     "gulp-zip": "^4.0.0",
     "jquery": "^3.2.1",
-    "jshint": "^2.9.5",
-    "mathsass": "^0.10.1",
-    "modularscale-sass": "^2.1.1",
-    "popper.js": "^1.12.9",
-    "typi": "^3.1.2"
+    "popper.js": "^1.12.9"
   },
   "dependencies": {}
 }

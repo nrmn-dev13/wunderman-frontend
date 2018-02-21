@@ -2,44 +2,59 @@
  * Basic typography style for copy text
  */
 
-body {
-	@include typi('base');
-}
+// body {
+// 	@include typi('base');
+// }
 
-h1, h2, h3, h4, h5, h6, dt, th, legend {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+dt,
+th,
+legend {
   font-weight: 300;
 }
 
-dt, th {
+dt,
+th {
   font-weight: 500;
 }
 
-h1, .h1 {
+h1,
+.h1 {
   font-size: 2.5em;
 }
 
-h2, .h2 {
+h2,
+.h2 {
   font-size: 2em;
 }
 
-h3, .h3 {
+h3,
+.h3 {
   font-size: 1.75em;
 }
 
-h4, .h4 {
+h4,
+.h4 {
   font-size: 1.5em;
 }
 
-h5, .h5 {
+h5,
+.h5 {
   font-size: 1.25em;
 }
 
-h6, .h6 {
+h6,
+.h6 {
   font-size: 1em;
 }
 
 .lead {
-  font-size: .75em;
+  font-size: 0.75em;
   font-weight: 300;
 }
 
@@ -73,7 +88,3 @@ hr {
   border: 0;
   border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
-
-
-
-
