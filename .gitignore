@@ -2,8 +2,6 @@ bower_components
 
 node_modules
 
-dist
-
-dist-product
+yarn.lock
 
 yarn-error.log
