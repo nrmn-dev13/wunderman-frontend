@@ -67,11 +67,6 @@ function njk() {
     .pipe(dest("./site"));
 }
 
-// html task
-// function html() {
-//   return src("./site/*.html").pipe(dest("./site"));
-// }
-
 // image optimizing
 function img() {
   return src([
@@ -98,7 +93,6 @@ function browserReload() {
 function watchFiles() {
   // watch scss
   watch("src/sass/**/*.scss", parallel(scss)).on("change", browserReload());
-  // watch("src/sass/**/*.scss", parallel(scss));
   // Watch javascripts
   watch("src/js/**/*.js", parallel(js)).on("change", browserReload());
   // Watch images
@@ -114,8 +108,6 @@ function watchFiles() {
     ],
     parallel(njk)
   ).on("change", browserReload());
-  // Watch html
-  // watch("site/*.html", parallel(html)).on("change", browsersync.reload);
 }
 
 // delivery & compress ( integrated with web & apps )
@@ -132,9 +124,3 @@ const watching = parallel(watchFiles, browserSync);
 // exports.css = css;
 exports.default = parallel(img, scss, js, njk);
 exports.watch = watching;
-
-// task(scss);
-// task(js);
-// task(img);
-// task(html);
-// task(njk);
