@@ -48,7 +48,12 @@ gulp.task("sass", function() {
         sass.logError
       )
     )
-    .pipe(autoprefixer({ browsers: ["last 2 versions"], cascade: false }))
+    .pipe(
+      autoprefixer({
+        overrideBrowserslist: ["last 2 versions"],
+        cascade: false
+      })
+    )
     .pipe(concat("style.min.css"))
     .pipe(csso({ autoprefixer: { browsers: browser_support, add: true } }))
     .pipe(sourcemaps.write("../maps"))

@@ -52,5 +52,10 @@
   "dependencies": {
     "gulp-cli": "^2.0.1",
     "jshint": "^2.9.6"
-  }
+  },
+  "browserslist": [
+    "last 1 version",
+    "> 1%",
+    "IE 10"
+  ]
 }
