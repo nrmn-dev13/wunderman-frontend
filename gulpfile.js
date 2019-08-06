@@ -24,7 +24,7 @@ var browser_support = [
 var nunjucksRender = require("gulp-nunjucks-render");
 //css-task variable
 var sass = require("gulp-sass"),
-  cssnano = require("gulp-cssnano"),
+  // cssnano = require("gulp-cssnano"),
   csso = require("gulp-csso"),
   autoprefixer = require("gulp-autoprefixer"),
   //js-task variable
@@ -57,7 +57,8 @@ gulp.task("sass", function() {
 });
 // javascript task
 gulp.task("javascript", function() {
-  return (gulp
+  return (
+    gulp
       .src("./src/js/**/*.js")
       // .pipe(jshint('./.jshintrc'))
       // .pipe(jshint.reporter('default'))
@@ -67,7 +68,8 @@ gulp.task("javascript", function() {
       // .pipe(uglify())
       .pipe(sourcemaps.write("../maps"))
       .pipe(gulp.dest("./site/assets/js/"))
-      .pipe(browserSync.stream()) );
+      .pipe(browserSync.stream())
+  );
 });
 // template engine
 gulp.task("nunjucks", function() {
