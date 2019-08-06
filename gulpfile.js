@@ -111,12 +111,11 @@ function watchFiles() {
 }
 
 // delivery & compress ( integrated with web & apps )
-// gulp.task("archive", function() {
-//   return gulp
-//     .src("./site/**/*")
-//     .pipe(zip("prod_" + "dist" + "_" + date + ".zip"))
-//     .pipe(gulp.dest("./archive"));
-// });
+task("archive", function archive() {
+  return src("./site/**/*")
+    .pipe(zip("prod_" + "dist" + "_" + date + ".zip"))
+    .pipe(dest("./archive"));
+});
 
 const watching = parallel(watchFiles, browserSync);
 
