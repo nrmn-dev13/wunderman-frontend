@@ -24,6 +24,8 @@ const imagemin = require("gulp-imagemin");
 const copy = require("gulp-copy");
 const zip = require("gulp-zip");
 
+// const browserslist = ["last 1 version", "> 1%", "IE 10"];
+
 // css task
 function scss() {
   return (
@@ -43,6 +45,7 @@ function scss() {
       )
       .pipe(concat("style.min.css"))
       // .pipe(csso({ autoprefixer: { browsers: browserslist, add: true } }))
+      .pipe(csso())
       .pipe(sourcemaps.write("../maps"))
       .pipe(dest("./site/assets/css/"))
   );
@@ -123,3 +126,5 @@ const watching = parallel(watchFiles, browserSync);
 // exports.css = css;
 exports.default = parallel(img, scss, js, njk);
 exports.watch = watching;
+
+task(scss);
