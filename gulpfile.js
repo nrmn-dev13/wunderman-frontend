@@ -126,5 +126,3 @@ const watching = parallel(watchFiles, browserSync);
 // exports.css = css;
 exports.default = parallel(img, scss, js, njk);
 exports.watch = watching;
-
-task(scss);

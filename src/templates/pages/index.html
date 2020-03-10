@@ -1,59 +1,85 @@
 <!-- index.html -->
-{% extends "layout.html" %}
+{% extends "layout.html" %} {% block content %} {% import
+'macros/nav-macro.html' as nav %} {{ nav.active("") }}
 
-{% block content %}
-
-	{% import 'macros/nav-macro.html' as nav %} {{nav.active('')}}
-
-	<main role="main">
-
-    <!-- Main jumbotron for a primary marketing message or call to action -->
-    <div class="jumbotron">
-      <div class="container">
-        <h1 class="display-3">Hello, world!</h1>
-        <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
-        <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more »</a></p>
-      </div>
-    </div>
-
+<main role="main">
+  <!-- Main jumbotron for a primary marketing message or call to action -->
+  <div class="jumbotron">
     <div class="container">
-      <!-- Example row of columns -->
-      <div class="row">
-        <div class="col-md-4">
-          <h2>Heading</h2>
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-          <p><a class="btn btn-secondary" href="#" role="button">View details »</a></p>
-        </div>
-        <div class="col-md-4">
-          <h2>Heading</h2>
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-          <p><a class="btn btn-secondary" href="#" role="button">View details »</a></p>
-        </div>
-        <div class="col-md-4">
-          <h2>Heading</h2>
-          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-          <p><a class="btn btn-secondary" href="#" role="button">View details »</a></p>
-        </div>
-      </div>
-
-      <hr>
-
-    </div> <!-- /container -->
-
-<div class="container sample-wraper">
-	<div class="row">
-    <div class="col-md-4">
-      <figure>
-      <img src="assets/img/testimg.png">
-      </figure>
-      <h1 class="sample-title">Sample Title</h1>
-      <p class="sample-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus veniam animi, aperiam praesentium ipsam at harum voluptatibus, hic excepturi dolorem, adipisci porro quos labore perspiciatis asperiores iure fuga consectetur culpa.</p>
+      <h1 class="display-3">Hello, world!</h1>
+      <p>
+        This is a template for a simple marketing or informational website. It
+        includes a large callout called a jumbotron and three supporting pieces
+        of content. Use it as a starting point to create something more unique.
+      </p>
+      <p>
+        <a class="btn btn-primary btn-lg" href="#" role="button">Learn more »</a>
+      </p>
     </div>
   </div>
-</div>
 
-  </main>
+  <div class="container">
+    <!-- Example row of columns -->
+    <div class="row">
+      <div class="col-md-4">
+        <h2>Heading</h2>
+        <p>
+          Donec id elit non mi porta gravida at eget metus. Fusce dapibus,
+          tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum
+          massa justo sit amet risus. Etiam porta sem malesuada magna mollis
+          euismod. Donec sed odio dui.
+        </p>
+        <p>
+          <a class="btn btn-secondary" href="#" role="button">View details »</a>
+        </p>
+      </div>
+      <div class="col-md-4">
+        <h2>Heading</h2>
+        <p>
+          Donec id elit non mi porta gravida at eget metus. Fusce dapibus,
+          tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum
+          massa justo sit amet risus. Etiam porta sem malesuada magna mollis
+          euismod. Donec sed odio dui.
+        </p>
+        <p>
+          <a class="btn btn-secondary" href="#" role="button">View details »</a>
+        </p>
+      </div>
+      <div class="col-md-4">
+        <h2>Heading</h2>
+        <p>
+          Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas
+          eget quam. Vestibulum id ligula porta felis euismod semper. Fusce
+          dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut
+          fermentum massa justo sit amet risus.
+        </p>
+        <p>
+          <a class="btn btn-secondary" href="#" role="button">View details »</a>
+        </p>
+      </div>
+    </div>
+
+    <hr />
+  </div>
+  <!-- /container -->
+
+  <div class="container sample-wraper">
+    <div class="row">
+      <div class="col-md-4">
+        <figure>
+          <img src="assets/img/testimg.png" />
+        </figure>
+        <h1 class="sample-title">Sample Title</h1>
+        <p class="sample-text">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus
+          veniam animi, aperiam praesentium ipsam at harum voluptatibus, hic
+          excepturi dolorem, adipisci porro quos labore perspiciatis asperiores
+          iure fuga consectetur culpa.
+        </p>
+      </div>
+    </div>
+  </div>
+
+</main>
 
 {% endblock %}
-
-
