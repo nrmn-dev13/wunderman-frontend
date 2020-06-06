@@ -95,22 +95,18 @@ function browserReload() {
 // static server & task watch
 function watchFiles() {
   // watch scss
-  watch("src/sass/**/*.scss", { usePolling: true }, series(scss)).on("change", browserReload());
+  watch("src/sass/**/*.scss", { usePolling: true }, series(scss, browserReload));
   // Watch javascripts
-  watch("src/js/**/*.js", { usePolling: true }, series(js)).on("change", browserReload());
+  watch("src/js/**/*.js", { usePolling: true }, series(js, browserReload));
   // Watch images
-  watch(["src/img/**/*.+(png|jpg|gif|svg)"], { usePolling: true }, parallel(img)).on(
-    "change",
-    browserReload()
-  );
+  watch(["src/img/**/*.+(png|jpg|gif|svg)"], { usePolling: true }, series(img, browserReload));
   // Watch template
   watch(
     [
       "src/templates/pages/**/*.+(html|nunjucks|njk)",
       "src/templates/components/**/*.+(html|nunjucks|njk)"
     ], { usePolling: true },
-    series(njk)
-  ).on("change", browserReload());
+    series(njk, browserReload));
 }
 
 // delivery & compress ( integrated with web & apps )
