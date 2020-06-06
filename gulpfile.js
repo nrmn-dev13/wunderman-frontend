@@ -95,11 +95,11 @@ function browserReload() {
 // static server & task watch
 function watchFiles() {
   // watch scss
-  watch("src/sass/**/*.scss", parallel(scss)).on("change", browserReload());
+  watch("src/sass/**/*.scss", { usePolling: true }, series(scss)).on("change", browserReload());
   // Watch javascripts
-  watch("src/js/**/*.js", parallel(js)).on("change", browserReload());
+  watch("src/js/**/*.js", { usePolling: true }, series(js)).on("change", browserReload());
   // Watch images
-  watch(["src/img/**/*.+(png|jpg|gif|svg)"], parallel(img)).on(
+  watch(["src/img/**/*.+(png|jpg|gif|svg)"], { usePolling: true }, parallel(img)).on(
     "change",
     browserReload()
   );
@@ -108,8 +108,8 @@ function watchFiles() {
     [
       "src/templates/pages/**/*.+(html|nunjucks|njk)",
       "src/templates/components/**/*.+(html|nunjucks|njk)"
-    ],
-    parallel(njk)
+    ], { usePolling: true },
+    series(njk)
   ).on("change", browserReload());
 }
 
@@ -120,7 +120,30 @@ task("archive", function archive() {
     .pipe(dest("./archive"));
 });
 
-const watching = series(watchFiles, browserSync);
+task("optimize", function img() {
+  return src([
+    "./src/img/*.+(png|jpg|jpeg|gif|svg|PNG|JPG|JPEG|GIF|SVG)",
+    "./src/img/**/*.+(png|jpg|jpeg|gif|svg|PNG|JPG|JPEG|GIF|SVG)"
+  ])
+    .pipe(imagemin({
+      verbose: true
+    }))
+    .pipe(dest("./site/assets/img"));
+}
+);
+
+task("html", function njk() {
+  return src("./src/templates/pages/**/*.+(html|nunjucks|njk)")
+    .pipe(
+      nunjucksRender({
+        path: ["./src/templates/components"]
+      })
+    )
+    .pipe(dest("./site"));
+}
+);
+
+const watching = parallel(watchFiles, browserSync);
 
 // exports.js = js;
 // exports.css = css;
