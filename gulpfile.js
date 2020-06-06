@@ -120,7 +120,7 @@ task("archive", function archive() {
     .pipe(dest("./archive"));
 });
 
-const watching = parallel(watchFiles, browserSync);
+const watching = series(watchFiles, browserSync);
 
 // exports.js = js;
 // exports.css = css;
