@@ -89,24 +89,22 @@ function browserSync() {
 
 // BrowserSync reload
 function browserReload() {
-  return browsersync.reload;
+  return browsersync.reload();
 }
 
 // static server & task watch
 function watchFiles() {
   // watch scss
-  watch("src/sass/**/*.scss", { usePolling: true }, series(scss, browserReload));
+  watch("src/sass/**/*.scss", { usePolling: true }).on('change', series(scss, browserReload));
   // Watch javascripts
-  watch("src/js/**/*.js", { usePolling: true }, series(js, browserReload));
+  watch("src/js/**/*.js", { usePolling: true }).on('change', series(js, browserReload));
   // Watch images
-  watch(["src/img/**/*.+(png|jpg|gif|svg)"], { usePolling: true }, series(img, browserReload));
+  watch(["src/img/**/*.+(png|jpg|gif|svg)"], { usePolling: true }).on('change', series(img, browserReload));
   // Watch template
   watch(
     [
-      "src/templates/pages/**/*.+(html|nunjucks|njk)",
-      "src/templates/components/**/*.+(html|nunjucks|njk)"
-    ], { usePolling: true },
-    series(njk, browserReload));
+      "src/templates/**/**/*.+(html|nunjucks|njk)"
+    ], { usePolling: true }).on('change', series(njk, browserReload));
 }
 
 // delivery & compress ( integrated with web & apps )
@@ -136,6 +134,10 @@ task("html", function njk() {
       })
     )
     .pipe(dest("./site"));
+}
+);
+task("reload", function browserReload() {
+  return browsersync.reload;
 }
 );
 
