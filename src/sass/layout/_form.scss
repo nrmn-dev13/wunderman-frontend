@@ -92,4 +92,17 @@
   &__bold {
     font-weight: bold;
   }
+  &__description {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+    color: #595959;
+    margin: 0;
+    &--lg {
+      font-weight: bold;
+      font-size: 18px;
+    }
+  }
 }
