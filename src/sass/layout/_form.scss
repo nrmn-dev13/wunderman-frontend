@@ -105,4 +105,13 @@
       font-size: 18px;
     }
   }
+  &__link-group {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 0 12px 0;
+    .form__link {
+      color: #abcc75;
+      margin: 0;
+    }
+  }
 }
