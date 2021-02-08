@@ -80,4 +80,16 @@
     line-height: 16px;
     color: #595959;
   }
+  &__agreement {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 16px;
+    color: #595959;
+    margin: 0 0 24px 0;
+  }
+  &__bold {
+    font-weight: bold;
+  }
 }

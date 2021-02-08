@@ -1,16 +1,60 @@
 <!-- index.html -->
-{% extends "layout.html" %} 
+{% extends "layout.html" %}
 
-{% block content %} 
-  
-  <section>
+{% block content %}
+
+<header>
+  {% import 'macros/nav-macro.html' as nav %} {{nav.active('')}}
+</header>
+<main class="auth">
+  <section class="auth__section">
     <div class="container">
-      <div class="row">
+      <div class="auth__row row">
+        <div class="col-md-5">
+          <div class="auth__content">
+            <div class="auth__content-wrapper">
+              <h2 class="auth__sub-title">Naumi Haramai Ki</h2>
+              <h1 class="auth__title">MĀNAWA</h1>
+            </div>
+          </div>
+        </div>
         <div class="col-md-6">
-          <h1>Sign Up</h1>
+          <div class="auth__form">
+            <form class="form">
+              <div class="form__container">
+                <h4 class="form__title">Form Registration</h4>
+                <div class="form__field">
+                  <label class="form__label">Email</label>
+                  <input type="email" class="form__input" placeholder="Input Email">
+                </div>
+                <div class="form__field">
+                  <label class="form__label">Password <span class="form__italic">(6 characters minimum)</span></label>
+                  <input type="password" class="form__input" placeholder="Input Password">
+                </div>
+                <div class="form__field">
+                  <label class="form__label">Password Confirmation</label>
+                  <input type="password" class="form__input" placeholder="Input Password">
+                </div>
+                <p class="form__agreement">I accept <span class="form__bold">Whare Hauora’s terms and conditions</span></p>                
+                <button class="button button--black">Sign Up</button>
+                <div class="form__helper form__helper--has-link">
+                  <p class="form__text-helper">
+                    Already have an account? <a href="#" class="form__link">Login</a>
+                  </p>
+                </div>
+              </div>
+            </form>
+            <div class="auth__helper">
+              <i class="auth__icon icon--helper"></i>
+              <p class="auth__text-helper">Didn't receive confirmation instructions? <a href="#"
+                  class="auth__link">Click
+                  Here</a></p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </section>
-  
+</main>
+
 {% endblock %}
