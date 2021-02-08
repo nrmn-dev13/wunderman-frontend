@@ -1,85 +1,26 @@
 <!-- index.html -->
-{% extends "layout.html" %} {% block content %} {% import
-'macros/nav-macro.html' as nav %} {{ nav.active("") }}
+{% extends "layout.html" %}
 
-<main role="main">
-  <!-- Main jumbotron for a primary marketing message or call to action -->
-  <div class="jumbotron">
+{% block content %}
+
+<header>
+  {% import 'macros/nav-macro.html' as nav %} {{nav.active('')}}
+</header>
+<main class="auth">
+  <section class="auth__section">
     <div class="container">
-      <h1 class="display-3">Hello, world!</h1>
-      <p>
-        This is a template for a simple marketing or informational website. It
-        includes a large callout called a jumbotron and three supporting pieces
-        of content. Use it as a starting point to create something more unique.
-      </p>
-      <p>
-        <a class="btn btn-primary btn-lg button-red" href="#" role="button">Learn more »</a>
-      </p>      
-      <img src="assets/img/test.png" alt="">
-      <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
-        <li class="nav-item" role="presentation">
-          <a class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Home</a>
-        </li>
-        <li class="nav-item" role="presentation">
-          <a class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">Profile</a>
-        </li>
-        <li class="nav-item" role="presentation">
-          <a class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false">Contact</a>
-        </li>
-      </ul>
-      <div class="tab-content" id="pills-tabContent">
-        <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">...</div>
-        <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">...</div>
-        <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">...</div>
+      <div class="auth__row row">
+        <div class="col-md-5">
+          <div class="auth__content">
+            <div class="auth__content-wrapper">
+              <h2 class="auth__sub-title">Naumi Haramai Ki</h2>
+              <h1 class="auth__title">MĀNAWA</h1>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-
-  <div class="container">
-    <!-- Example row of columns -->
-    <div class="row">
-      <div class="col-md-4">
-        <h2>Heading</h2>
-        <p>
-          Donec id elit non mi porta gravida at eget metus. Fusce dapibus,
-          tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum
-          massa justo sit amet risus. Etiam porta sem malesuada magna mollis
-          euismod. Donec sed odio dui.
-        </p>
-        <p>
-          <a class="btn btn-secondary" href="#" role="button">View details »</a>
-        </p>
-      </div>
-      <div class="col-md-4">
-        <h2>Heading</h2>
-        <p>
-          Donec id elit non mi porta gravida at eget metus. Fusce dapibus,
-          tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum
-          massa justo sit amet risus. Etiam porta sem malesuada magna mollis
-          euismod. Donec sed odio dui.
-        </p>
-        <p>
-          <a class="btn btn-secondary" href="#" role="button">View details »</a>
-        </p>
-      </div>
-      <div class="col-md-4">
-        <h2>Heading</h2>
-        <p>
-          Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas
-          eget quam. Vestibulum id ligula porta felis euismod semper. Fusce
-          dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut
-          fermentum massa justo sit amet risus.
-        </p>
-        <p>
-          <a class="btn btn-secondary" href="#" role="button">View details »</a>
-        </p>
-      </div>
-    </div>
-
-    <hr />
-  </div>
-  <!-- /container -->
-
+  </section>
 </main>
 
 {% endblock %}
