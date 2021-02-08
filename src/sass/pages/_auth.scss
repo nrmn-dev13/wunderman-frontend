@@ -9,16 +9,46 @@
     font-family: Roboto;
     font-style: normal;
     font-weight: bold;
-    font-size: 75px;
-    line-height: 88px;
     color: $color-green;
+    font-size: 45px;
+    line-height: 53px;
+    text-align: center;
+    @include for-size(tablet) {
+      font-size: 65px;
+      line-height: 76px;
+    }
+    @include for-size(desktop) {
+      text-align: left;
+      font-size: 75px;
+      line-height: 88px;
+    }
+    @include for-size(ipad-pro) {
+      font-size: 65px;
+      line-height: 76px;
+      text-align: center;
+    }
   }
   &__sub-title {
     font-family: Roboto;
     font-style: normal;
     font-weight: bold;
-    font-size: 50px;
-    line-height: 59px;
+    font-size: 25px;
+    line-height: 29px;
+    text-align: center;
+    @include for-size(tablet) {
+      font-size: 40px;
+      line-height: 47px;
+    }
+    @include for-size(desktop) {
+      text-align: left;
+      font-size: 50px;
+      line-height: 59px;
+    }
+    @include for-size(ipad-pro) {
+      font-size: 40px;
+      line-height: 47px;
+      text-align: center;
+    }
   }
   &__section {
     height: 100%;
@@ -26,7 +56,16 @@
       height: 100%;
     }
     .row {
-      height: 100%;
+      height: auto;
+      @include for-size(tablet) {
+        height: 100%;
+      }
+      @include for-size(desktop) {
+        height: 100%;
+      }
+      @include for-size(ipad-pro) {
+        height: 100%;
+      }
     }
     .button {
       width: 100%;
@@ -35,6 +74,18 @@
     .form {
       margin: 0 0 36px 0;
       width: 100%;
+      @include for-size(tablet) {
+        width: 65%;
+      }
+      @include for-size(desktop) {
+        width: 100%;
+      }
+      @include for-size(ipad-pro) {
+        width: 100%;
+      }
+      @include for-size(ipad-pro-portrait) {
+        width: 65%;
+      }  
     }
   }
   &__row {
@@ -47,12 +98,40 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    @include for-size(tablet) {
+      height: auto;
+    }
+    @include for-size(desktop) {
+      height: 100%;
+    }
+    @include for-size(ipad-pro) {
+      height: 100%;
+    }
+    @include for-size(ipad-pro-portrait) {
+      height: auto;
+    }    
   }
-  &__content {
-    height: 100%;
+  &__content {    
     display: flex;
     align-items: center;
+    margin: 80px auto 50px;
+    height: auto;
+    @include for-size(tablet) {
+      margin: 0 auto;
+      height: 100%;
+    }
+    @include for-size(desktop) {
+      margin: 0 auto;
+      height: 100%;
+    }
+    @include for-size(ipad-pro) {
+      margin: 0 auto;
+      height: 100%;
+    }
   }
+  &__content-wrapper { 
+    width: 100%;
+   }
   &__helper {
     display: flex;
     align-items: center;

@@ -1,0 +1,15 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the navbar component.
+// 
+.navbar {
+  display: none;
+  @include for-size(tablet) {
+    display: flex;
+  }
+  @include for-size(desktop) {
+    display: flex;
+  }
+  @include for-size(ipad-pro) {
+    display: flex;
+  }
+}
