@@ -1,0 +1,95 @@
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the Auth page.
+// -----------------------------------------------------------------------------
+.auth {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  &__title {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 75px;
+    line-height: 88px;
+    color: #abcc75;
+  }
+  &__sub-title {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 50px;
+    line-height: 59px;
+  }
+  &__section {
+    height: 100%;
+    .container {
+      height: 100%;
+    }
+    .row {
+      height: 100%;
+    }
+    .button {
+      width: 100%;
+      margin: 0 0 16px 0;
+    }
+    .form {
+      margin: 0 0 36px 0;
+      width: 100%;
+    }
+  }
+  &__row {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__form {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  &__content {
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+  &__helper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__text-helper {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 16px;
+    color: #000000;
+    margin: 0;
+  }
+  &__icon {
+    display: flex;
+    flex: 0 0 auto;
+    &.icon--helper {
+      background-image: url(../img/icon_helper.png);
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 20px;
+      height: 20px;
+      margin: 0 6px 0 0;
+    }
+  }
+  &__link {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    color: #abcc75;
+    text-decoration: none;
+    &:hover {
+      color: #abcc75;
+    }
+  }
+}
