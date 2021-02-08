@@ -11,7 +11,7 @@
     font-weight: bold;
     font-size: 75px;
     line-height: 88px;
-    color: #abcc75;
+    color: $color-green;
   }
   &__sub-title {
     font-family: Roboto;
@@ -64,7 +64,7 @@
     font-weight: 300;
     font-size: 14px;
     line-height: 16px;
-    color: #000000;
+    color: $color-black;
     margin: 0;
   }
   &__icon {
@@ -86,10 +86,10 @@
     font-weight: 500;
     font-size: 14px;
     line-height: 16px;
-    color: #abcc75;
+    color: $color-green;
     text-decoration: none;
     &:hover {
-      color: #abcc75;
+      color: $color-green;
     }
   }
 }
