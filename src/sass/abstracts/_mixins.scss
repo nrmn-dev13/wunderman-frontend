@@ -84,53 +84,6 @@
 		padding-top: $padding;
 	}
 }
-
-// // usage @include css-triangle(#fff, left);
-// @mixin css-triangle($color, $direction, $size: 6px, $position: absolute, $round: false){
-// 	@include pseudo($pos: $position);
-// 	width: 0;
-// 	height: 0;
-// 	@if $round {
-// 		border-radius: 3px;
-// 	}
-// 	@if $direction == down {
-// 		border-left: $size solid transparent;
-// 		border-right: $size solid transparent;
-// 		border-top: $size solid $color;
-// 		margin-top: 0 - round( $size / 2.5 );
-// 	} @else if $direction == up {
-// 		border-left: $size solid transparent;
-// 		border-right: $size solid transparent;
-// 		border-bottom: $size solid $color;
-// 		margin-bottom: 0 - round( $size / 2.5 );
-// 	} @else if $direction == right {
-// 		border-top: $size solid transparent;
-// 		border-bottom: $size solid transparent;
-// 		border-left: $size solid $color;
-// 		margin-right: -$size;
-// 	} @else if  $direction == left {
-// 		border-top: $size solid transparent;
-// 		border-bottom: $size solid transparent;
-// 		border-right: $size solid $color;
-// 		margin-left: -$size;
-// 	}
-// }
-
-// usage:
-// input, textarea {  
-//	@include input-placeholder {
-//		color: $grey;
-//	}
-// }
-// @mixin input-placeholder {
-// 	&.placeholder { @content; }
-// 	&:-moz-placeholder { @content; }
-// 	&::-moz-placeholder { @content; }
-// 	&:-ms-input-placeholder { @content; }
-// 	&::-webkit-input-placeholder { @content; }
-// }
-
-// usage @include truncate(100%);
 @mixin truncate($truncation-boundary) {
 	max-width: $truncation-boundary;
 	white-space: nowrap;
@@ -148,49 +101,3 @@
 	overflow: hidden;
 	text-overflow: ellipsis;
 }
-
-// // Grid system
-// //
-// // Generate semantic grid columns with these mixins.
-
-// // Centered container element
-// @mixin make-container($gutter: $grid-gutter-width)
-// {
-// 	margin-right: auto;
-// 	margin-left: auto;
-// 	padding-left:  ($gutter / 2);
-// 	padding-right: ($gutter / 2);
-// }
-
-// // Creates a wrapper for a series of columns
-// @mixin make-row($gutter: $grid-gutter-width)
-// {
-// 	margin-left:  ($gutter / -2);
-// 	margin-right: ($gutter / -2);
-// }
-
-// @mixin make-col($gutter: $grid-gutter-width)
-// {
-// 	position: relative;
-// 	float: left;
-// 	min-height: 1px;
-// 	padding-left:  ($gutter / 2);
-// 	padding-right: ($gutter / 2);
-// }
-
-// @mixin make-col-span($columns)
-// {
-// 	width: percentage(($columns / $grid-columns));
-// }
-// @mixin make-col-offset($columns)
-// {
-// 	margin-left: percentage(($columns / $grid-columns));
-// }
-// @mixin make-col-push($columns)
-// {
-// 	left: percentage(($columns / $grid-columns));
-// }
-// @mixin make-col-pull($columns)
-// {
-// 	right: percentage(($columns / $grid-columns));
-// }
