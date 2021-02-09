@@ -187,15 +187,6 @@
   &__icon {
     display: flex;
     flex: 0 0 auto;
-    &.icon--helper {
-      background-image: url(../img/icon_helper.png);
-      background-position: 50% 50%;
-      background-repeat: no-repeat;
-      background-size: cover;
-      width: 20px;
-      height: 20px;
-      margin: 0 6px 0 0;
-    }
   }
   &__link {
     font-family: Roboto;
