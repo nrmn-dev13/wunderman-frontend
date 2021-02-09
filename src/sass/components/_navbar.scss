@@ -3,6 +3,7 @@
 // 
 .navbar {
   display: none;
+  background-color: $bg-white !important;
   @include for-size(tablet) {
     display: flex;
   }
