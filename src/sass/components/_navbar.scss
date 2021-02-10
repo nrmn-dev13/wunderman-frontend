@@ -4,7 +4,7 @@
 .navbar {
   display: none;
   background-color: transparent !important;
-  padding: 20px 0;
+  padding: 25px 0;
   @include for-size(tablet) {
     display: flex;
   }

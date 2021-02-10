@@ -38,7 +38,7 @@
     color: $color-lite-grey;
     &--has-checkbox {
       display: flex;
-      align-items: center;
+      align-items: flex-start;
       .form__agreement {
         margin: 0;
       }
@@ -60,7 +60,7 @@
       display: none;
       &:checked ~ .form__custom-checkbox {
         border: 2px solid $color-green;
-        .auth__icon.icon--check.material-icons {
+        .icon.icon--check.material-icons {
           display: block;
         }
       }
