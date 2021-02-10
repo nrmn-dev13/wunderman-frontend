@@ -36,6 +36,13 @@
     line-height: 16px;
     margin: 0 0 4px 0;
     color: $color-lite-grey;
+    &--has-checkbox {
+      display: flex;
+      align-items: center;
+      .form__agreement {
+        margin: 0;
+      }
+    }
   }
   &__input {
     background: $bg-cream-white;
@@ -49,6 +56,25 @@
     font-size: 14px;
     line-height: 14px;
     color: $color-grey;
+    &--checkbox {
+      display: none;
+      &:checked ~ .form__custom-checkbox {
+        border: 2px solid $color-green;
+        .auth__icon.icon--check.material-icons {
+          display: block;
+        }
+      }
+    }
+  }
+  &__custom-checkbox {
+    cursor: pointer;
+    position: relative;
+    background: $bg-white;
+    border: 2px solid $bg-gray;
+    border-radius: 3px;
+    width: 16px;
+    height: 16px;
+    margin: 0 5px 0 0;
   }
   &__link {
     display: inherit;
@@ -71,6 +97,7 @@
     font-size: 14px;
     line-height: 16px;
     text-align: center;
+    margin: 0;
     .form__link {
       font-weight: bold;
       color: $color-green;
