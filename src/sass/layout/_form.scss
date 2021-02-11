@@ -39,8 +39,13 @@
     &--has-checkbox {
       display: flex;
       align-items: flex-start;
+      flex-direction: column;
+      position: relative;
       .form__agreement {
-        margin: 0;
+        margin: 0 0 0 21px;
+      }
+      .form__invalid-message {
+        margin: 5px 0 0 21px;
       }
     }
   }
@@ -74,9 +79,10 @@
     border-radius: 3px;
     width: 16px;
     height: 16px;
-    margin: 0 5px 0 0;
+    margin: 0;
     display: flex;
     flex: 0 0 auto;
+    @include absolute(left 0);
     &::after {
       font-family: "Material Icons";
       content: "done";
@@ -132,7 +138,7 @@
     line-height: 16px;
     color: $color-lite-grey;
     margin: 0 0 24px 0;
-  }
+  }  
   &__bold {
     font-weight: bold;
   }
