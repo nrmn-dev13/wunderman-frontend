@@ -75,6 +75,8 @@
     width: 16px;
     height: 16px;
     margin: 0 5px 0 0;
+    display: flex;
+    flex: 0 0 auto;
     &::after {
       font-family: "Material Icons";
       content: "done";
