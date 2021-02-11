@@ -60,9 +60,9 @@
       display: none;
       &:checked ~ .form__custom-checkbox {
         border: 2px solid $color-green;
-        .icon.icon--check.material-icons {
+        &::after {
           display: block;
-        }
+        }                
       }
     }
   }
@@ -75,6 +75,16 @@
     width: 16px;
     height: 16px;
     margin: 0 5px 0 0;
+    &::after {
+      font-family: "Material Icons";
+      content: "done";
+      display: none;
+      font-weight: bold;
+      color: $color-green;
+      font-size: 13px;
+      @include absolute(top 50% left 50%);
+      transform: translate3d(-50%, -50%, 0);
+    }
   }
   &__link {
     display: inherit;
