@@ -1,13 +1,13 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the button component.
 // -----------------------------------------------------------------------------
-.card{
+.card {
   display: flex;
   align-items: flex-start;
   flex-direction: row;
   padding: 12px;
   &.card--attention {
-    background: #FDFF8C;
+    background: #fdff8c;
     box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 5px;
     max-width: 100%;
@@ -23,5 +23,14 @@
     .icon {
       margin: 0 6px 0 0;
     }
+  }
+  &__description {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 15px;
+    color: #2e2e2e;
+    margin: 0;
   }
 }

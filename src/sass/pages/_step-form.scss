@@ -37,6 +37,12 @@
       .form__container {
         padding: 78px 85px 28px;
       }
+      .form__field {
+        margin: 0 auto;
+        &.form__field--has-multiple-checkbox ~ .card--attention {
+          margin: 30px 0 0;
+        }
+      }
       .form__label {
         font-family: Roboto;
         font-style: normal;
@@ -60,6 +66,12 @@
           line-height: 24px;
         }
       }
+      .form__tab {
+        display: none;
+      }
+      .card--attention {
+        margin: 100px 0 0;
+      }
     }
   }
   &__navigation {
@@ -69,10 +81,14 @@
       @include absolute(top 12px left 12px);
       cursor: pointer;
     }
+    .button {
+      padding: 11px 22px;
+    }
   }
   &__indicator {
     display: flex;
     justify-content: center;
+    margin: 35px 0 0;
   }
   &__bullet {
     margin: 0 11px;
@@ -93,6 +109,3 @@ input.invalid {
 }
 
 /* Hide all steps by default: */
-.tab {
-  display: none;
-}
