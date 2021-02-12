@@ -16,10 +16,10 @@
 @import "layout/header", "layout/footer", "layout/form";
 
 // 5. Components
-@import "components/button", "components/navbar", "components/icon";
+@import "components/button", "components/navbar", "components/icon", "components/card";
 
 // 6. Page-specific styles
-@import "pages/home", "pages/auth";
+@import "pages/home", "pages/auth", "pages/step-form";
 
 // 7. Themes
 @import "themes/default";

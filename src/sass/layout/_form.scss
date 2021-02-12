@@ -3,6 +3,7 @@
 // -----------------------------------------------------------------------------
 .form {
   &__container {
+    position: relative;
     padding: 0;
     background: #ffffff;
     box-shadow: 0px 0px 0px rgba(0, 0, 0, 0), 0px 0px 0px rgba(0, 0, 0, 0);
@@ -27,6 +28,25 @@
     flex-direction: column;
     width: 100%;
     margin: 0 0 16px 0;
+    &--has-radio {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      .form__label {
+        width: max-content;
+        margin: 0 7px !important;        
+      }
+    }
+    &--has-multiple-checkbox {
+      flex-direction: row;
+      flex-wrap: wrap;
+      width: 60%;
+      margin: 0 auto 16px;
+      .form__label--has-checkbox {
+        width: 50%;
+        margin: 0 0 5px !important;
+      }
+    }
   }
   &__label {
     font-family: Roboto;
@@ -70,6 +90,16 @@
         }                
       }
     }
+    &--radio {
+      display: none;
+      &:checked ~ .form__custom-radio {
+        background: $color-green; 
+        color: $color-white;       
+        &::after {
+          display: block;
+        }                
+      }
+    }
   }
   &__custom-checkbox {
     cursor: pointer;
@@ -93,6 +123,21 @@
       @include absolute(top 50% left 50%);
       transform: translate3d(-50%, -50%, 0);
     }
+  }
+  &__custom-radio {
+    padding: 10px 41px;
+    cursor: pointer;
+    position: relative;
+    border-radius: 50px;
+    margin: 0;
+    background: $color-white;
+    border: 1px solid $color-green;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    color: $color-green;
   }
   &__link {
     display: inherit;
@@ -163,5 +208,5 @@
       color: $color-green;
       margin: 0;
     }
-  }
+  }  
 }

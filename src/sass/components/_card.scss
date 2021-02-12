@@ -1,0 +1,27 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the button component.
+// -----------------------------------------------------------------------------
+.card{
+  display: flex;
+  align-items: flex-start;
+  flex-direction: row;
+  padding: 12px;
+  &.card--attention {
+    background: #FDFF8C;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+    max-width: 100%;
+    @include for-size(tablet) {
+      max-width: 60%;
+    }
+    @include for-size(desktop) {
+      max-width: 60%;
+    }
+    @include for-size(ipad-pro) {
+      max-width: 60%;
+    }
+    .icon {
+      margin: 0 6px 0 0;
+    }
+  }
+}
