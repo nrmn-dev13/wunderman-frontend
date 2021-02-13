@@ -9,4 +9,11 @@
     transform: translate3d(0px, -50%, 0px);
     cursor: pointer;
   }
+  &.icon--checked-circle {
+    display: flex;
+    justify-content: center;
+    color: $color-green;
+    font-size: 70px;
+    margin: 0 0 17px;
+  }
 }
