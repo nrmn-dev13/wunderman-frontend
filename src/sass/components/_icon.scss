@@ -4,4 +4,9 @@
 .icon {
   display: flex;
   flex: 0 0 auto;
+  &.icon--location {
+    @include absolute(top 50% right 10px);
+    transform: translate3d(0px, -50%, 0px);
+    cursor: pointer;
+  }
 }

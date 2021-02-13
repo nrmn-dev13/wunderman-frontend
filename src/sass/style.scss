@@ -16,7 +16,7 @@
 @import "layout/header", "layout/footer", "layout/form";
 
 // 5. Components
-@import "components/button", "components/navbar", "components/icon", "components/card";
+@import "components/button", "components/navbar", "components/icon", "components/card", "components/modal";
 
 // 6. Page-specific styles
 @import "pages/home", "pages/auth", "pages/step-form";
