@@ -1,3 +1,8 @@
+$( document ).ready(function() {
+  console.log( "ready!" );
+  $('.form__input--select').selectize({ create: true, sortField: 'text'});
+});
+
 var currentTab = 0; // Current tab is set to be the first tab (0)
 showTab(currentTab); // Display the current tab
 
