@@ -29,13 +29,12 @@
 		integrity="sha512-H955AcCOE/fUjX4XWkN0FwjCYVV/zioSF6VpUKCcrGdR1Wa8paFWYixWYp85npbnx3i1kZCH4Rm4TRxut2+d5A=="
 		crossorigin="anonymous" />
 	<link href="./assets/css/style.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery.steps@1.1.1/dist/jquery-steps.min.css">
 	<script src="./assets/js/vendor/jquery.min.js"></script>
-	<!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-		integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-		crossorigin="anonymous"></script> -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.13.3/js/standalone/selectize.js"
 		integrity="sha512-pF+DNRwavWMukUv/LyzDyDMn8U2uvqYQdJN0Zvilr6DDo/56xPDZdDoyPDYZRSL4aOKO/FGKXTpzDyQJ8je8Qw=="
 		crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/jquery.steps@1.1.1/dist/jquery-steps.min.js"></script>
 	<script src="./assets/js/vendor/bootstrap.bundle.min.js"></script>
 	<script defer src="./assets/js/main.js"></script>
 	<!-- <script src="./assets/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script> -->
@@ -68,9 +67,9 @@
       <div class="step-form__row row justify-content-center">
         <div class="col-sm-12 col-md-10 col-lg-10 col-xl-8 justify-content-center">
           <div class="step-form__form">
-            <form class="form" id="stepForm">
-              <div class="form__container">
-                <div class="form__tab">
+            <form class="form step-app" id="demo">
+              <div class="form__container step-content">
+                <div class="form__tab step-tab-panel" data-step="step1">
                   <div class="form__tab-title">Enter your Home Address below</div>
                   <div class="form__field">
                     <input type="text" class="form__input" placeholder="Your address">
@@ -83,7 +82,7 @@
                       too.</p>
                   </div>
                 </div>
-                <div class="form__tab">
+                <div class="form__tab step-tab-panel" data-step="step2">
                   <div class="form__tab-title">What is the ownership status of your home?</div>
                   <div class="form__field">
                     <select class="form__input form__input--select">
@@ -100,7 +99,7 @@
                       affects families and the healthiness of heir homes.</p>
                   </div>
                 </div>
-                <div class="form__tab">
+                <div class="form__tab step-tab-panel" data-step="step3">
                   <div class="form__tab-title">Does anyone aged 14 or younger reside in the home?</div>
                   <div class="form__field form__field--has-radio">
                     <label class="form__label" for="inlineRadio1">
@@ -124,7 +123,7 @@
                       present, to understand how children are affected by the healthiness of their home.</p>
                   </div>
                 </div>
-                <div class="form__tab">
+                <div class="form__tab step-tab-panel" data-step="step4">
                   <div class="form__tab-title">Does anyone aged 65 or older reside in the home?</div>
                   <div class="form__field form__field--has-radio">
                     <label class="form__label" for="inlineRadio3">
@@ -148,7 +147,7 @@
                       present, to understand how elderly are affected by the healthiness of their home.</p>
                   </div>
                 </div>
-                <div class="form__tab mb-5">
+                <div class="form__tab step-tab-panel mb-5" data-step="step5">
                   <div class="form__tab-title">Do any residents in your home identify as the following?</div>
                   <div class="form__field form__field--has-multiple-checkbox">
                     <label for="checkboxOne" class="form__label form__label--has-checkbox">
@@ -193,7 +192,7 @@
                     </label>
                   </div>
                 </div>
-                <div class="form__tab">
+                <div class="form__tab step-tab-panel" data-step="step6">
                   <div class="form__tab-title">Do any residents in your home identify as the following?</div>
                   <div class="form__field form__field--has-multiple-checkbox">
                     <label for="checkboxOneB" class="form__label form__label--has-checkbox">
@@ -243,21 +242,20 @@
                       issues helps us to tell you when and how your home may be affecting your illness.</p>
                   </div>
                 </div>
-                <div class="step-form__navigation">
-                  <i class="icon icon--back material-icons" id="prevBtn" onclick="nextPrev(-1)">arrow_back</i>
-                  <button class="button button--black" type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
-                </div>
-
-                <!-- Circles which indicates the steps of the form: -->
-                <div class="step-form__indicator">
-                  <span class="step-form__bullet step"></span>
-                  <span class="step-form__bullet step"></span>
-                  <span class="step-form__bullet step"></span>
-                  <span class="step-form__bullet step"></span>
-                  <span class="step-form__bullet step"></span>
-                  <span class="step-form__bullet step"></span>
-                </div>
               </div>
+              <div class="step-footer step-form__navigation">
+                <i data-step-action="prev" class="step-btn icon icon--back material-icons">arrow_back</i>
+                <button data-step-action="next" class="step-btn button button--black" type="button">Next</button>
+                <button data-step-action="finish" class="step-btn button button--black">Finish</button>
+              </div>
+              <ul class="step-steps step-form__indicator">
+                <li class="step-form__bullet" data-step-target="step1"></li>
+                <li class="step-form__bullet" data-step-target="step2"></li>
+                <li class="step-form__bullet" data-step-target="step3"></li>
+                <li class="step-form__bullet" data-step-target="step4"></li>
+                <li class="step-form__bullet" data-step-target="step5"></li>
+                <li class="step-form__bullet" data-step-target="step6"></li>
+              </ul>
             </form>
           </div>
         </div>
@@ -275,7 +273,8 @@
         <div class="modal-cta">
           <i class="icon icon-close material-icons" data-bs-dismiss="modal" aria-label="Close">close</i>
         </div>
-        <iframe class="modal-map" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=1%20Grafton%20Street,%20Dublin,%20Ireland+(My%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>        
+        <iframe class="modal-map" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+          src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=1%20Grafton%20Street,%20Dublin,%20Ireland+(My%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
       </div>
     </div>
   </div>
