@@ -3,11 +3,8 @@ $(document).ready(function () {
     $('.form__input--select').selectize({ create: true, sortField: 'text' });
   }
   function handleStepForm() {    
-    $('#demo').steps({
-      onFinish: function () { alert('complete'); }
-    });
+    $('#stepForm').steps();
   }
-
   handleSelect();
   handleStepForm()
 }); 

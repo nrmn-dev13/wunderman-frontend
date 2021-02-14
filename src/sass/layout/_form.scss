@@ -5,7 +5,7 @@
   &__container {
     position: relative;
     padding: 0;
-    background: #ffffff;
+    background: $bg-white;
     box-shadow: 0px 0px 0px rgba(0, 0, 0, 0), 0px 0px 0px rgba(0, 0, 0, 0);
     border-radius: 10px;
     @include for-size(desktop) {
@@ -115,7 +115,7 @@
         padding: 0px;
         .selectize-input {
           padding: 10px 10px 6px;
-          background-color: #ececec;
+          background-color: $bg-cream-white;
           border: 1px solid transparent;
           box-shadow: 0px 0px 0px rgba(0, 0, 0, 0), 0px 0px 0px rgba(0, 0, 0, 0);
           background-image: none !important;

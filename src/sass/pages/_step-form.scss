@@ -93,7 +93,7 @@
               background-color: $color-green;
             }
             &.done {
-              background-color: #d0d0d0;
+              background-color: $bg-gray;
             }
           }
         }
@@ -104,9 +104,9 @@
           .step-btn {
             border-radius: 5px;
             padding: 11px 22px;
-            background-color: #000;
-            border: 1px solid #000;
-            color: #fff;
+            background-color: $bg-black;
+            border: 1px solid $color-white;
+            color: $color-white;
             &.icon--back {
               border: none;
               padding: 0;
@@ -153,7 +153,7 @@
     margin: 0 11px;
     height: 10px;
     width: 10px;
-    background-color: #d0d0d0;
+    background-color: $bg-gray;
     border: none;
     border-radius: 50%;
     display: inline-block;
@@ -199,9 +199,3 @@
     justify-content: center;
   }
 }
-/* Mark input boxes that gets an error on validation: */
-input.invalid {
-  background-color: #ffdddd;
-}
-
-/* Hide all steps by default: */
