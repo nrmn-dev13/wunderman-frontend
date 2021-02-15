@@ -2,7 +2,7 @@
 // This file contains all styles related to the button component.
 // -----------------------------------------------------------------------------
 .modal {
-  &.modal--step-form {
+  &.modal--step-guide {
     bottom: 0;
     padding: 0;
     @include for-size(desktop) {
