@@ -1,6 +1,6 @@
 $(document).ready(function () {
   function handleSelect() {
-    $('.form__input--select').selectize({ create: true, sortField: 'text' });
+    $('.form__input--select').selectize({ create: true, sortField: 'asc' });
   }
   function handleStepForm() {    
     $('#stepForm').steps();
