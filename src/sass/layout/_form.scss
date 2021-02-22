@@ -35,7 +35,7 @@
       justify-content: center;
       .form__label {
         width: max-content;
-        margin: 0 7px !important;        
+        margin: 0 7px !important;
       }
     }
   }
@@ -60,6 +60,27 @@
       }
     }
   }
+  &__input-wrapper {
+    width: 100%;
+    position: relative;
+    .icon.icon-password {
+      @include absolute(top 50% right 10px);
+      z-index: 1;
+      cursor: pointer;
+      transform: translateY(-50%);
+      width: 24px;
+      height: 24px;
+      &::after {
+        font-family: "Material Icons";
+        content: "remove_red_eye";
+      }
+      &.active {
+        &::after {
+          content: "visibility_off";
+        }
+      }
+    }
+  }
   &__input {
     background: $bg-cream-white;
     border: 0.5px solid $color-grey;
@@ -72,23 +93,24 @@
     font-size: 14px;
     line-height: 14px;
     color: $color-grey;
+    width: 100%;
     &--checkbox {
       display: none;
       &:checked ~ .form__custom-checkbox {
         border: 2px solid $color-green;
         &::after {
           display: block;
-        }                
+        }
       }
     }
     &--radio {
       display: none;
       &:checked ~ .form__custom-radio {
-        background: $color-green; 
-        color: $color-white;       
+        background: $color-green;
+        color: $color-white;
         &::after {
           display: block;
-        }                
+        }
       }
     }
     &--select {
@@ -112,7 +134,7 @@
               position: relative;
               padding: 8px 8px 8px 22px;
               &::after {
-                content: '';
+                content: "";
                 width: 12px;
                 height: 12px;
                 display: block;
@@ -215,7 +237,7 @@
     line-height: 16px;
     color: $color-lite-grey;
     margin: 0 0 24px 0;
-  }  
+  }
   &__bold {
     font-weight: bold;
   }
@@ -240,5 +262,5 @@
       color: $color-green;
       margin: 0;
     }
-  }  
+  }
 }
