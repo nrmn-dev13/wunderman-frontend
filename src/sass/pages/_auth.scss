@@ -32,20 +32,20 @@
     font-family: Roboto;
     font-style: normal;
     font-weight: bold;
-    font-size: 25px;
+    font-size: 16px;
     line-height: 29px;
     text-align: center;
     @include for-size(tablet) {
-      font-size: 40px;
+      font-size: 24px;
       line-height: 47px;
     }
     @include for-size(desktop) {
       text-align: left;
-      font-size: 50px;
+      font-size: 27px;
       line-height: 59px;
     }
     @include for-size(ipad-pro) {
-      font-size: 40px;
+      font-size: 24px;
       line-height: 47px;
       text-align: center;
     }
