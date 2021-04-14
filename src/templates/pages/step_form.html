@@ -12,179 +12,429 @@
             <form class="form step-app" id="stepForm">
               <div class="form__container step-content">
                 <div class="form__tab step-tab-panel" data-step="step1">
-                  <div class="form__sub-title">Step 1 of  10</div>
-                  <div class="form__tab-title">Please enter your home address</div>
-                  <div class="form__field">
-                    <input type="text" class="form__input" placeholder="Your address">
-                    <i class="icon icon--location material-icons" data-bs-toggle="modal"
-                      data-bs-target="#exampleModal">location_on</i>
+                  <div class="form__title-wrapper">
+                    <div class="form__sub-title">Step 1 of  10</div>
+                    <div class="form__tab-title">Please enter your home address</div>
                   </div>
-                  <div class="card card--attention">
-                    <i class="icon material-icons">info</i>
-                    <p class="card__description">We need your address to link your home to your sensors.</p>
+                  <div class="form__step-content">
+                    <div class="card card--attention">                      
+                      <i class="icon icon--info fas fa-info-circle"></i>
+                      <p class="card__description">We need your address to associate the temperature and humidity readings too.</p>
+                    </div>
+                    <div class="form__field">
+                      <input type="text" class="form__input" placeholder="Your address">
+                      <i class="icon icon--location material-icons" data-bs-toggle="modal"
+                        data-bs-target="#exampleModal">location_on</i>
+                    </div>                    
                   </div>
                 </div>
                 <div class="form__tab step-tab-panel" data-step="step2">
-                  <div class="form__tab-title">What is the ownership status of your home?</div>
-                  <div class="form__field">
-                    <select class="form__input form__input--select">
-                      <option>Own your home</option>
-                      <option>Rent privately</option>
-                      <option>Rent from Housing NZ</option>
-                      <option>Rent from City Council</option>
-                      <option>Other</option>
-                    </select>
+                  <div class="form__title-wrapper">
+                    <div class="form__sub-title">Step 2 of  10</div>
+                    <div class="form__tab-title">What is the ownership status of your home?</div>
                   </div>
-                  <div class="card card--attention">
-                    <i class="icon material-icons">info</i>
-                    <p class="card__description">We use ownership status at a suburb or city level to show how ownership affects families and the healthiness of their homes.</p>
-                  </div>
+                  <div class="form__step-content">
+                    <div class="card card--attention">
+                      <i class="icon icon--info fas fa-info-circle"></i>
+                      <p class="card__description">We use ownership status at a suburb or city level to show how ownership affects families and the healthiness of their homes.</p>
+                    </div>
+                    <div class="form__field">
+                      <select class="form__input form__input--select">
+                        <option>Own your home</option>
+                        <option>Rent privately</option>
+                        <option>Rent from Housing NZ</option>
+                        <option>Rent from City Council</option>
+                        <option>Other</option>
+                      </select>
+                    </div>                    
+                  </div>                  
                 </div>
                 <div class="form__tab step-tab-panel" data-step="step3">
-                  <div class="form__tab-title">Does anyone aged 14 or younger reside in the home?</div>
-                  <div class="form__field form__field--has-radio">
-                    <label class="form__label" for="inlineRadio1">
-                      <input class="form__input form__input--radio" type="radio" checked name="inlineRadioOptions"
-                        id="inlineRadio1" value="option1">
-                      <div class="form__custom-radio">
-                        Yes
-                      </div>
-                    </label>
-                    <label class="form__label" for="inlineRadio2">
-                      <input class="form__input form__input--radio" type="radio" name="inlineRadioOptions"
-                        id="inlineRadio2" value="option2">
-                      <div class="form__custom-radio">
-                        No
-                      </div>
-                    </label>
+                  <div class="form__title-wrapper">
+                    <div class="form__sub-title">Step 3 of  10</div>
+                    <div class="form__tab-title">Does anyone aged 14 or younger reside in the home?</div>
                   </div>
-                  <div class="card card--attention">
-                    <i class="icon material-icons">info</i>
-                    <p class="card__description">We use the age of 14 or younger as an indicator for children being
-                      present, to understand how children are affected by the healthiness of their home.</p>
+                  <div class="form__step-content">
+                    <div class="card card--attention">
+                      <i class="icon icon--info fas fa-info-circle"></i>
+                      <p class="card__description">We use the age of 14 or younger as an indicator for children being
+                        present, to understand how children are affected by the healthiness of their home.</p>
+                    </div>
+                    <div class="form__field form__field--has-radio">
+                      <label class="form__label" for="inlineRadio1">
+                        <input class="form__input form__input--radio" type="radio" checked name="inlineRadioOptions"
+                          id="inlineRadio1" value="option1">
+                        <div class="form__custom-radio">
+                          Yes
+                        </div>
+                      </label>
+                      <label class="form__label" for="inlineRadio2">
+                        <input class="form__input form__input--radio" type="radio" name="inlineRadioOptions"
+                          id="inlineRadio2" value="option2">
+                        <div class="form__custom-radio">
+                          No
+                        </div>
+                      </label>
+                    </div>                    
                   </div>
                 </div>
                 <div class="form__tab step-tab-panel" data-step="step4">
-                  <div class="form__tab-title">Does anyone aged 65 or older reside in the home?</div>
-                  <div class="form__field form__field--has-radio">
-                    <label class="form__label" for="inlineRadio3">
-                      <input class="form__input form__input--radio" type="radio" checked name="inlineRadioOptions2"
-                        id="inlineRadio3" value="option1">
-                      <div class="form__custom-radio">
-                        Yes
-                      </div>
-                    </label>
-                    <label class="form__label" for="inlineRadio4">
-                      <input class="form__input form__input--radio" type="radio" name="inlineRadioOptions2"
-                        id="inlineRadio4" value="option2">
-                      <div class="form__custom-radio">
-                        No
-                      </div>
-                    </label>
+                  <div class="form__title-wrapper">
+                    <div class="form__sub-title">Step 4 of  10</div>                    
+                    <div class="form__tab-title">Does anyone aged 65 or older reside in the home?</div>
                   </div>
-                  <div class="card card--attention">
-                    <i class="icon material-icons">info</i>
-                    <p class="card__description">We use the age of 65 or older as an indicator for elderly being
-                      present, to understand how elderly are affected by the healthiness of their home.</p>
+                  <div class="form__step-content">
+                    <div class="card card--attention">
+                      <i class="icon icon--info fas fa-info-circle"></i>
+                      <p class="card__description">We use the age of 65 or older as an indicator for elderly being
+                        present, to understand how elderly are affected by the healthiness of their home.</p>
+                    </div>
+                    <div class="form__field form__field--has-radio">
+                      <label class="form__label" for="inlineRadio3">
+                        <input class="form__input form__input--radio" type="radio" checked name="inlineRadioOptions2"
+                          id="inlineRadio3" value="option1">
+                        <div class="form__custom-radio">
+                          Yes
+                        </div>
+                      </label>
+                      <label class="form__label" for="inlineRadio4">
+                        <input class="form__input form__input--radio" type="radio" name="inlineRadioOptions2"
+                          id="inlineRadio4" value="option2">
+                        <div class="form__custom-radio">
+                          No
+                        </div>
+                      </label>
+                    </div>                    
                   </div>
                 </div>
                 <div class="form__tab step-tab-panel mb-5" data-step="step5">
-                  <div class="form__tab-title">Do any residents in your home identify as the following?</div>
-                  <div class="form__field form__field--has-multiple-checkbox">
-                    <label for="checkboxOne" class="form__label form__label--has-checkbox">
-                      <input id="checkboxOne" type="checkbox" class="form__input form__input--checkbox">
-                      <div class="form__custom-checkbox"></div>
-                      <p class="form__text-label">Māori</p>
-                    </label>
-                    <label for="checkboxTwo" class="form__label form__label--has-checkbox">
-                      <input id="checkboxTwo" type="checkbox" class="form__input form__input--checkbox">
-                      <div class="form__custom-checkbox"></div>
-                      <p class="form__text-label">African</p>
-                    </label>
-                    <label for="checkboxThree" class="form__label form__label--has-checkbox">
-                      <input id="checkboxThree" type="checkbox" class="form__input form__input--checkbox">
-                      <div class="form__custom-checkbox"></div>
-                      <p class="form__text-label">Pacific peoples</p>
-                    </label>
-                    <label for="checkboxFour" class="form__label form__label--has-checkbox">
-                      <input id="checkboxFour" type="checkbox" class="form__input form__input--checkbox">
-                      <div class="form__custom-checkbox"></div>
-                      <p class="form__text-label">Asian</p>
-                    </label>
-                    <label for="checkboxFive" class="form__label form__label--has-checkbox">
-                      <input id="checkboxFive" type="checkbox" class="form__input form__input--checkbox">
-                      <div class="form__custom-checkbox"></div>
-                      <p class="form__text-label">Middle Eastern</p>
-                    </label>
-                    <label for="checkboxSix" class="form__label form__label--has-checkbox">
-                      <input id="checkboxSix" type="checkbox" class="form__input form__input--checkbox">
-                      <div class="form__custom-checkbox"></div>
-                      <p class="form__text-label">European</p>
-                    </label>
-                    <label for="checkboxSeven" class="form__label form__label--has-checkbox">
-                      <input id="checkboxSeven" type="checkbox" class="form__input form__input--checkbox">
-                      <div class="form__custom-checkbox"></div>
-                      <p class="form__text-label">Latin American</p>
-                    </label>
-                    <label for="checkboxEight" class="form__label form__label--has-checkbox">
-                      <input id="checkboxEight" type="checkbox" class="form__input form__input--checkbox">
-                      <div class="form__custom-checkbox"></div>
-                      <p class="form__text-label">New Zealander</p>
-                    </label>
+                  <div class="form__title-wrapper">
+                    <div class="form__sub-title">Step 5 of  10</div>
+                    <div class="form__tab-title">Do any residents in your home identify as the following?</div>
+                  </div>
+                  <div class="form__step-content">
+                    <div class="form__field form__field--has-multiple-checkbox">
+                      <label for="checkboxOne" class="form__label form__label--has-checkbox">
+                        <input id="checkboxOne" type="checkbox" class="form__input form__input--checkbox">
+                        <div class="form__custom-checkbox"></div>
+                        <p class="form__text-label">Māori</p>
+                      </label>
+                      <label for="checkboxTwo" class="form__label form__label--has-checkbox">
+                        <input id="checkboxTwo" type="checkbox" class="form__input form__input--checkbox">
+                        <div class="form__custom-checkbox"></div>
+                        <p class="form__text-label">African</p>
+                      </label>
+                      <label for="checkboxThree" class="form__label form__label--has-checkbox">
+                        <input id="checkboxThree" type="checkbox" class="form__input form__input--checkbox">
+                        <div class="form__custom-checkbox"></div>
+                        <p class="form__text-label">Pacific peoples</p>
+                      </label>
+                      <label for="checkboxFour" class="form__label form__label--has-checkbox">
+                        <input id="checkboxFour" type="checkbox" class="form__input form__input--checkbox">
+                        <div class="form__custom-checkbox"></div>
+                        <p class="form__text-label">Asian</p>
+                      </label>
+                      <label for="checkboxFive" class="form__label form__label--has-checkbox">
+                        <input id="checkboxFive" type="checkbox" class="form__input form__input--checkbox">
+                        <div class="form__custom-checkbox"></div>
+                        <p class="form__text-label">Middle Eastern</p>
+                      </label>
+                      <label for="checkboxSix" class="form__label form__label--has-checkbox">
+                        <input id="checkboxSix" type="checkbox" class="form__input form__input--checkbox">
+                        <div class="form__custom-checkbox"></div>
+                        <p class="form__text-label">European</p>
+                      </label>
+                      <label for="checkboxSeven" class="form__label form__label--has-checkbox">
+                        <input id="checkboxSeven" type="checkbox" class="form__input form__input--checkbox">
+                        <div class="form__custom-checkbox"></div>
+                        <p class="form__text-label">Latin American</p>
+                      </label>
+                      <label for="checkboxEight" class="form__label form__label--has-checkbox">
+                        <input id="checkboxEight" type="checkbox" class="form__input form__input--checkbox">
+                        <div class="form__custom-checkbox"></div>
+                        <p class="form__text-label">New Zealander</p>
+                      </label>
+                    </div>
                   </div>
                 </div>
                 <div class="form__tab step-tab-panel" data-step="step6">
-                  <div class="form__tab-title">Do any residents in your home have any of the following?</div>
-                  <div class="form__field form__field--has-multiple-checkbox">
-                    <label for="checkboxOneB" class="form__label form__label--has-checkbox">
-                      <input id="checkboxOneB" type="checkbox" class="form__input form__input--checkbox">
-                      <div class="form__custom-checkbox"></div>
-                      <p class="form__text-label">Respiratory illness</p>
-                    </label>
-                    <label for="checkboxTwoB" class="form__label form__label--has-checkbox">
-                      <input id="checkboxTwoB" type="checkbox" class="form__input form__input--checkbox">
-                      <div class="form__custom-checkbox"></div>
-                      <p class="form__text-label">Rheumatic fever</p>
-                    </label>
-                    <label for="checkboxThreeB" class="form__label form__label--has-checkbox">
-                      <input id="checkboxThreeB" type="checkbox" class="form__input form__input--checkbox">
-                      <div class="form__custom-checkbox"></div>
-                      <p class="form__text-label">Asthma</p>
-                    </label>
-                    <label for="checkboxFourB" class="form__label form__label--has-checkbox">
-                      <input id="checkboxFourB" type="checkbox" class="form__input form__input--checkbox">
-                      <div class="form__custom-checkbox"></div>
-                      <p class="form__text-label">Mental health issues</p>
-                    </label>
-                    <label for="checkboxFiveB" class="form__label form__label--has-checkbox">
-                      <input id="checkboxFiveB" type="checkbox" class="form__input form__input--checkbox">
-                      <div class="form__custom-checkbox"></div>
-                      <p class="form__text-label">Eczema</p>
-                    </label>
-                    <label for="checkboxSixB" class="form__label form__label--has-checkbox">
-                      <input id="checkboxSixB" type="checkbox" class="form__input form__input--checkbox">
-                      <div class="form__custom-checkbox"></div>
-                      <p class="form__text-label">Anxiety</p>
-                    </label>
-                    <label for="checkboxSevenB" class="form__label form__label--has-checkbox">
-                      <input id="checkboxSevenB" type="checkbox" class="form__input form__input--checkbox">
-                      <div class="form__custom-checkbox"></div>
-                      <p class="form__text-label">Allergies</p>
-                    </label>
-                    <label for="checkboxEightB" class="form__label form__label--has-checkbox">
-                      <input id="checkboxEightB" type="checkbox" class="form__input form__input--checkbox">
-                      <div class="form__custom-checkbox"></div>
-                      <p class="form__text-label">Depression</p>
-                    </label>
+                  <div class="form__title-wrapper">
+                    <div class="form__sub-title">Step 6 of  10</div>
+                    <div class="form__tab-title">Do any residents in your home have any of the following?</div>
                   </div>
-                  <div class="card card--attention">
-                    <i class="icon material-icons">info</i>
-                    <p class="card__description">Telling us if you or your whānau are affected by any of these health
-                      issues helps us to tell you when and how your home may be affecting your illness.</p>
+                  <div class="form__step-content">
+                    <div class="card card--attention">
+                      <i class="icon icon--info fas fa-info-circle"></i>
+                      <p class="card__description">Telling us if you or your whānau are affected by any of these health
+                        issues helps us to tell you when and how your home may be affecting your illness.</p>
+                    </div>
+                    <div class="form__field form__field--has-multiple-checkbox">
+                      <label for="checkboxOneB" class="form__label form__label--has-checkbox">
+                        <input id="checkboxOneB" type="checkbox" class="form__input form__input--checkbox">
+                        <div class="form__custom-checkbox"></div>
+                        <p class="form__text-label">Respiratory illness</p>
+                      </label>
+                      <label for="checkboxTwoB" class="form__label form__label--has-checkbox">
+                        <input id="checkboxTwoB" type="checkbox" class="form__input form__input--checkbox">
+                        <div class="form__custom-checkbox"></div>
+                        <p class="form__text-label">Rheumatic fever</p>
+                      </label>
+                      <label for="checkboxThreeB" class="form__label form__label--has-checkbox">
+                        <input id="checkboxThreeB" type="checkbox" class="form__input form__input--checkbox">
+                        <div class="form__custom-checkbox"></div>
+                        <p class="form__text-label">Asthma</p>
+                      </label>
+                      <label for="checkboxFourB" class="form__label form__label--has-checkbox">
+                        <input id="checkboxFourB" type="checkbox" class="form__input form__input--checkbox">
+                        <div class="form__custom-checkbox"></div>
+                        <p class="form__text-label">Mental health issues</p>
+                      </label>
+                      <label for="checkboxFiveB" class="form__label form__label--has-checkbox">
+                        <input id="checkboxFiveB" type="checkbox" class="form__input form__input--checkbox">
+                        <div class="form__custom-checkbox"></div>
+                        <p class="form__text-label">Eczema</p>
+                      </label>
+                      <label for="checkboxSixB" class="form__label form__label--has-checkbox">
+                        <input id="checkboxSixB" type="checkbox" class="form__input form__input--checkbox">
+                        <div class="form__custom-checkbox"></div>
+                        <p class="form__text-label">Anxiety</p>
+                      </label>
+                      <label for="checkboxSevenB" class="form__label form__label--has-checkbox">
+                        <input id="checkboxSevenB" type="checkbox" class="form__input form__input--checkbox">
+                        <div class="form__custom-checkbox"></div>
+                        <p class="form__text-label">Allergies</p>
+                      </label>
+                      <label for="checkboxEightB" class="form__label form__label--has-checkbox">
+                        <input id="checkboxEightB" type="checkbox" class="form__input form__input--checkbox">
+                        <div class="form__custom-checkbox"></div>
+                        <p class="form__text-label">Depression</p>
+                      </label>
+                    </div>                    
+                  </div>
+                </div>
+                <div class="form__tab step-tab-panel" data-step="step7">
+                  <div class="form__title-wrapper">
+                    <div class="form__sub-title">Step 7 of  10</div>
+                    <div class="form__tab-title">Do any residents in your home have any of the following?</div>
+                  </div>
+                  <div class="form__step-content">
+                    <div class="card card--attention">
+                      <i class="icon icon--info fas fa-info-circle"></i>
+                      <p class="card__description">Telling us if you or your whānau are affected by any of these health
+                        issues helps us to tell you when and how your home may be affecting your illness.</p>
+                    </div>
+                    <div class="form__field form__field--has-multiple-checkbox">
+                      <label for="checkboxOneB" class="form__label form__label--has-checkbox">
+                        <input id="checkboxOneB" type="checkbox" class="form__input form__input--checkbox">
+                        <div class="form__custom-checkbox"></div>
+                        <p class="form__text-label">Respiratory illness</p>
+                      </label>
+                      <label for="checkboxTwoB" class="form__label form__label--has-checkbox">
+                        <input id="checkboxTwoB" type="checkbox" class="form__input form__input--checkbox">
+                        <div class="form__custom-checkbox"></div>
+                        <p class="form__text-label">Rheumatic fever</p>
+                      </label>
+                      <label for="checkboxThreeB" class="form__label form__label--has-checkbox">
+                        <input id="checkboxThreeB" type="checkbox" class="form__input form__input--checkbox">
+                        <div class="form__custom-checkbox"></div>
+                        <p class="form__text-label">Asthma</p>
+                      </label>
+                      <label for="checkboxFourB" class="form__label form__label--has-checkbox">
+                        <input id="checkboxFourB" type="checkbox" class="form__input form__input--checkbox">
+                        <div class="form__custom-checkbox"></div>
+                        <p class="form__text-label">Mental health issues</p>
+                      </label>
+                      <label for="checkboxFiveB" class="form__label form__label--has-checkbox">
+                        <input id="checkboxFiveB" type="checkbox" class="form__input form__input--checkbox">
+                        <div class="form__custom-checkbox"></div>
+                        <p class="form__text-label">Eczema</p>
+                      </label>
+                      <label for="checkboxSixB" class="form__label form__label--has-checkbox">
+                        <input id="checkboxSixB" type="checkbox" class="form__input form__input--checkbox">
+                        <div class="form__custom-checkbox"></div>
+                        <p class="form__text-label">Anxiety</p>
+                      </label>
+                      <label for="checkboxSevenB" class="form__label form__label--has-checkbox">
+                        <input id="checkboxSevenB" type="checkbox" class="form__input form__input--checkbox">
+                        <div class="form__custom-checkbox"></div>
+                        <p class="form__text-label">Allergies</p>
+                      </label>
+                      <label for="checkboxEightB" class="form__label form__label--has-checkbox">
+                        <input id="checkboxEightB" type="checkbox" class="form__input form__input--checkbox">
+                        <div class="form__custom-checkbox"></div>
+                        <p class="form__text-label">Depression</p>
+                      </label>
+                    </div>                    
+                  </div>
+                </div>
+                <div class="form__tab step-tab-panel" data-step="step8">
+                  <div class="form__title-wrapper">
+                    <div class="form__sub-title">Step 8 of  10</div>
+                    <div class="form__tab-title">Do any residents in your home have any of the following?</div>
+                  </div>
+                  <div class="form__step-content">
+                    <div class="card card--attention">
+                      <i class="icon icon--info fas fa-info-circle"></i>
+                      <p class="card__description">Telling us if you or your whānau are affected by any of these health
+                        issues helps us to tell you when and how your home may be affecting your illness.</p>
+                    </div>
+                    <div class="form__field form__field--has-multiple-checkbox">
+                      <label for="checkboxOneB" class="form__label form__label--has-checkbox">
+                        <input id="checkboxOneB" type="checkbox" class="form__input form__input--checkbox">
+                        <div class="form__custom-checkbox"></div>
+                        <p class="form__text-label">Respiratory illness</p>
+                      </label>
+                      <label for="checkboxTwoB" class="form__label form__label--has-checkbox">
+                        <input id="checkboxTwoB" type="checkbox" class="form__input form__input--checkbox">
+                        <div class="form__custom-checkbox"></div>
+                        <p class="form__text-label">Rheumatic fever</p>
+                      </label>
+                      <label for="checkboxThreeB" class="form__label form__label--has-checkbox">
+                        <input id="checkboxThreeB" type="checkbox" class="form__input form__input--checkbox">
+                        <div class="form__custom-checkbox"></div>
+                        <p class="form__text-label">Asthma</p>
+                      </label>
+                      <label for="checkboxFourB" class="form__label form__label--has-checkbox">
+                        <input id="checkboxFourB" type="checkbox" class="form__input form__input--checkbox">
+                        <div class="form__custom-checkbox"></div>
+                        <p class="form__text-label">Mental health issues</p>
+                      </label>
+                      <label for="checkboxFiveB" class="form__label form__label--has-checkbox">
+                        <input id="checkboxFiveB" type="checkbox" class="form__input form__input--checkbox">
+                        <div class="form__custom-checkbox"></div>
+                        <p class="form__text-label">Eczema</p>
+                      </label>
+                      <label for="checkboxSixB" class="form__label form__label--has-checkbox">
+                        <input id="checkboxSixB" type="checkbox" class="form__input form__input--checkbox">
+                        <div class="form__custom-checkbox"></div>
+                        <p class="form__text-label">Anxiety</p>
+                      </label>
+                      <label for="checkboxSevenB" class="form__label form__label--has-checkbox">
+                        <input id="checkboxSevenB" type="checkbox" class="form__input form__input--checkbox">
+                        <div class="form__custom-checkbox"></div>
+                        <p class="form__text-label">Allergies</p>
+                      </label>
+                      <label for="checkboxEightB" class="form__label form__label--has-checkbox">
+                        <input id="checkboxEightB" type="checkbox" class="form__input form__input--checkbox">
+                        <div class="form__custom-checkbox"></div>
+                        <p class="form__text-label">Depression</p>
+                      </label>
+                    </div>                    
+                  </div>
+                </div>
+                <div class="form__tab step-tab-panel" data-step="step9">
+                  <div class="form__title-wrapper">
+                    <div class="form__sub-title">Step 9 of  10</div>
+                    <div class="form__tab-title">Do any residents in your home have any of the following?</div>
+                  </div>
+                  <div class="form__step-content">
+                    <div class="card card--attention">
+                      <i class="icon icon--info fas fa-info-circle"></i>
+                      <p class="card__description">Telling us if you or your whānau are affected by any of these health
+                        issues helps us to tell you when and how your home may be affecting your illness.</p>
+                    </div>
+                    <div class="form__field form__field--has-multiple-checkbox">
+                      <label for="checkboxOneB" class="form__label form__label--has-checkbox">
+                        <input id="checkboxOneB" type="checkbox" class="form__input form__input--checkbox">
+                        <div class="form__custom-checkbox"></div>
+                        <p class="form__text-label">Respiratory illness</p>
+                      </label>
+                      <label for="checkboxTwoB" class="form__label form__label--has-checkbox">
+                        <input id="checkboxTwoB" type="checkbox" class="form__input form__input--checkbox">
+                        <div class="form__custom-checkbox"></div>
+                        <p class="form__text-label">Rheumatic fever</p>
+                      </label>
+                      <label for="checkboxThreeB" class="form__label form__label--has-checkbox">
+                        <input id="checkboxThreeB" type="checkbox" class="form__input form__input--checkbox">
+                        <div class="form__custom-checkbox"></div>
+                        <p class="form__text-label">Asthma</p>
+                      </label>
+                      <label for="checkboxFourB" class="form__label form__label--has-checkbox">
+                        <input id="checkboxFourB" type="checkbox" class="form__input form__input--checkbox">
+                        <div class="form__custom-checkbox"></div>
+                        <p class="form__text-label">Mental health issues</p>
+                      </label>
+                      <label for="checkboxFiveB" class="form__label form__label--has-checkbox">
+                        <input id="checkboxFiveB" type="checkbox" class="form__input form__input--checkbox">
+                        <div class="form__custom-checkbox"></div>
+                        <p class="form__text-label">Eczema</p>
+                      </label>
+                      <label for="checkboxSixB" class="form__label form__label--has-checkbox">
+                        <input id="checkboxSixB" type="checkbox" class="form__input form__input--checkbox">
+                        <div class="form__custom-checkbox"></div>
+                        <p class="form__text-label">Anxiety</p>
+                      </label>
+                      <label for="checkboxSevenB" class="form__label form__label--has-checkbox">
+                        <input id="checkboxSevenB" type="checkbox" class="form__input form__input--checkbox">
+                        <div class="form__custom-checkbox"></div>
+                        <p class="form__text-label">Allergies</p>
+                      </label>
+                      <label for="checkboxEightB" class="form__label form__label--has-checkbox">
+                        <input id="checkboxEightB" type="checkbox" class="form__input form__input--checkbox">
+                        <div class="form__custom-checkbox"></div>
+                        <p class="form__text-label">Depression</p>
+                      </label>
+                    </div>                    
+                  </div>
+                </div>
+                <div class="form__tab step-tab-panel" data-step="step10">
+                  <div class="form__title-wrapper">
+                    <div class="form__sub-title">Step 10 of  10</div>
+                    <div class="form__tab-title">Do any residents in your home have any of the following?</div>
+                  </div>
+                  <div class="form__step-content">
+                    <div class="card card--attention">
+                      <i class="icon icon--info fas fa-info-circle"></i>
+                      <p class="card__description">Telling us if you or your whānau are affected by any of these health
+                        issues helps us to tell you when and how your home may be affecting your illness.</p>
+                    </div>
+                    <div class="form__field form__field--has-multiple-checkbox">
+                      <label for="checkboxOneB" class="form__label form__label--has-checkbox">
+                        <input id="checkboxOneB" type="checkbox" class="form__input form__input--checkbox">
+                        <div class="form__custom-checkbox"></div>
+                        <p class="form__text-label">Respiratory illness</p>
+                      </label>
+                      <label for="checkboxTwoB" class="form__label form__label--has-checkbox">
+                        <input id="checkboxTwoB" type="checkbox" class="form__input form__input--checkbox">
+                        <div class="form__custom-checkbox"></div>
+                        <p class="form__text-label">Rheumatic fever</p>
+                      </label>
+                      <label for="checkboxThreeB" class="form__label form__label--has-checkbox">
+                        <input id="checkboxThreeB" type="checkbox" class="form__input form__input--checkbox">
+                        <div class="form__custom-checkbox"></div>
+                        <p class="form__text-label">Asthma</p>
+                      </label>
+                      <label for="checkboxFourB" class="form__label form__label--has-checkbox">
+                        <input id="checkboxFourB" type="checkbox" class="form__input form__input--checkbox">
+                        <div class="form__custom-checkbox"></div>
+                        <p class="form__text-label">Mental health issues</p>
+                      </label>
+                      <label for="checkboxFiveB" class="form__label form__label--has-checkbox">
+                        <input id="checkboxFiveB" type="checkbox" class="form__input form__input--checkbox">
+                        <div class="form__custom-checkbox"></div>
+                        <p class="form__text-label">Eczema</p>
+                      </label>
+                      <label for="checkboxSixB" class="form__label form__label--has-checkbox">
+                        <input id="checkboxSixB" type="checkbox" class="form__input form__input--checkbox">
+                        <div class="form__custom-checkbox"></div>
+                        <p class="form__text-label">Anxiety</p>
+                      </label>
+                      <label for="checkboxSevenB" class="form__label form__label--has-checkbox">
+                        <input id="checkboxSevenB" type="checkbox" class="form__input form__input--checkbox">
+                        <div class="form__custom-checkbox"></div>
+                        <p class="form__text-label">Allergies</p>
+                      </label>
+                      <label for="checkboxEightB" class="form__label form__label--has-checkbox">
+                        <input id="checkboxEightB" type="checkbox" class="form__input form__input--checkbox">
+                        <div class="form__custom-checkbox"></div>
+                        <p class="form__text-label">Depression</p>
+                      </label>
+                    </div>                    
                   </div>
                 </div>
                 <div class="step-footer step-guide__navigation">
-                  <i data-step-action="prev" class="step-btn icon icon--back material-icons">arrow_back</i>
+                  <!-- <i data-step-action="prev" class="step-btn icon icon--back material-icons">arrow_back</i> -->
+                  <button data-step-action="prev" class="step-btn button button--black" type="button">Previous</button>
                   <button data-step-action="next" class="step-btn button button--black" type="button">Next</button>
                   <button data-step-action="finish" class="step-btn button button--black">Finish</button>
                 </div>
@@ -196,6 +446,10 @@
                 <li class="step-guide__bullet" data-step-target="step4"></li>
                 <li class="step-guide__bullet" data-step-target="step5"></li>
                 <li class="step-guide__bullet" data-step-target="step6"></li>
+                <li class="step-guide__bullet" data-step-target="step7"></li>
+                <li class="step-guide__bullet" data-step-target="step8"></li>
+                <li class="step-guide__bullet" data-step-target="step9"></li>
+                <li class="step-guide__bullet" data-step-target="step10"></li>
               </ul>
             </form>
           </div>

@@ -8,20 +8,18 @@
   padding: 12px;
   &.card--attention {
     background: $bg-yellow;
-    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.15);
-    border-radius: 5px;
-    max-width: 100%;
-    @include for-size(tablet) {
-      max-width: 60%;
-    }
-    @include for-size(desktop) {
-      max-width: 60%;
-    }
-    @include for-size(ipad-pro) {
-      max-width: 60%;
-    }
+    width: 100%;
+    border-color: $bg-yellow;
+    border-radius: 0;
+    border-bottom: 5px solid $color-green;
     .icon {
       margin: 0 6px 0 0;
+      font-size: 36px;
+      opacity: 0.5;
+    }
+    .card__description {
+      font-size: 16px;
+      line-height: 28px;
     }
   }
   &__description {

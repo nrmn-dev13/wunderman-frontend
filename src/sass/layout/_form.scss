@@ -224,6 +224,11 @@
       color: $color-black;
     }
   }
+  &__step-content {
+    background-color: $bg-white;
+    padding: 50px 80px;
+    min-height: 450px;
+  }
   &__text-helper {
     font-family: Roboto;
     font-style: normal;

@@ -90,14 +90,27 @@
           margin: 30px 0 17px;
         }
       }
+      .form__title-wrapper {
+        margin: 0 50px 23px;
+      }
       .form__tab-title {
         font-family: Roboto;
         font-style: normal;
         font-weight: 300;
-        font-size: 21px;
-        line-height: 25px;
-        text-align: center;
-        margin: 0 0 30px 0;
+        font-size: 24px;
+        line-height: 34px;
+        text-align: left;        
+        color: $color-white;
+      }
+      .form__sub-title {
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 20px;
+        line-height: 28px;
+        text-align: left;
+        color: $color-white;
+        margin: 0 0 10px;
       }
       .form__label--has-checkbox {
         .form__custom-checkbox {
@@ -113,7 +126,7 @@
         }
       }
       .card--attention {
-        margin: 100px 0 17px;
+        margin: 0 0 40px;
       }
       &.step-app{
         position: relative;
@@ -130,6 +143,12 @@
         }
         .step-content {
           border: none;
+          &.form__container {
+            padding: 0;
+            border-radius: 0;
+            background-color: transparent;
+            box-shadow: 0px 0px 0px rgba(0, 0, 0, 0), 0px 0px 0px rgba(0, 0, 0, 0);
+          }
         }
         .step-footer {
           .step-btn {
@@ -151,20 +170,10 @@
   }
   &__navigation {
     display: flex;
-    justify-content: flex-end;
-    .icon--back {
-      @include absolute(top 12px left 0px);
-      cursor: pointer;
-      @include for-size(tablet) {
-        @include absolute(top 12px left 12px);
-      }
-      @include for-size(desktop) {
-        @include absolute(top 12px left 12px);
-      }
-      @include for-size(ipad-pro) {
-        @include absolute(top 12px left 12px);
-      }
-    }
+    justify-content: space-between;
+    background-color: #F5F5F5;
+    padding: 21px 80px;
+    margin: 0 80px;
     .button {
       padding: 11px 22px;
     }
