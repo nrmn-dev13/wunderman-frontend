@@ -1,7 +1,4 @@
-$(document).ready(function () {
-  function handleSelect() {
-    $('.form__input--select').selectize({ create: true, sortField: 'asc' });
-  }
+$(document).ready(function () {  
   function handleStepForm() {
     $('#stepForm').steps();
   }
@@ -15,8 +12,7 @@ $(document).ready(function () {
         password.attr("type", "password");        
       }
     });
-  }
-  handleSelect();
+  }  
   handleStepForm();
   handleTogglePassword();
 }); 
