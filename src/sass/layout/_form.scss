@@ -98,7 +98,7 @@
     width: 100%;
     &--checkbox {
       display: none;
-      &:checked ~ .form__custom-checkbox {        
+      &:checked ~ .form__custom-checkbox-wrapper .form__custom-checkbox {        
         &::after {
           display: block;
         }
@@ -168,6 +168,10 @@
       color: #E0E0E0;
     }
   }
+  &__custom-checkbox-wrapper {    
+    display: flex;
+    align-items: center;
+  }
   &__custom-checkbox {
     cursor: pointer;
     position: relative;
@@ -181,8 +185,8 @@
     flex: 0 0 auto;
     @include absolute(left 0);
     &::after {
-      font-family: "Material Icons";
-      content: "done";
+      font-family: "Font Awesome 5 Free";
+      content: "\f00c";
       display: none;
       font-weight: bold;
       color: $color-green;

@@ -18,5 +18,12 @@
   }
   &.icon--question {
     color: $color-dark-grey;
+    display: none;
+    @include for-size(desktop) {
+      display: block;
+    }
+    @include for-size(ipad-pro) {
+      display: none;
+    }
   }
 }
