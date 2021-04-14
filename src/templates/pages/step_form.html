@@ -39,13 +39,29 @@
                       <p class="card__description">We use ownership status at a suburb or city level to show how ownership affects families and the healthiness of their homes.</p>
                     </div>
                     <div class="form__field">
-                      <select class="form__input form__input--select">
+                      <!-- <select class="form__input form__input--select">
                         <option>Own your home</option>
                         <option>Rent privately</option>
                         <option>Rent from Housing NZ</option>
                         <option>Rent from City Council</option>
                         <option>Other</option>
-                      </select>
+                      </select> -->
+                      <label class="form__label form__label--inline-radio" for="ownership-one">
+                        <input class="form__input form__input--radio" type="radio" checked name="inlineRadioOptions"
+                          id="ownership-one" value="option1">
+                        <div class="form__custom-radio-wrapper">
+                          <div class="form__custom-radio"></div>
+                          <div class="form__custom-radio-title">Yes</div>
+                        </div>
+                      </label>
+                      <label class="form__label form__label--inline-radio" for="ownership-two">
+                        <input class="form__input form__input--radio" type="radio" checked name="inlineRadioOptions"
+                          id="ownership-two" value="option1">
+                          <div class="form__custom-radio-wrapper">
+                            <div class="form__custom-radio"></div>
+                            <div class="form__custom-radio-title">No</div>
+                          </div>
+                      </label>
                     </div>                    
                   </div>                  
                 </div>
@@ -62,18 +78,20 @@
                     </div>
                     <div class="form__field form__field--has-radio">
                       <label class="form__label" for="inlineRadio1">
-                        <input class="form__input form__input--radio" type="radio" checked name="inlineRadioOptions"
+                        <input class="form__input form__input--radio" type="radio" name="inlineRadioOptions"
                           id="inlineRadio1" value="option1">
-                        <div class="form__custom-radio">
-                          Yes
-                        </div>
+                          <div class="form__custom-radio-wrapper">
+                            <div class="form__custom-radio"></div>
+                            <div class="form__custom-radio-title">Yes</div>
+                          </div>
                       </label>
                       <label class="form__label" for="inlineRadio2">
                         <input class="form__input form__input--radio" type="radio" name="inlineRadioOptions"
                           id="inlineRadio2" value="option2">
-                        <div class="form__custom-radio">
-                          No
-                        </div>
+                          <div class="form__custom-radio-wrapper">
+                            <div class="form__custom-radio"></div>
+                            <div class="form__custom-radio-title">No</div>
+                          </div>
                       </label>
                     </div>                    
                   </div>
@@ -93,16 +111,18 @@
                       <label class="form__label" for="inlineRadio3">
                         <input class="form__input form__input--radio" type="radio" checked name="inlineRadioOptions2"
                           id="inlineRadio3" value="option1">
-                        <div class="form__custom-radio">
-                          Yes
-                        </div>
+                          <div class="form__custom-radio-wrapper">
+                            <div class="form__custom-radio"></div>
+                            <div class="form__custom-radio-title">Yes</div>
+                          </div>
                       </label>
                       <label class="form__label" for="inlineRadio4">
                         <input class="form__input form__input--radio" type="radio" name="inlineRadioOptions2"
                           id="inlineRadio4" value="option2">
-                        <div class="form__custom-radio">
-                          No
-                        </div>
+                          <div class="form__custom-radio-wrapper">
+                            <div class="form__custom-radio"></div>
+                            <div class="form__custom-radio-title">No</div>
+                          </div>
                       </label>
                     </div>                    
                   </div>

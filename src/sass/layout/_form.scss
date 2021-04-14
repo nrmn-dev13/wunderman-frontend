@@ -34,7 +34,7 @@
       flex-direction: row;
       justify-content: center;
       .form__label {
-        width: max-content;
+        width: 100%;
         margin: 0 7px !important;
       }
     }
@@ -106,9 +106,8 @@
     }
     &--radio {
       display: none;
-      &:checked ~ .form__custom-radio {
-        background: $color-green;
-        color: $color-white;
+      &:checked ~ .form__custom-radio-wrapper .form__custom-radio  {
+        border: 5px solid $color-green;
         &::after {
           display: block;
         }
@@ -196,19 +195,28 @@
     }
   }
   &__custom-radio {
-    padding: 10px 41px;
-    cursor: pointer;
-    position: relative;
-    border-radius: 50px;
-    margin: 0;
-    background: $color-white;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
     border: 1px solid $color-green;
+    margin: 0 15px 0 0;
+  }
+  &__custom-radio-title {
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
     line-height: 19px;
-    color: $color-green;
+  }
+  &__custom-radio-wrapper {
+    padding: 15px;
+    cursor: pointer;
+    position: relative;
+    border-radius: 0;
+    border: 1px solid $color-green;
+    margin: 0;
+    display: flex;
+    align-items: center;
   }
   &__link {
     display: inherit;
