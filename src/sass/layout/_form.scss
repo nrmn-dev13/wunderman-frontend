@@ -68,16 +68,18 @@
       z-index: 1;
       cursor: pointer;
       transform: translateY(-50%);
-      width: 24px;
-      height: 24px;
       &::after {
-        font-family: "Material Icons";
-        content: "remove_red_eye";
+        font-family: "Font Awesome 5 Free";
+        content: "\f06e";
+        color: $color-dark-grey;
       }
       &.active {
         &::after {
-          content: "visibility_off";
+          content: "\f070";
         }
+      }
+      &.fa-eye:before {
+        display: none;
       }
     }
   }
