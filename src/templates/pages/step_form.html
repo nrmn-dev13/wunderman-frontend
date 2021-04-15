@@ -13,30 +13,44 @@
               <div class="form__container step-content">
                 <div class="form__tab step-tab-panel" data-step="step1">
                   <div class="form__title-wrapper">
-                    <div class="form__sub-title">Step 1 of  10</div>
+                    <div class="form__sub-title">Step 1 of 10</div>
                     <div class="form__tab-title">Please enter your home address</div>
                   </div>
                   <div class="form__step-content">
-                    <div class="card card--attention">                      
+                    <div class="card card--attention">
                       <i class="icon icon--info fas fa-info-circle"></i>
-                      <p class="card__description">We need your address to associate the temperature and humidity readings too.</p>
+                      <p class="card__description">We need your address to associate the temperature and humidity
+                        readings too.</p>
                     </div>
                     <div class="form__field">
-                      <input type="text" class="form__input" placeholder="Your address">
-                      <i class="icon icon--location material-icons" data-bs-toggle="modal"
-                        data-bs-target="#exampleModal">location_on</i>
-                    </div>                    
+                      <textarea class="form__input" name="" id="" cols="30" rows="3"
+                        placeholder="Enter your home address detail"></textarea>                      
+                    </div>
+                    <div class="form__field form__field--has-map">
+                      <div class="form__map-wrapper">                        
+                        <div class="form__map-overlay">
+                          <button type="button" class="button button--black" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal">                            
+                            <i class="icon icon--location fas fa-map-marker-alt"></i>
+                            Set Your Location
+                          </button>
+                        </div>
+                        <iframe class="form__map" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+                          src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=1%20Grafton%20Street,%20Dublin,%20Ireland+(My%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
+                      </div>
+                    </div>
                   </div>
                 </div>
                 <div class="form__tab step-tab-panel" data-step="step2">
                   <div class="form__title-wrapper">
-                    <div class="form__sub-title">Step 2 of  10</div>
+                    <div class="form__sub-title">Step 2 of 10</div>
                     <div class="form__tab-title">What is the ownership status of your home?</div>
                   </div>
                   <div class="form__step-content">
                     <div class="card card--attention">
                       <i class="icon icon--info fas fa-info-circle"></i>
-                      <p class="card__description">We use ownership status at a suburb or city level to show how ownership affects families and the healthiness of their homes.</p>
+                      <p class="card__description">We use ownership status at a suburb or city level to show how
+                        ownership affects families and the healthiness of their homes.</p>
                     </div>
                     <div class="form__field">
                       <label class="form__label form__label--inline-radio" for="ownership-one">
@@ -50,107 +64,110 @@
                       <label class="form__label form__label--inline-radio" for="ownership-two">
                         <input class="form__input form__input--radio" type="radio" name="inlineRadioOptions"
                           id="ownership-two" value="option1">
-                          <div class="form__custom-radio-wrapper">
-                            <div class="form__custom-radio"></div>
-                            <div class="form__custom-radio-title">Rent privately</div>
-                          </div>
+                        <div class="form__custom-radio-wrapper">
+                          <div class="form__custom-radio"></div>
+                          <div class="form__custom-radio-title">Rent privately</div>
+                        </div>
                       </label>
                       <label class="form__label form__label--inline-radio" for="ownership-three">
                         <input class="form__input form__input--radio" type="radio" name="inlineRadioOptions"
                           id="ownership-three" value="option1">
-                          <div class="form__custom-radio-wrapper">
-                            <div class="form__custom-radio"></div>
-                            <div class="form__custom-radio-title">Rent from Housing NZ</div>
-                          </div>
+                        <div class="form__custom-radio-wrapper">
+                          <div class="form__custom-radio"></div>
+                          <div class="form__custom-radio-title">Rent from Housing NZ</div>
+                        </div>
                       </label>
                       <label class="form__label form__label--inline-radio" for="ownership-four">
                         <input class="form__input form__input--radio" type="radio" name="inlineRadioOptions"
                           id="ownership-four" value="option1">
-                          <div class="form__custom-radio-wrapper">
-                            <div class="form__custom-radio"></div>
-                            <div class="form__custom-radio-title">Rent from City Council</div>
-                          </div>
+                        <div class="form__custom-radio-wrapper">
+                          <div class="form__custom-radio"></div>
+                          <div class="form__custom-radio-title">Rent from City Council</div>
+                        </div>
                       </label>
                       <label class="form__label form__label--inline-radio" for="ownership-five">
                         <input class="form__input form__input--radio" type="radio" name="inlineRadioOptions"
                           id="ownership-five" value="option1">
-                          <div class="form__custom-radio-wrapper">
-                            <div class="form__custom-radio"></div>
-                            <div class="form__custom-radio-title">Other</div>
-                          </div>
+                        <div class="form__custom-radio-wrapper">
+                          <div class="form__custom-radio"></div>
+                          <div class="form__custom-radio-title">Other</div>
+                        </div>
                       </label>
-                    </div>                    
-                  </div>                  
+                    </div>
+                  </div>
                 </div>
                 <div class="form__tab step-tab-panel" data-step="step3">
                   <div class="form__title-wrapper">
-                    <div class="form__sub-title">Step 3 of  10</div>
+                    <div class="form__sub-title">Step 3 of 10</div>
                     <div class="form__tab-title">Is anyone aged 14 and under present in the home?</div>
                   </div>
                   <div class="form__step-content">
                     <div class="card card--attention">
                       <i class="icon icon--info fas fa-info-circle"></i>
-                      <p class="card__description">We use the age of 14 or younger as an indicator for children being present, to understand how whānau are affected by temperature and humidity.</p>
+                      <p class="card__description">We use the age of 14 or younger as an indicator for children being
+                        present, to understand how whānau are affected by temperature and humidity.</p>
                     </div>
                     <div class="form__field form__field--has-radio">
                       <label class="form__label" for="inlineRadio1">
                         <input class="form__input form__input--radio" type="radio" name="inlineRadioOptions"
                           id="inlineRadio1" value="option1">
-                          <div class="form__custom-radio-wrapper">
-                            <div class="form__custom-radio"></div>
-                            <div class="form__custom-radio-title">Yes, there is</div>
-                          </div>
+                        <div class="form__custom-radio-wrapper">
+                          <div class="form__custom-radio"></div>
+                          <div class="form__custom-radio-title">Yes, there is</div>
+                        </div>
                       </label>
                       <label class="form__label" for="inlineRadio2">
                         <input class="form__input form__input--radio" type="radio" name="inlineRadioOptions"
                           id="inlineRadio2" value="option2">
-                          <div class="form__custom-radio-wrapper">      
-                            <div class="form__custom-radio"></div>
-                            <div class="form__custom-radio-title">No, there isn't</div>
-                          </div>
+                        <div class="form__custom-radio-wrapper">
+                          <div class="form__custom-radio"></div>
+                          <div class="form__custom-radio-title">No, there isn't</div>
+                        </div>
                       </label>
                     </div>
                   </div>
                 </div>
                 <div class="form__tab step-tab-panel" data-step="step4">
                   <div class="form__title-wrapper">
-                    <div class="form__sub-title">Step 4 of  10</div>                    
-                    <div class="form__tab-title">Is anyone aged 65 and over  present in the home?</div>
+                    <div class="form__sub-title">Step 4 of 10</div>
+                    <div class="form__tab-title">Is anyone aged 65 and over present in the home?</div>
                   </div>
                   <div class="form__step-content">
                     <div class="card card--attention">
                       <i class="icon icon--info fas fa-info-circle"></i>
-                      <p class="card__description">We use the age of 65 or older as an indicator for an elderly person being present, to understand how whānau are affected by temperature and humidity.</p>
+                      <p class="card__description">We use the age of 65 or older as an indicator for an elderly person
+                        being present, to understand how whānau are affected by temperature and humidity.</p>
                     </div>
                     <div class="form__field form__field--has-radio">
                       <label class="form__label" for="inlineRadio3">
                         <input class="form__input form__input--radio" type="radio" name="inlineRadioOptions2"
                           id="inlineRadio3" value="option1">
-                          <div class="form__custom-radio-wrapper">
-                            <div class="form__custom-radio"></div>
-                            <div class="form__custom-radio-title">Yes, there is</div>
-                          </div>
+                        <div class="form__custom-radio-wrapper">
+                          <div class="form__custom-radio"></div>
+                          <div class="form__custom-radio-title">Yes, there is</div>
+                        </div>
                       </label>
                       <label class="form__label" for="inlineRadio4">
                         <input class="form__input form__input--radio" type="radio" name="inlineRadioOptions2"
                           id="inlineRadio4" value="option2">
-                          <div class="form__custom-radio-wrapper">
-                            <div class="form__custom-radio"></div>
-                            <div class="form__custom-radio-title">No, there isn't</div>
-                          </div>
+                        <div class="form__custom-radio-wrapper">
+                          <div class="form__custom-radio"></div>
+                          <div class="form__custom-radio-title">No, there isn't</div>
+                        </div>
                       </label>
-                    </div>                    
+                    </div>
                   </div>
                 </div>
                 <div class="form__tab step-tab-panel mb-5" data-step="step5">
                   <div class="form__title-wrapper">
-                    <div class="form__sub-title">Step 5 of  10</div>
+                    <div class="form__sub-title">Step 5 of 10</div>
                     <div class="form__tab-title">Do any residents in your home identify as?</div>
                   </div>
                   <div class="form__step-content">
                     <div class="card card--attention">
                       <i class="icon icon--info fas fa-info-circle"></i>
-                      <p class="card__description">Select any and all ethnicities that apply, this information will help us show which ethnicities are affected by the health of their homes and how.</p>
+                      <p class="card__description">Select any and all ethnicities that apply, this information will help
+                        us show which ethnicities are affected by the health of their homes and how.</p>
                     </div>
                     <div class="form__field form__field--has-multiple-checkbox">
                       <label for="checkboxOne" class="form__label form__label--has-checkbox">
@@ -162,49 +179,49 @@
                       </label>
                       <label for="checkboxTwo" class="form__label form__label--has-checkbox">
                         <input id="checkboxTwo" type="checkbox" class="form__input form__input--checkbox">
-                        <div class="form__custom-checkbox-wrapper">                          
+                        <div class="form__custom-checkbox-wrapper">
                           <div class="form__custom-checkbox"></div>
                           <p class="form__text-label">African</p>
                         </div>
                       </label>
                       <label for="checkboxThree" class="form__label form__label--has-checkbox">
                         <input id="checkboxThree" type="checkbox" class="form__input form__input--checkbox">
-                        <div class="form__custom-checkbox-wrapper">                          
+                        <div class="form__custom-checkbox-wrapper">
                           <div class="form__custom-checkbox"></div>
                           <p class="form__text-label">Pacific peoples</p>
                         </div>
                       </label>
                       <label for="checkboxFour" class="form__label form__label--has-checkbox">
                         <input id="checkboxFour" type="checkbox" class="form__input form__input--checkbox">
-                        <div class="form__custom-checkbox-wrapper">                          
+                        <div class="form__custom-checkbox-wrapper">
                           <div class="form__custom-checkbox"></div>
                           <p class="form__text-label">Asian</p>
                         </div>
                       </label>
                       <label for="checkboxFive" class="form__label form__label--has-checkbox">
                         <input id="checkboxFive" type="checkbox" class="form__input form__input--checkbox">
-                        <div class="form__custom-checkbox-wrapper">                          
+                        <div class="form__custom-checkbox-wrapper">
                           <div class="form__custom-checkbox"></div>
                           <p class="form__text-label">Middle Eastern</p>
                         </div>
                       </label>
                       <label for="checkboxSix" class="form__label form__label--has-checkbox">
                         <input id="checkboxSix" type="checkbox" class="form__input form__input--checkbox">
-                        <div class="form__custom-checkbox-wrapper">                          
+                        <div class="form__custom-checkbox-wrapper">
                           <div class="form__custom-checkbox"></div>
                           <p class="form__text-label">European</p>
                         </div>
                       </label>
                       <label for="checkboxSeven" class="form__label form__label--has-checkbox">
                         <input id="checkboxSeven" type="checkbox" class="form__input form__input--checkbox">
-                        <div class="form__custom-checkbox-wrapper">                          
+                        <div class="form__custom-checkbox-wrapper">
                           <div class="form__custom-checkbox"></div>
                           <p class="form__text-label">Latin American</p>
                         </div>
                       </label>
                       <label for="checkboxEight" class="form__label form__label--has-checkbox">
                         <input id="checkboxEight" type="checkbox" class="form__input form__input--checkbox">
-                        <div class="form__custom-checkbox-wrapper">                          
+                        <div class="form__custom-checkbox-wrapper">
                           <div class="form__custom-checkbox"></div>
                           <p class="form__text-label">New Zealander</p>
                         </div>
@@ -214,25 +231,26 @@
                 </div>
                 <div class="form__tab step-tab-panel" data-step="step6">
                   <div class="form__title-wrapper">
-                    <div class="form__sub-title">Step 6 of  10</div>
+                    <div class="form__sub-title">Step 6 of 10</div>
                     <div class="form__tab-title">Does anyone in your whare have a history of?</div>
                   </div>
                   <div class="form__step-content">
                     <div class="card card--attention">
                       <i class="icon icon--info fas fa-info-circle"></i>
-                      <p class="card__description">Telling us if you or your whānau are affected by any of these health issues helps us to tell you when your home may be affecting your illness.</p>
+                      <p class="card__description">Telling us if you or your whānau are affected by any of these health
+                        issues helps us to tell you when your home may be affecting your illness.</p>
                     </div>
                     <div class="form__field form__field--has-multiple-checkbox">
                       <label for="checkboxOneB" class="form__label form__label--has-checkbox">
                         <input id="checkboxOneB" type="checkbox" class="form__input form__input--checkbox">
-                        <div class="form__custom-checkbox-wrapper">                                                    
+                        <div class="form__custom-checkbox-wrapper">
                           <div class="form__custom-checkbox"></div>
                           <p class="form__text-label">Respiratory illness</p>
                         </div>
                       </label>
                       <label for="checkboxTwoB" class="form__label form__label--has-checkbox">
                         <input id="checkboxTwoB" type="checkbox" class="form__input form__input--checkbox">
-                        <div class="form__custom-checkbox-wrapper">                                                    
+                        <div class="form__custom-checkbox-wrapper">
                           <div class="form__custom-checkbox"></div>
                           <p class="form__text-label">Rheumatic fever</p>
                         </div>
@@ -279,19 +297,22 @@
                           <p class="form__text-label">Depression</p>
                         </div>
                       </label>
-                    </div>                    
+                    </div>
                   </div>
                 </div>
                 <div class="form__tab step-tab-panel" data-step="step7">
                   <div class="form__title-wrapper">
-                    <div class="form__sub-title">Step 7 of  10</div>
+                    <div class="form__sub-title">Step 7 of 10</div>
                     <div class="form__tab-title">Select your health organization</div>
                   </div>
                   <div class="form__step-content">
                     <div class="card card--attention">
                       <i class="icon icon--info fas fa-info-circle"></i>
-                      <p class="card__description">We provide aggregated, information to your Health provider. This information is about the healthiness of your home and how it may impact on you and your whānau, so they can support your health better. 
-                        If your health professional has not talked you through our programme, please select "No organisation".</p>
+                      <p class="card__description">We provide aggregated, information to your Health provider. This
+                        information is about the healthiness of your home and how it may impact on you and your whānau,
+                        so they can support your health better.
+                        If your health professional has not talked you through our programme, please select "No
+                        organisation".</p>
                     </div>
                     <div class="form__field">
                       <label class="form__label form__label--inline-radio" for="step-seventh-one">
@@ -305,23 +326,27 @@
                       <label class="form__label form__label--inline-radio" for="step-seventh-two">
                         <input class="form__input form__input--radio" type="radio" name="inlineRadioOptions"
                           id="step-seventh-two" value="option1">
-                          <div class="form__custom-radio-wrapper">
-                            <div class="form__custom-radio"></div>
-                            <div class="form__custom-radio-title">Turanga Health</div>
-                          </div>
+                        <div class="form__custom-radio-wrapper">
+                          <div class="form__custom-radio"></div>
+                          <div class="form__custom-radio-title">Turanga Health</div>
+                        </div>
                       </label>
                     </div>
                   </div>
                 </div>
                 <div class="form__tab step-tab-panel" data-step="step8">
                   <div class="form__title-wrapper">
-                    <div class="form__sub-title">Step 8 of  10</div>
+                    <div class="form__sub-title">Step 8 of 10</div>
                     <div class="form__tab-title">Do you know your NHI Number ?</div>
                   </div>
                   <div class="form__step-content">
                     <div class="card card--attention">
                       <i class="icon icon--info fas fa-info-circle"></i>
-                      <p class="card__description">We ask for your NHI number so that your health provider can connect your healthy whare, healthy whānau report to your health records so that they will be able to see if the healthiness of your home is affecting your health. See our <span class="fw-bold">terms and conditions</span> and <span class="fw-bold">privacy statement</span> for more information</p>
+                      <p class="card__description">We ask for your NHI number so that your health provider can connect
+                        your healthy whare, healthy whānau report to your health records so that they will be able to
+                        see if the healthiness of your home is affecting your health. See our <span
+                          class="fw-bold">terms and conditions</span> and <span class="fw-bold">privacy statement</span>
+                        for more information</p>
                     </div>
                     <p class="form__text-disclaimer">If you don't know your NHI number, please select "Next"</p>
                     <div class="form__field form__field--has-inline-button">
@@ -330,53 +355,54 @@
                     </div>
                     <div class="form__field form__field--has-badges">
                       <span class="badge badge--green badge--has-icon rounded-pill">
-                        AAB9090                        
+                        AAB9090
                         <i class="icon icon--close fas fa-times"></i>
                       </span>
                       <span class="badge badge--green badge--has-icon rounded-pill">
-                        CGI8899                        
+                        CGI8899
                         <i class="icon icon--close fas fa-times"></i>
                       </span>
                       <span class="badge badge--green badge--has-icon rounded-pill">
-                        XX123GA                        
+                        XX123GA
                         <i class="icon icon--close fas fa-times"></i>
                       </span>
-                    </div>                  
+                    </div>
                   </div>
                 </div>
                 <div class="form__tab step-tab-panel" data-step="step9">
                   <div class="form__title-wrapper">
-                    <div class="form__sub-title">Step 9 of  10</div>
+                    <div class="form__sub-title">Step 9 of 10</div>
                     <div class="form__tab-title">Do you have a internet capable device in your home?</div>
                   </div>
                   <div class="form__step-content">
                     <div class="card card--attention">
                       <i class="icon icon--info fas fa-info-circle"></i>
-                      <p class="card__description">Mānawa can only be used on a internet capable device, do you have one?</p>
+                      <p class="card__description">Mānawa can only be used on a internet capable device, do you have
+                        one?</p>
                     </div>
                     <div class="form__field form__field--has-radio">
                       <label class="form__label" for="step-nineth-one">
                         <input class="form__input form__input--radio" type="radio" name="inlineRadioOptions"
                           id="step-nineth-one" value="option1">
-                          <div class="form__custom-radio-wrapper">
-                            <div class="form__custom-radio"></div>
-                            <div class="form__custom-radio-title">Yes, I Do</div>
-                          </div>
+                        <div class="form__custom-radio-wrapper">
+                          <div class="form__custom-radio"></div>
+                          <div class="form__custom-radio-title">Yes, I Do</div>
+                        </div>
                       </label>
                       <label class="form__label" for="step-nineth-two">
                         <input class="form__input form__input--radio" type="radio" name="inlineRadioOptions"
                           id="step-nineth-two" value="option2">
-                          <div class="form__custom-radio-wrapper">
-                            <div class="form__custom-radio"></div>
-                            <div class="form__custom-radio-title">No, I Don't</div>
-                          </div>
+                        <div class="form__custom-radio-wrapper">
+                          <div class="form__custom-radio"></div>
+                          <div class="form__custom-radio-title">No, I Don't</div>
+                        </div>
                       </label>
                     </div>
                   </div>
                 </div>
                 <div class="form__tab step-tab-panel" data-step="step10">
                   <div class="form__title-wrapper">
-                    <div class="form__sub-title">Step 10 of  10</div>
+                    <div class="form__sub-title">Step 10 of 10</div>
                     <div class="form__tab-title">Do you have a internet connection?</div>
                   </div>
                   <div class="form__step-content">
@@ -388,25 +414,26 @@
                       <label class="form__label" for="step-tenth-one">
                         <input class="form__input form__input--radio" type="radio" name="inlineRadioOptions"
                           id="step-tenth-one" value="option1">
-                          <div class="form__custom-radio-wrapper">
-                            <div class="form__custom-radio"></div>
-                            <div class="form__custom-radio-title">Yes, I Do</div>
-                          </div>
+                        <div class="form__custom-radio-wrapper">
+                          <div class="form__custom-radio"></div>
+                          <div class="form__custom-radio-title">Yes, I Do</div>
+                        </div>
                       </label>
                       <label class="form__label" for="step-tenth-two">
                         <input class="form__input form__input--radio" type="radio" name="inlineRadioOptions"
                           id="step-tenth-two" value="option2">
-                          <div class="form__custom-radio-wrapper">
-                            <div class="form__custom-radio"></div>
-                            <div class="form__custom-radio-title">No, I Don't</div>
-                          </div>
+                        <div class="form__custom-radio-wrapper">
+                          <div class="form__custom-radio"></div>
+                          <div class="form__custom-radio-title">No, I Don't</div>
+                        </div>
                       </label>
                     </div>
                   </div>
                 </div>
                 <div class="step-footer step-guide__navigation">
                   <!-- <i data-step-action="prev" class="step-btn icon icon--back material-icons">arrow_back</i> -->
-                  <button data-step-action="prev" class="step-btn button button--black-outline" type="button">Previous</button>
+                  <button data-step-action="prev" class="step-btn button button--black-outline"
+                    type="button">Previous</button>
                   <button data-step-action="next" class="step-btn button button--black" type="button">Next</button>
                   <button data-step-action="finish" class="step-btn button button--black">Finish</button>
                 </div>
@@ -436,12 +463,17 @@
   aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
-      <div class="modal-body">
-        <div class="modal-cta">
-          <i class="icon icon-close material-icons" data-bs-dismiss="modal" aria-label="Close">close</i>
-        </div>
+      <div class="modal-body">        
         <iframe class="modal-map" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
           src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=1%20Grafton%20Street,%20Dublin,%20Ireland+(My%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
+          <div class="form__field">
+            <input type="text" class="form__input" placeholder="Your address">
+            <i class="icon icon--location material-icons">location_on</i>
+          </div>
+      </div>
+      <div class="modal-footer">
+        <button class="button button--white" data-bs-dismiss="modal">Cancel</button>
+        <button class="button button--green">Confirmation</button>
       </div>
     </div>
   </div>
