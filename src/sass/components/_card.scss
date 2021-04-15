@@ -12,6 +12,8 @@
     border-color: $bg-yellow;
     border-radius: 0;
     border-bottom: 5px solid $color-green;
+    display: flex;
+    align-items: center;
     .icon {
       margin: 0 6px 0 0;
       font-size: 36px;

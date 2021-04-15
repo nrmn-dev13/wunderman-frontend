@@ -72,18 +72,12 @@
           flex-wrap: wrap;
           width: 100%;
           margin: 0 auto 16px;
-          @include for-size(tablet) {
-            width: 60%;
-          }
-          @include for-size(desktop) {
-            width: 60%;
-          }
-          @include for-size(ipad-pro) {
-            width: 60%;
-          }
+          justify-content: space-between;
           .form__label--has-checkbox {
-            width: 50%;
-            margin: 0 0 10px !important;
+            width: 48%;
+            margin: 0 0 25px !important;
+            border: 1px solid $color-green;
+            padding: 16px 13px;
           }
         }
         &.form__field--has-multiple-checkbox ~ .card--attention {

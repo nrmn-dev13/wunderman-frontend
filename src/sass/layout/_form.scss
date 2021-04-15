@@ -106,7 +106,8 @@
     width: 100%;
     &--checkbox {
       display: none;
-      &:checked ~ .form__custom-checkbox-wrapper .form__custom-checkbox {        
+      &:checked ~ .form__custom-checkbox-wrapper .form__custom-checkbox {
+        background-color: $color-green;
         &::after {
           display: block;
         }
@@ -115,7 +116,7 @@
     &--radio {
       display: none;
       &:checked ~ .form__custom-radio-wrapper .form__custom-radio  {
-        border: 5px solid $color-green;
+        border: 5px solid $color-green;        
         &::after {
           display: block;
         }
@@ -137,6 +138,7 @@
   &__custom-checkbox-wrapper {    
     display: flex;
     align-items: center;
+    position: relative;
   }
   &__custom-checkbox {
     cursor: pointer;
@@ -155,8 +157,8 @@
       content: "\f00c";
       display: none;
       font-weight: bold;
-      color: $color-green;
-      font-size: 13px;
+      color: $color-white;
+      font-size: 10px;
       @include absolute(top 50% left 50%);
       transform: translate3d(-50%, -50%, 0);
     }
