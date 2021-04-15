@@ -23,6 +23,11 @@
     color: $color-black;
     margin: 0 0 15px 0;
   }
+  &__tab {
+    &.active[data-step="step1"] ~ .step-guide__navigation {
+      justify-content: flex-end;
+    }
+  }
   &__field {
     position: relative;
     display: flex;
@@ -36,6 +41,30 @@
       .form__label {
         width: 100%;
         margin: 0 7px !important;
+      }
+    }
+    &--has-inline-button {
+      display: flex;
+      flex-direction: row;
+      .form__input {
+        display: flex;
+        flex: 1 1 auto;
+        width: auto;
+        margin-right: 30px;
+      }
+      .button {
+        display: flex;
+        flex: 0 0 auto;
+        padding: 10px 24px;
+      }
+    }
+    &--has-badges {
+      margin: 25px 0 0 !important;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      .badge {
+        margin:0 15px 10px 0;
       }
     }
   }
@@ -220,6 +249,15 @@
       color: $color-green;
       display: inline;
     }
+  }
+  &__text-disclaimer {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 28px;    
+    color: $color-red;
+    margin: 0 0 31px;
   }
   &__italic {
     font-family: Roboto;

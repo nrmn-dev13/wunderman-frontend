@@ -111,7 +111,7 @@
           @include absolute(top 0);
         }
         .form__text-label {
-          margin: 0 0 0 21px;
+          margin: 0 0 0 26px;
           font-family: Roboto;
           font-style: normal;
           font-weight: 300;
@@ -151,6 +151,17 @@
             background-color: $bg-black;
             border: 1px solid $color-white;
             color: $color-white;
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 20px;
+            line-height: 28px;
+            width: 47%;
+            &.button--black-outline {
+              background-color: $color-white;
+              color: $color-black;
+              border: 1px solid $color-black;
+            }
             &.icon--back {
               border: none;
               padding: 0;

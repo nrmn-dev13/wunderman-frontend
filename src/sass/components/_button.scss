@@ -14,4 +14,14 @@
     background-color: $bg-black;
     border: 1px solid $bg-black;
   }
+  &.button--green {
+    background-color: $color-green;
+    color: $color-white;
+    border: 1px solid $color-green;
+  }
+  &.button--black-outline {
+    background-color: $color-white;
+    color: $color-black;
+    border: 1px solid $color-black;
+  }
 }

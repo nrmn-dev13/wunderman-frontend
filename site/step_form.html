@@ -162,7 +162,7 @@
                     </div>
                     <div class="form__field form__field--has-radio">
                       <label class="form__label" for="inlineRadio3">
-                        <input class="form__input form__input--radio" type="radio" checked name="inlineRadioOptions2"
+                        <input class="form__input form__input--radio" type="radio" name="inlineRadioOptions2"
                           id="inlineRadio3" value="option1">
                           <div class="form__custom-radio-wrapper">
                             <div class="form__custom-radio"></div>
@@ -354,56 +354,32 @@
                 <div class="form__tab step-tab-panel" data-step="step8">
                   <div class="form__title-wrapper">
                     <div class="form__sub-title">Step 8 of  10</div>
-                    <div class="form__tab-title">Do any residents in your home have any of the following?</div>
+                    <div class="form__tab-title">Do you know your NHI Number ?</div>
                   </div>
                   <div class="form__step-content">
                     <div class="card card--attention">
                       <i class="icon icon--info fas fa-info-circle"></i>
-                      <p class="card__description">Telling us if you or your whānau are affected by any of these health
-                        issues helps us to tell you when and how your home may be affecting your illness.</p>
+                      <p class="card__description">We ask for your NHI number so that your health provider can connect your healthy whare, healthy whānau report to your health records so that they will be able to see if the healthiness of your home is affecting your health. See our <span class="fw-bold">terms and conditions</span> and <span class="fw-bold">privacy statement</span> for more information</p>
                     </div>
-                    <div class="form__field form__field--has-multiple-checkbox">
-                      <label for="checkboxOneB" class="form__label form__label--has-checkbox">
-                        <input id="checkboxOneB" type="checkbox" class="form__input form__input--checkbox">
-                        <div class="form__custom-checkbox"></div>
-                        <p class="form__text-label">Respiratory illness</p>
-                      </label>
-                      <label for="checkboxTwoB" class="form__label form__label--has-checkbox">
-                        <input id="checkboxTwoB" type="checkbox" class="form__input form__input--checkbox">
-                        <div class="form__custom-checkbox"></div>
-                        <p class="form__text-label">Rheumatic fever</p>
-                      </label>
-                      <label for="checkboxThreeB" class="form__label form__label--has-checkbox">
-                        <input id="checkboxThreeB" type="checkbox" class="form__input form__input--checkbox">
-                        <div class="form__custom-checkbox"></div>
-                        <p class="form__text-label">Asthma</p>
-                      </label>
-                      <label for="checkboxFourB" class="form__label form__label--has-checkbox">
-                        <input id="checkboxFourB" type="checkbox" class="form__input form__input--checkbox">
-                        <div class="form__custom-checkbox"></div>
-                        <p class="form__text-label">Mental health issues</p>
-                      </label>
-                      <label for="checkboxFiveB" class="form__label form__label--has-checkbox">
-                        <input id="checkboxFiveB" type="checkbox" class="form__input form__input--checkbox">
-                        <div class="form__custom-checkbox"></div>
-                        <p class="form__text-label">Eczema</p>
-                      </label>
-                      <label for="checkboxSixB" class="form__label form__label--has-checkbox">
-                        <input id="checkboxSixB" type="checkbox" class="form__input form__input--checkbox">
-                        <div class="form__custom-checkbox"></div>
-                        <p class="form__text-label">Anxiety</p>
-                      </label>
-                      <label for="checkboxSevenB" class="form__label form__label--has-checkbox">
-                        <input id="checkboxSevenB" type="checkbox" class="form__input form__input--checkbox">
-                        <div class="form__custom-checkbox"></div>
-                        <p class="form__text-label">Allergies</p>
-                      </label>
-                      <label for="checkboxEightB" class="form__label form__label--has-checkbox">
-                        <input id="checkboxEightB" type="checkbox" class="form__input form__input--checkbox">
-                        <div class="form__custom-checkbox"></div>
-                        <p class="form__text-label">Depression</p>
-                      </label>
-                    </div>                    
+                    <p class="form__text-disclaimer">If you don't know your NHI number, please select "Next"</p>
+                    <div class="form__field form__field--has-inline-button">
+                      <input type="text" class="form__input" placeholder="Eg. AAB9090">
+                      <button class="button button--green">Add</button>
+                    </div>
+                    <div class="form__field form__field--has-badges">
+                      <span class="badge badge--green badge--has-icon rounded-pill">
+                        AAB9090                        
+                        <i class="icon icon--close fas fa-times"></i>
+                      </span>
+                      <span class="badge badge--green badge--has-icon rounded-pill">
+                        CGI8899                        
+                        <i class="icon icon--close fas fa-times"></i>
+                      </span>
+                      <span class="badge badge--green badge--has-icon rounded-pill">
+                        XX123GA                        
+                        <i class="icon icon--close fas fa-times"></i>
+                      </span>
+                    </div>                  
                   </div>
                 </div>
                 <div class="form__tab step-tab-panel" data-step="step9">
@@ -468,7 +444,7 @@
                 </div>
                 <div class="step-footer step-guide__navigation">
                   <!-- <i data-step-action="prev" class="step-btn icon icon--back material-icons">arrow_back</i> -->
-                  <button data-step-action="prev" class="step-btn button button--black" type="button">Previous</button>
+                  <button data-step-action="prev" class="step-btn button button--black-outline" type="button">Previous</button>
                   <button data-step-action="next" class="step-btn button button--black" type="button">Next</button>
                   <button data-step-action="finish" class="step-btn button button--black">Finish</button>
                 </div>
