@@ -7,7 +7,7 @@
   <section class="step-guide__section">
     <div class="container-fluid">
       <div class="step-guide__row row justify-content-center">
-        <div class="col-sm-12 col-md-10 col-lg-10 col-xl-8 justify-content-center">
+        <div class="col-sm-12 col-md-10 col-lg-10 col-xl-8 justify-content-center p-0">
           <div class="step-guide__form">
             <form class="form step-app" id="stepForm">
               <div class="form__container step-content">
@@ -467,8 +467,10 @@
         <iframe class="modal-map" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
           src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=1%20Grafton%20Street,%20Dublin,%20Ireland+(My%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
           <div class="form__field">
-            <input type="text" class="form__input" placeholder="Your address">
-            <i class="icon icon--location material-icons">location_on</i>
+            <div class="form__input-wrapper form__input-wrapper--has-icon">
+              <input type="text" class="form__input" placeholder="Your address">
+              <i class="icon icon--location fas fa-map-marker-alt"></i>
+            </div>
           </div>
       </div>
       <div class="modal-footer">

@@ -193,6 +193,8 @@
     }
   }
   &__custom-radio {
+    display: flex;
+    flex: 0 0 auto;
     width: 25px;
     height: 25px;
     border-radius: 50%;
@@ -203,7 +205,7 @@
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
-    font-size: 16px;
+    font-size: 20px;
     line-height: 19px;
   }
   &__custom-radio-wrapper {
@@ -232,8 +234,17 @@
   }
   &__step-content {
     background-color: $bg-white;
-    padding: 50px 80px;
+    padding: 0;
     min-height: 450px;
+    @include for-size(tablet) {
+      padding: 50px 80px;
+    }
+    @include for-size(desktop) {
+      padding: 50px 80px;
+    }
+    @include for-size(tablet) {
+      padding: 50px 80px;
+    }
   }
   &__text-helper {
     font-family: Roboto;

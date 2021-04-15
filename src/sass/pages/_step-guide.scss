@@ -22,10 +22,16 @@
       position: relative;
       &::before {
         content: '';
-        background-color: $color-green;
+        background-color: $bg-white;
         height: 33.33%;
         position: absolute;
         width: 100%;
+        @include for-size (desktop) {
+          background-color: $color-green;
+        }
+        @include for-size (ipad-pro) {
+          background-color: $bg-white;
+        }
       }
     }
   }
@@ -67,6 +73,16 @@
       }
       .form__field {
         margin: 0 auto;
+        padding: 0 16px;
+        @include for-size(tablet) {
+          padding: 0;
+        }
+        @include for-size(desktop) {
+          padding: 0;
+        }
+        @include for-size(tablet) {
+          padding: 0;
+        }
         &.form__field--has-multiple-checkbox {
           flex-direction: row;
           flex-wrap: wrap;
@@ -85,26 +101,57 @@
         }
       }
       .form__title-wrapper {
-        margin: 23px 50px;
+        margin: 12px 15px 21px;
+        @include for-size (desktop) {
+          margin: 23px 50px;
+        }
       }
       .form__tab-title {
         font-family: Roboto;
         font-style: normal;
         font-weight: 300;
-        font-size: 24px;
-        line-height: 34px;
+        font-size: 16px;
+        line-height: 22px;
         text-align: left;        
-        color: $color-white;
+        color: $color-black;
+        @include for-size(tablet) {
+          font-size: 24px;
+          line-height: 34px;
+        }
+        @include for-size(desktop) {
+          color: $color-white;
+          font-size: 24px;
+          line-height: 34px;
+        }
+        @include for-size(ipad-pro) {
+          color: $color-black;
+          font-size: 24px;
+          line-height: 34px;
+        }
       }
       .form__sub-title {
         font-family: Roboto;
         font-style: normal;
         font-weight: 300;
-        font-size: 20px;
-        line-height: 28px;
+        font-size: 16px;
+        line-height: 22px;
         text-align: left;
-        color: $color-white;
+        color: $color-dark-grey;
         margin: 0 0 10px;
+        @include for-size(tablet) {          
+          font-size: 20px;
+          line-height: 28px;
+        }
+        @include for-size(desktop) {
+          color: $color-white;
+          font-size: 20px;
+          line-height: 28px;
+        }
+        @include for-size(ipad-pro) {
+          color: $color-dark-grey;
+          font-size: 20px;
+          line-height: 28px;
+        }
       }
       .form__label--has-checkbox {
         .form__custom-checkbox {
@@ -115,7 +162,7 @@
           font-family: Roboto;
           font-style: normal;
           font-weight: 300;
-          font-size: 14px;
+          font-size: 16px;
           line-height: normal;
         }
       }
@@ -178,7 +225,16 @@
     justify-content: space-between;
     background-color: #F5F5F5;
     padding: 21px 80px;
-    margin: 0 80px;
+    margin: 0;
+    @include for-size(tablet) {
+      margin: 0 80px;
+    }
+    @include for-size(desktop) {
+      margin: 0 80px;
+    }
+    @include for-size(ipad-pro) {
+      margin: 0 80px;
+    }
     .button {
       padding: 11px 22px;
     }

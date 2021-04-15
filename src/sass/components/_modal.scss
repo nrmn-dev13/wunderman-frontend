@@ -23,6 +23,7 @@
     .modal-body {
       padding: 0;
       z-index: 0;
+      position: relative;
       @include for-size(tablet) {
         padding: 1.75rem 1rem 1rem;
       }
@@ -31,7 +32,18 @@
       }
       @include for-size(ipad-pro) {
         padding: 1.75rem 1rem 1rem;
-      }      
+      }
+      .form__field {
+        @include absolute(top 55px left 0 right 0);
+        width: 90%;
+        margin: 0 auto;
+        .form__input-wrapper--has-icon {
+          .icon.icon--location {
+            @include absolute(top 50% right 12px);
+            transform: translateY(-50%);
+          }
+        }
+      }
     }
     .modal-dialog.modal-dialog-centered {
       align-items: normal;
