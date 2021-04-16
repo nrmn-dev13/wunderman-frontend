@@ -173,10 +173,18 @@
     font-family: Roboto;
     font-style: normal;
     font-weight: 300;
-    font-size: 14px;
-    line-height: 14px;
-    color: $color-grey;
     width: 100%;
+    font-size: 16px;
+    line-height: 22px;
+    color: $color-black;
+    @include for-size(desktop) {
+      font-size: 20px;
+      line-height: 28px;
+    }
+    @include for-size(ipad-pro) {
+      font-size: 16px;
+      line-height: 22px;
+    }
     &--checkbox {
       display: none;
       &:checked ~ .form__custom-checkbox-wrapper .form__custom-checkbox {
