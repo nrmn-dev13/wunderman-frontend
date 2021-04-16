@@ -20,16 +20,6 @@
   &__row {
     &.row.justify-content-center {
       position: relative;
-      padding-bottom: 82px;
-      @include for-size(tablet) {
-        padding-bottom: 82px;
-      }
-      @include for-size(desktop) {
-        padding-bottom: 0;
-      }
-      @include for-size(tablet) {
-        padding-bottom: 82px;
-      }
       &::before {
         content: '';
         background-color: $bg-white;
