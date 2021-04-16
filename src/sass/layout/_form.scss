@@ -36,11 +36,29 @@
     margin: 0 0 16px 0;
     &--has-radio {
       display: flex;
-      flex-direction: row;
+      flex-direction: column;
       justify-content: center;
+      @include for-size(tablet) {
+        flex-direction: row;
+      }
+      @include for-size(desktop) {
+        flex-direction: row;
+      }
+      @include for-size(ipad-pro) {
+        flex-direction: row;
+      }
       .form__label {
         width: 100%;
-        margin: 0 7px !important;
+        margin: 0 0 15px!important;
+        @include for-size(tablet) {
+          margin: 0 7px !important;
+        }
+        @include for-size(desktop) {
+          margin: 0 7px !important;
+        }
+        @include for-size(ipad-pro) {
+          margin: 0 7px !important;
+        }
       }
     }
     &--has-inline-button {
@@ -50,7 +68,16 @@
         display: flex;
         flex: 1 1 auto;
         width: auto;
-        margin-right: 30px;
+        margin-right: 15px;
+        @include for-size(tablet) {
+          margin-right: 30px;
+        }
+        @include for-size(desktop) {
+          margin-right: 30px;
+        }
+        @include for-size(ipad-pro) {
+          margin-right: 30px;
+        }
       }
       .button {
         display: flex;
@@ -205,8 +232,16 @@
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
-    font-size: 20px;
-    line-height: 19px;
+    font-size: 14px;
+    line-height: 20px;
+    @include for-size (desktop) {
+      font-size: 20px;
+      line-height: 28px;
+    }
+    @include for-size (ipad-pro) {
+      font-size: 20px;
+      line-height: 28px;
+    }
   }
   &__custom-radio-wrapper {
     padding: 15px;
@@ -265,10 +300,22 @@
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
-    font-size: 20px;
-    line-height: 28px;    
+    font-size: 14px;
+    line-height: 20px;    
     color: $color-red;
-    margin: 0 0 31px;
+    margin: 0 12px 31px;
+    @include for-size (tablet) {
+      font-size: 20px;
+      line-height: 28px;
+    }
+    @include for-size (desktop) {
+      margin: 0 0 31px;
+      font-size: 20px;
+      line-height: 28px;
+    }
+    @include for-size (ipad-pro) {
+      margin: 0 12px 31px;
+    }
   }
   &__italic {
     font-family: Roboto;
@@ -329,10 +376,22 @@
       font-family: Roboto;
       font-style: normal;
       font-weight: normal;
-      font-size: 20px;
+      font-size: 14px;
+      line-height: 20px;
       color: $color-white;
       display: flex;
       align-items: center;
+      padding: 5px 10px;
+      @include for-size(desktop) {
+        font-size: 20px;
+        line-height: 28px;
+        padding: 12px 13px;
+      }
+      @include for-size(ipad-pro) {
+        font-size: 20px;
+        line-height: 28px;
+        padding: 12px 13px;
+      }
     }
   }
   &__map {

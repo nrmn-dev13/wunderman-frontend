@@ -15,13 +15,28 @@
     display: flex;
     align-items: center;
     .icon {
-      margin: 0 24px 0 0;
+      margin: 0 15px 0 0;
       font-size: 36px;
       opacity: 0.5;
+      @include for-size (tablet) {
+        margin: 0 21px 0 0;
+      }
+      @include for-size (tablet) {
+        margin: 0 24px 0 0;
+      }
+      @include for-size (tablet) {
+        margin: 0 21px 0 0;
+      }
     }
     .card__description {
-      font-size: 16px;
+      font-size: 12px;
       line-height: 28px;
+      @include for-size(desktop) {
+        font-size: 16px;
+      }
+      @include for-size(ipad-pro) {
+        font-size: 16px;
+      }
     }
   }
   &__description {

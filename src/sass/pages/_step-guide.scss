@@ -90,10 +90,22 @@
           margin: 0 auto 16px;
           justify-content: space-between;
           .form__label--has-checkbox {
-            width: 48%;
-            margin: 0 0 25px !important;
+            width: 100%;
+            margin: 0 0 15px !important;
             border: 1px solid $color-green;
             padding: 16px 13px;
+            @include for-size(tablet) {
+              width: 48%;
+              margin: 0 0 25px !important;
+            }
+            @include for-size(desktop) {
+              width: 48%;
+              margin: 0 0 25px !important;
+            }
+            @include for-size(ipad-pro) {
+              width: 48%;
+              margin: 0 0 25px !important;
+            }
           }
         }
         &.form__field--has-multiple-checkbox ~ .card--attention {
@@ -162,8 +174,16 @@
           font-family: Roboto;
           font-style: normal;
           font-weight: 300;
-          font-size: 16px;
-          line-height: normal;
+          font-size: 14px;
+          line-height: 20px;
+          @include for-size (desktop) {
+            font-size: 16px;
+            line-height: 22px;
+          }
+          @include for-size (ipad-pro) {
+            font-size: 16px;
+            line-height: 22px;
+          }
         }
       }
       .card--attention {
@@ -171,6 +191,16 @@
       }
       &.step-app{
         position: relative;
+        padding-bottom: 82px;
+        @include for-size(tablet) {
+          padding-bottom: 82px;
+        }
+        @include for-size(desktop) {
+          padding-bottom: 0;
+        }
+        @include for-size(tablet) {
+          padding-bottom: 82px;
+        }
         .step-steps {
           li {
             flex: 0;
@@ -194,16 +224,26 @@
         .step-footer {
           .step-btn {
             border-radius: 5px;
-            padding: 11px 22px;
+            padding: 5px;
             background-color: $bg-black;
             border: 1px solid $color-white;
             color: $color-white;
             font-family: Roboto;
             font-style: normal;
             font-weight: normal;
-            font-size: 20px;
-            line-height: 28px;
             width: 47%;
+            font-size: 14px;
+            line-height: 20px;
+            @include for-size (desktop) {
+              font-size: 20px;
+              line-height: 28px;
+              padding: 10px;
+            }
+            @include for-size (desktop) {
+              font-size: 20px;
+              line-height: 28px;
+              padding: 10px;
+            }
             &.button--black-outline {
               background-color: $color-white;
               color: $color-black;
@@ -224,19 +264,25 @@
     display: flex;
     justify-content: space-between;
     background-color: #F5F5F5;
-    padding: 21px 80px;
+    padding: 21px 16px;
     margin: 0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
     @include for-size(tablet) {
       margin: 0 80px;
+      padding: 21px 80px;
     }
     @include for-size(desktop) {
       margin: 0 80px;
+      padding: 21px 80px;
+      position: relative;
     }
     @include for-size(ipad-pro) {
       margin: 0 80px;
-    }
-    .button {
-      padding: 11px 22px;
+      padding: 21px 80px;
+      position: fixed;
     }
   }
   &__indicator {
