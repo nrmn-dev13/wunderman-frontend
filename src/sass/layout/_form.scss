@@ -25,7 +25,7 @@
   }
   &__tab {
     &.active[data-step="step1"] ~ .step-guide__navigation {
-      justify-content: center;
+      justify-content: flex-end;
     }
   }
   &__field {
