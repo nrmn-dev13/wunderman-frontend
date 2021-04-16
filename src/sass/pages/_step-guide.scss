@@ -114,6 +114,7 @@
             margin: 0 0 15px !important;
             border: 1px solid $color-green;
             padding: 16px 13px;
+            cursor: pointer;
             @include for-size(tablet) {
               width: 48%;
               margin: 0 0 25px !important;
