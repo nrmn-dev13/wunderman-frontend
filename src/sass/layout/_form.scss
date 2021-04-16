@@ -274,7 +274,7 @@
     @include for-size(desktop) {
       padding: 50px 80px;
     }
-    @include for-size(tablet) {
+    @include for-size(ipad-pro) {
       padding: 0;
     }
   }
