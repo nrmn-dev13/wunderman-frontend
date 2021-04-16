@@ -25,7 +25,7 @@
   }
   &__tab {
     &.active[data-step="step1"] ~ .step-guide__navigation {
-      justify-content: flex-end;
+      justify-content: center;
     }
   }
   &__field {
@@ -271,14 +271,11 @@
     background-color: $bg-white;
     padding: 0;
     min-height: 450px;
-    @include for-size(tablet) {
-      padding: 50px 80px;
-    }
     @include for-size(desktop) {
       padding: 50px 80px;
     }
     @include for-size(tablet) {
-      padding: 50px 80px;
+      padding: 0;
     }
   }
   &__text-helper {
@@ -303,18 +300,19 @@
     font-size: 14px;
     line-height: 20px;    
     color: $color-red;
-    margin: 0 12px 31px;
+    margin: 0 12px 30px;
     @include for-size (tablet) {
+      margin: 0 39px 30px;
       font-size: 20px;
       line-height: 28px;
     }
     @include for-size (desktop) {
-      margin: 0 0 31px;
+      margin: 0 0 30px;
       font-size: 20px;
       line-height: 28px;
     }
     @include for-size (ipad-pro) {
-      margin: 0 12px 31px;
+      margin: 0 39px 30px;
     }
   }
   &__italic {
