@@ -79,6 +79,7 @@
       padding: 22px 16px;
       display: flex;
       justify-content: space-between;
+      border-top: none;
       @include for-size(tablet) {
         padding: 21px 39px;
       }

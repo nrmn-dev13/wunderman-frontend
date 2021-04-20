@@ -290,13 +290,11 @@
     @include for-size(tablet) {      
       padding: 21px 80px;
     }
-    @include for-size(desktop) {
-      margin: 0 80px;
+    @include for-size(desktop) {      
       padding: 21px 80px;
       position: relative;
     }
-    @include for-size(ipad-pro) {
-      margin: 0;
+    @include for-size(ipad-pro) {      
       padding: 21px 80px;
       position: fixed;
     }
