@@ -37,7 +37,7 @@
     &--has-radio {
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      justify-content: space-between;
       @include for-size(tablet) {
         flex-direction: row;
       }
@@ -49,15 +49,18 @@
       }
       .form__label {
         width: 100%;
-        margin: 0 0 15px!important;
+        margin: 0 0 15px !important;
         @include for-size(tablet) {
-          margin: 0 7px !important;
+          margin: 0 !important;
+          width: 48%;
         }
         @include for-size(desktop) {
-          margin: 0 7px !important;
+          margin: 0 !important;
+          width: 48%;
         }
         @include for-size(ipad-pro) {
-          margin: 0 7px !important;
+          margin: 0 !important;
+          width: 48%;
         }
       }
     }
@@ -92,7 +95,7 @@
       flex-direction: row;
       flex-wrap: wrap;
       .badge {
-        margin:0 15px 10px 0;
+        margin: 0 15px 10px 0;
       }
     }
     &--has-map {
@@ -134,14 +137,18 @@
       }
     }
     &--inline-radio {
+      .form__custom-radio {
+        margin: 0;
+      }
       .form__custom-radio-wrapper {
         flex-direction: row-reverse;
         justify-content: space-between;
         border: none;
-        border-bottom: 1px solid #E0E0E0;        
+        border-bottom: 1px solid #e0e0e0;
+        padding: 15px 0;
       }
       &:last-child {
-        .form__custom-radio-wrapper {          
+        .form__custom-radio-wrapper {
           border-bottom: 0px solid transparent;
         }
       }
@@ -172,7 +179,7 @@
   }
   &__input {
     background: $bg-white;
-    border: 1px solid #CED4DA;
+    border: 1px solid #ced4da;
     box-sizing: border-box;
     border-radius: 4px;
     padding: 10px 10px;
@@ -202,27 +209,31 @@
     }
     &--radio {
       display: none;
-      &:checked ~ .form__custom-radio-wrapper .form__custom-radio  {
-        border: 5px solid $color-green;        
+      &:checked ~ .form__custom-radio-wrapper .form__custom-radio {
+        border: 5px solid $color-green;
         &::after {
           display: block;
         }
       }
     }
-    &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-      color: #E0E0E0;
+    &::-webkit-input-placeholder {
+      /* Chrome/Opera/Safari */
+      color: #e0e0e0;
     }
-    &::-moz-placeholder { /* Firefox 19+ */
-      color: #E0E0E0;
+    &::-moz-placeholder {
+      /* Firefox 19+ */
+      color: #e0e0e0;
     }
-    &:-ms-input-placeholder { /* IE 10+ */
-      color: #E0E0E0;
+    &:-ms-input-placeholder {
+      /* IE 10+ */
+      color: #e0e0e0;
     }
-    &:-moz-placeholder { /* Firefox 18- */
-      color: #E0E0E0;
+    &:-moz-placeholder {
+      /* Firefox 18- */
+      color: #e0e0e0;
     }
   }
-  &__custom-checkbox-wrapper {    
+  &__custom-checkbox-wrapper {
     display: flex;
     align-items: center;
     position: relative;
@@ -265,11 +276,11 @@
     font-weight: normal;
     font-size: 14px;
     line-height: 20px;
-    @include for-size (desktop) {
+    @include for-size(desktop) {
       font-size: 20px;
       line-height: 28px;
     }
-    @include for-size (ipad-pro) {
+    @include for-size(ipad-pro) {
       font-size: 20px;
       line-height: 28px;
     }
@@ -329,20 +340,20 @@
     font-style: normal;
     font-weight: normal;
     font-size: 14px;
-    line-height: 20px;    
+    line-height: 20px;
     color: $color-red;
     margin: 0 12px 30px;
-    @include for-size (tablet) {
+    @include for-size(tablet) {
       margin: 0 39px 30px;
       font-size: 20px;
       line-height: 28px;
     }
-    @include for-size (desktop) {
+    @include for-size(desktop) {
       margin: 0 0 30px;
       font-size: 20px;
       line-height: 28px;
     }
-    @include for-size (ipad-pro) {
+    @include for-size(ipad-pro) {
       margin: 0 39px 30px;
     }
   }
@@ -359,7 +370,7 @@
     }
     @include for-size(desktop) {
       font-size: 20px;
-      line-height: 28px
+      line-height: 28px;
     }
     @include for-size(tablet) {
       font-size: 16px;
@@ -425,8 +436,8 @@
     @include absolute(top 0 left 0 right 0 bottom 0);
     display: flex;
     align-items: center;
-    justify-content: center;    
-    background-color:rgba(255, 255, 255, 0.5);
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.5);
     .icon.icon--location {
       margin-right: 10px;
     }
