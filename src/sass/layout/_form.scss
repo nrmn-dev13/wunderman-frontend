@@ -138,7 +138,12 @@
         flex-direction: row-reverse;
         justify-content: space-between;
         border: none;
-        border-bottom: 1px solid #E0E0E0;
+        border-bottom: 1px solid #E0E0E0;        
+      }
+      &:last-child {
+        .form__custom-radio-wrapper {          
+          border-bottom: 0px solid transparent;
+        }
       }
     }
   }
