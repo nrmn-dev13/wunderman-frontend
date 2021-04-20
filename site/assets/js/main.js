@@ -12,7 +12,18 @@ $(document).ready(function () {
         password.attr("type", "password");        
       }
     });
-  }  
+  }
+  function handleReadMore() {
+    $('.button--read-more').click(function(){
+      if ($(this).closest(".card--attention").hasClass('expanded')) {
+        $(this).html( "Read More" );
+      } else {
+        $(this).html( "Less" );
+      }
+      $(this).closest(".card--attention").toggleClass('expanded');
+    })
+  }
   handleStepForm();
   handleTogglePassword();
+  handleReadMore();
 }); 
