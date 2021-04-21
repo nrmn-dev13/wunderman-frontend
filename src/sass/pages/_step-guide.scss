@@ -56,7 +56,7 @@
       justify-content: flex-start;
     }
     @include for-size(desktop) {
-      justify-content: center;
+      justify-content: flex-start;
     }
     @include for-size(ipad-pro) {
       justify-content: flex-start;
