@@ -3,20 +3,26 @@
 
 {% block content %}
 
-<header>
-  {% import 'macros/nav-macro.html' as nav %} {{nav.active('')}}
-</header>
 <main class="step-guide">
-  <section class="step-guide__section">
-    <div class="container">
+  <section class="step-guide__section step-guide__section--final">
+    <div class="container-fluid">
       <div class="step-guide__row row justify-content-center">
-        <div class="col-sm-12 col-md-10 col-lg-10 col-xl-8">
-          <div class="step-guide__content">
-            <div class="step-guide__content-wrapper">
-              <i class="icon icon--checked-circle material-icons">check_circle</i>
-              <h4 class="step-guide__description">Ngā mihi maioha, thank you for helping us, tautoko you and your whānau towards a healthier home</h4>
-              <div class="step-guide__button-container">
-                <button class="button button--black">Kia ora</button>
+        <div class="step-guide__col col-sm-12 col-md-12 col-lg-12 col-xl-8 justify-content-center p-0">
+          <div class="step-guide__form">
+            <div class="form step-app">
+              <div class="form__container step-content">
+                <div class="form__tab">
+                  <div class="form__step-content">
+                    <div class="form__field">                      
+                      <figure class="step-guide__image-wrapper">
+                        <img src="assets/img/success_icon.svg" alt="" class="step-guide__image">
+                      </figure>
+                      <h4 class="step-guide__title">We have successfully received your data</h4>
+                      <p class="step-guide__description">Thank you for filling in all the data, we are currently setting
+                        up firmware for kit, after that we will send it to you and notify you via email.</p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

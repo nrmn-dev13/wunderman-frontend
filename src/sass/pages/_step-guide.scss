@@ -16,20 +16,42 @@
     .row {
       height: 100%;
     }
+    &--final {
+      .form__field {
+        align-items: center;
+      }
+    }
+  }
+  &__title {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 23px;
+    text-align: left;
+    color: $color-black;
+    @include for-size (desktop) {
+      font-size: 20px;
+      line-height: 28px;
+    }
+    @include for-size (ipad-pro) {
+      font-size: 20px;
+      line-height: 28px;
+    }    
   }
   &__row {
     &.row.justify-content-center {
       position: relative;
       &::before {
-        content: '';
+        content: "";
         background-color: $bg-white;
         height: 33.33%;
         position: absolute;
         width: 100%;
-        @include for-size (desktop) {
+        @include for-size(desktop) {
           background-color: $color-green;
         }
-        @include for-size (ipad-pro) {
+        @include for-size(ipad-pro) {
           background-color: $bg-white;
         }
       }
@@ -135,13 +157,13 @@
       }
       .form__title-wrapper {
         margin: 12px 15px 21px;
-        @include for-size (tablet) {
+        @include for-size(tablet) {
           margin: 44px 39px 20px;
         }
-        @include for-size (desktop) {
+        @include for-size(desktop) {
           margin: 23px 50px;
         }
-        @include for-size (ipad-pro) {
+        @include for-size(ipad-pro) {
           margin: 44px 39px 20px;
         }
       }
@@ -151,7 +173,7 @@
         font-weight: 300;
         font-size: 16px;
         line-height: 22px;
-        text-align: left;        
+        text-align: left;
         color: $color-black;
         @include for-size(tablet) {
           font-size: 24px;
@@ -177,7 +199,7 @@
         text-align: left;
         color: $color-dark-grey;
         margin: 0 0 10px;
-        @include for-size(tablet) {          
+        @include for-size(tablet) {
           font-size: 20px;
           line-height: 28px;
         }
@@ -203,11 +225,11 @@
           font-weight: 300;
           font-size: 14px;
           line-height: 20px;
-          @include for-size (desktop) {
+          @include for-size(desktop) {
             font-size: 16px;
             line-height: 22px;
           }
-          @include for-size (ipad-pro) {
+          @include for-size(ipad-pro) {
             font-size: 16px;
             line-height: 22px;
           }
@@ -216,8 +238,8 @@
       .card--attention {
         margin: 0 0 40px;
       }
-      &.step-app{
-        position: relative;        
+      &.step-app {
+        position: relative;
         .step-steps {
           li {
             flex: 0;
@@ -251,12 +273,12 @@
             width: 47%;
             font-size: 14px;
             line-height: 20px;
-            @include for-size (desktop) {
+            @include for-size(desktop) {
               font-size: 20px;
               line-height: 28px;
               padding: 10px;
             }
-            @include for-size (desktop) {
+            @include for-size(desktop) {
               font-size: 20px;
               line-height: 28px;
               padding: 10px;
@@ -280,21 +302,21 @@
   &__navigation {
     display: flex;
     justify-content: space-between;
-    background-color: #F5F5F5;
+    background-color: #f5f5f5;
     padding: 21px 16px;
     margin: 0;
     position: fixed;
     bottom: 0;
     left: 0;
     right: 0;
-    @include for-size(tablet) {      
+    @include for-size(tablet) {
       padding: 21px 39px;
     }
-    @include for-size(desktop) {      
+    @include for-size(desktop) {
       padding: 21px 80px;
       position: relative;
     }
-    @include for-size(ipad-pro) {      
+    @include for-size(ipad-pro) {
       padding: 21px 39px;
       position: fixed;
     }
@@ -358,5 +380,17 @@
   &__button-container {
     display: flex;
     justify-content: center;
+  }
+  &__image-wrapper {
+    display: flex;
+    justify-content: center;
+    margin: 0 0 50px 0;
+    width: 270px;
+    height: 208px;
+    overflow: hidden;
+  }
+  &__image {
+    width: 100%;
+    height: auto;
   }
 }
