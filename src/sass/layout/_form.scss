@@ -313,11 +313,14 @@
     background-color: $bg-white;
     padding: 0 0 82px;
     min-height: 450px;
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.5);
     @include for-size(desktop) {
       padding: 50px 80px;
+      box-shadow: 0px 16px 8px rgba(0, 0, 0, 0.5);
     }
     @include for-size(ipad-pro) {
       padding: 0 0 82px;
+      box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.5);
     }
   }
   &__text-helper {
