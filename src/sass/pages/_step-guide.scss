@@ -8,6 +8,13 @@
   height: 100vh;
   display: flex;
   flex-direction: column;
+  background-color: #ffffff;
+  @include for-size(desktop) {
+    background-color: #F9F9F9;
+  }
+  @include for-size(ipad-pro) {
+    background-color: #ffffff;
+  }
   &__section {
     height: 100%;
     .container-fluid {
@@ -229,7 +236,7 @@
           margin: 44px 39px 20px;
         }
         @include for-size(desktop) {
-          margin: 23px 50px;
+          margin: 23px 80px;
         }
         @include for-size(ipad-pro) {
           margin: 44px 39px 20px;
