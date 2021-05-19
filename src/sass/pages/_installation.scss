@@ -9,7 +9,7 @@
     @include fixed(top 0 bottom 0 left 0 right 0);
     transform: translateX(-100%);
     background-color: $color-green;
-    z-index: 2;
+    z-index: 3;
     padding: 59px 29px;
     transition: transform 200ms ease-in-out;
     width: 100%;
@@ -30,6 +30,13 @@
     &.show--nav {
       transform: translateX(0%);
       transition: transform 200ms ease-in-out;
+      ~ .backdrop {
+        @include fixed(top 0 left 0 right 0 bottom 0);
+        background: $bg-black;
+        opacity: 75%;
+        z-index: 2;
+        pointer-events: none;
+      }
     }
     &__title {
       color: $white;
@@ -288,7 +295,7 @@
       }
     }
   }
-  .col-installation{
+  .col-installation {
     display: flex;
     justify-content: center;
     @include for-size(desktop) {
