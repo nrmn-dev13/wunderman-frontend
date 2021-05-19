@@ -96,6 +96,11 @@
                   <p class="slide-content__text">Plug in the Micro USB, into the slot next to the On/Off button. Plug in
                     the USB into your router or use an adapter (not included) to plug it into a power socket.
                     Press the On/Off button. Your Mānawa gateway will light up into a rainbow.</p>
+                  <button class="button button--black-outline mt-4" data-bs-toggle="modal"
+                    data-bs-target="#installationGuideModal">
+                    <i class="fas fa-play-circle"></i>
+                    Play Video
+                  </button>
                 </div>
               </div>
             </div>
@@ -108,6 +113,11 @@
                   <h4 class="slide-content__title">Connect your Mānawa gateway to the Internet</h4>
                   <p class="slide-content__text">Connect the LAN cable to your Mānawa gateway. Connect the LAN cable to
                     your router.</p>
+                  <button class="button button--black-outline mt-4" data-bs-toggle="modal"
+                    data-bs-target="#installationGuideModal">
+                    <i class="fas fa-play-circle"></i>
+                    Play Video
+                  </button>
                 </div>
               </div>
             </div>
@@ -120,6 +130,11 @@
                   <h4 class="slide-content__title">Login to Manawa.nz</h4>
                   <p class="slide-content__text">Open your browser, go to https://manawa.nz/ then enter your username
                     and password</p>
+                  <button class="button button--black-outline mt-4" data-bs-toggle="modal"
+                    data-bs-target="#installationGuideModal">
+                    <i class="fas fa-play-circle"></i>
+                    Play Video
+                  </button>
                 </div>
               </div>
             </div>
@@ -135,6 +150,11 @@
                     PRESS the button on the back for 3 secs, the sensor will long flash blue.
                     PRESS AGAIN for 3 secs, the sensor will flash 3 times, your sensor is now ON
                     It will take 10mins for the first reading from the sensor to show on your dashboard.</p>
+                  <button class="button button--black-outline mt-4" data-bs-toggle="modal"
+                    data-bs-target="#installationGuideModal">
+                    <i class="fas fa-play-circle"></i>
+                    Play Video
+                  </button>
                 </div>
               </div>
             </div>
@@ -149,6 +169,11 @@
                     characters.
                     In the top right corner is a pencil, select this and change the name of your room and select the
                     room type</p>
+                  <button class="button button--black-outline mt-4" data-bs-toggle="modal"
+                    data-bs-target="#installationGuideModal">
+                    <i class="fas fa-play-circle"></i>
+                    Play Video
+                  </button>
                 </div>
               </div>
             </div>
@@ -165,6 +190,11 @@
                     We do not suggest installing the sensors high up, as heat rises making the reading higher than it
                     should be.
                     The 3M sticker may tear wallpaper or paint if pulled. Bluetack is acceptable to use as well.</p>
+                  <button class="button button--black-outline mt-4" data-bs-toggle="modal"
+                    data-bs-target="#installationGuideModal">
+                    <i class="fas fa-play-circle"></i>
+                    Play Video
+                  </button>
                 </div>
               </div>
             </div>
@@ -195,5 +225,21 @@
 </main>
 
 <!-- Modal -->
+<div class="modal modal--installation-guide fade" id="installationGuideModal" tabindex="-1"
+  aria-labelledby="installationGuideModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <i class="icon icon--close fas fa-times" data-bs-dismiss="modal" aria-label="Close"></i>
+      </div>
+      <div class="modal-body">
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/PkZNo7MFNFg" title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+</div>
 
 {% endblock %}
