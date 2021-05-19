@@ -14,12 +14,17 @@
     transition: transform 400ms ease-in-out;
     width: 100%;
     @include for-size(desktop) {
+      padding: 59px 33px;
+    }
+    @include for-size(desktop) {
       width: 25%;
       transform: translateX(0%);
+      padding: 33px 32px;
     }
     @include for-size(ipad-pro) {
       width: 100%;
       transform: translateX(-100%);
+      padding: 59px 33px;
     }
     &.show--nav {
       transform: translateX(0%);
@@ -69,24 +74,25 @@
       font-size: 24px;
       color: $white;
       display: block;
-      @include for-size(desktop)  {
+      @include for-size(desktop) {
         display: none;
       }
-      @include for-size(ipad-pro)  {
+      @include for-size(ipad-pro) {
         display: block;
       }
     }
   }
-  .main-content {
+  .slide-content {
     padding: 0 3px;
+    border: none;
     @include for-size(tablet) {
-      padding: 0 27px
+      padding: 0 27px;
     }
     @include for-size(desktop) {
-      padding: 0 23px
+      padding: 0 23px;
     }
     @include for-size(ipad-pro) {
-      padding: 0 27px
+      padding: 0 27px;
     }
     &__title {
       font-family: Roboto;
@@ -111,15 +117,25 @@
     }
     &__text {
       font-size: 14px;
-      line-height: 32px;
+      line-height: 30px;
       @include for-size(tablet) {
         font-size: 16px;
+        line-height: 30px;
+      }
+      @include for-size(desktop) {
+        font-size: 16px;
+        line-height: 32px;
+      }
+      @include for-size(ipad-pro) {
+        font-size: 16px;
+        line-height: 30px;
       }
     }
-    &__card {      
+    &__card {
       background-color: transparent;
       padding: 0 0 86px 0;
       border-radius: 0px;
+      box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.15);
       @include for-size(tablet) {
         padding-bottom: 0;
       }
@@ -128,6 +144,9 @@
         background-color: $bg-white;
         padding: 0;
         border-radius: 15px;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
       }
       @include for-size(ipad-pro) {
         background-color: transparent;
@@ -173,17 +192,27 @@
         margin: 67px 0 65px;
       }
     }
+    &__panel {
+      &.active[data-step="step1"] ~ .navigation.step-footer .button--back {
+        display: flex !important;
+        pointer-events: none;
+        opacity: 0.5;
+      }
+    }
   }
   .navigation {
     @include fixed(bottom 0 left 0 right 0);
     display: flex;
     z-index: 1;
-    background-color: #F5F6F8;
+    background-color: #f5f6f8;
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.15);
     @include for-size(desktop) {
       position: relative;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
     }
     @include for-size(ipad-pro) {
       position: fixed;
+      box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.15);
     }
     &__title {
       color: $black;
@@ -196,7 +225,7 @@
     &__toggle {
       padding: 30px 27px;
       background-color: $color-green;
-      display: block;      
+      display: block;
       @include for-size(desktop) {
         display: none;
       }
@@ -218,26 +247,39 @@
       display: flex;
       .button {
         padding: 0;
-        border: none;
+        border: 1px solid $color-black;
+        background-color: $color-black;
+        width: 42px;
+        height: 42px;
+        display: flex;
+        flex: 0 0 auto;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
         .icon.icon--nav {
-          font-size: 36px;
-          color: $black;
-          background-color: transparent;
-          border-radius: 50%;
+          font-size: 30px;
+          color: $color-white;
         }
-        &.button--disabled {
+        &.button--back {
+          background-color: $color-white;
+          opacity: 1;
           .icon.icon--nav {
-            font-size: 36px;
-            color: white;
-            background-color: #b8b8ba;
-            border-radius: 50%;
-            border: 1px solid #b8b8ba;
+            color: $color-black;
           }
         }
         &:focus {
           outline: -webkit-focus-ring-color auto 0px;
         }
       }
+    }
+  }
+  .row.row-installation {
+    justify-content: center;
+    @include for-size(desktop) {
+      justify-content: flex-end;
+    }
+    @include for-size(ipad-pro) {
+      justify-content: center;
     }
   }
 }
