@@ -13,6 +13,7 @@
     padding: 59px 29px;
     transition: transform 200ms ease-in-out;
     width: 100%;
+    overflow: auto;
     @include for-size(tablet) {
       width: 33.33%;
       padding: 59px 33px;
