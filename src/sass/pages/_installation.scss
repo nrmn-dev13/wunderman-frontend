@@ -11,9 +11,10 @@
     background-color: $color-green;
     z-index: 2;
     padding: 59px 29px;
-    transition: transform 400ms ease-in-out;
+    transition: transform 200ms ease-in-out;
     width: 100%;
-    @include for-size(desktop) {
+    @include for-size(tablet) {
+      width: 33.33%;
       padding: 59px 33px;
     }
     @include for-size(desktop) {
@@ -22,13 +23,13 @@
       padding: 33px 32px;
     }
     @include for-size(ipad-pro) {
-      width: 100%;
+      width: 33.33%;
       transform: translateX(-100%);
       padding: 59px 33px;
     }
     &.show--nav {
       transform: translateX(0%);
-      transition: transform 400ms ease-in-out;
+      transition: transform 200ms ease-in-out;
     }
     &__title {
       color: $white;
@@ -94,14 +95,18 @@
   .slide-content {
     padding: 0 3px;
     border: none;
+    max-width: 100%;
+    width: 100%;
     @include for-size(tablet) {
       padding: 0 27px;
     }
     @include for-size(desktop) {
       padding: 0 23px;
+      max-width: 75%;
     }
     @include for-size(ipad-pro) {
       padding: 0 27px;
+      max-width: 100%;
     }
     &__title {
       font-family: Roboto;
@@ -161,6 +166,7 @@
         background-color: transparent;
         padding: 0;
         border-radius: 0px;
+        box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.15);
       }
     }
     &__inner-wrapper {
@@ -282,7 +288,8 @@
       }
     }
   }
-  .row.row-installation {
+  .col-installation{
+    display: flex;
     justify-content: center;
     @include for-size(desktop) {
       justify-content: flex-end;
