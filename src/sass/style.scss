@@ -10,7 +10,7 @@
 @import "../../node_modules/bootstrap/scss/bootstrap";
 
 // 3. Base stuff
-@import "base/fonts", "base/typography", "base/helpers";
+@import "base/base", "base/fonts", "base/typography", "base/helpers";
 
 // 4. Layout-related sections
 @import "layout/header", "layout/footer", "layout/form";
@@ -24,7 +24,7 @@
   "components/modal";
 
 // 6. Page-specific styles
-@import "pages/home", "pages/auth", "pages/step-guide";
+@import "pages/home", "pages/auth", "pages/step-guide", "pages/installation";
 
 // 7. Themes
 @import "themes/default";

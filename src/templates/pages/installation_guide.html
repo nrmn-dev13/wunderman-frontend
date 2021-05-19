@@ -1,0 +1,83 @@
+<!-- index.html -->
+{% extends "layout.html" %}
+
+{% block content %}
+
+<main class="installation-guide">
+  <section class="installation-guide__section">
+    <div class="container-fluid">
+      <div class="row">
+        <aside class="col-xs-12 col-sm-12 col-md-12 col-lg-3">
+          <div class="sidebar">
+            <i class="icon icon--close toggle--nav fas fa-times"></i>
+            <div class="sidebar__title">Installation Guide</div>
+            <ul class="sidebar__list">
+              <li class="sidebar__item active">
+                <a href="#" class="sidebar__link">
+                  <i class="icon icon--list fas fa-dot-circle"></i>
+                  <p class="sidebar__item-name">Mānawa Sensor Kit</p>
+                </a>
+              </li>
+              <li class="sidebar__item">
+                <a href="#" class="sidebar__link">
+                  <i class="icon icon--list fas fa-dot-circle"></i>
+                  <p class="sidebar__item-name">Turn on  Mānawa Gateway</p>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </aside>
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-9">
+          <div class="main-content">
+            <figure class="main-content__image-wrapper">
+              <img src="assets/img/guide_one.jpg" alt="" class="main-content__image img-fluid">
+            </figure>
+            <div class="main-content__card">
+              <div class="main-content__inner-wrapper">
+                <h4 class="main-content__title">What comes in your Mānawa sensor kit?</h4>
+                <ul class="main-content__list">
+                  <li class="main-content__item">
+                    <i class="icon icon--list-content fas fa-check-circle"></i>
+                    <p class="main-content__text">Mānawa gateway</p>
+                  </li>
+                  <li class="main-content__item">
+                    <i class="icon icon--list-content fas fa-check-circle"></i>
+                    <p class="main-content__text">4 x Mānawa sensors</p>
+                  </li>
+                  <li class="main-content__item">
+                    <i class="icon icon--list-content fas fa-check-circle"></i>
+                    <p class="main-content__text">1 x Micro USB to USB power cable</p>
+                  </li>
+                  <li class="main-content__item">
+                    <i class="icon icon--list-content fas fa-check-circle"></i>
+                    <p class="main-content__text">1 x LAN cable</p>
+                  </li>
+                </ul>
+              </div>
+              <div class="navigation">
+                <div class="navigation__toggle">
+                  <i class="icon icon--nav toggle--nav fas fa-bars"></i>
+                </div>
+                <div class="navigation__bar">
+                  <p class="navigation__title">Step 1 of 7</p>
+                  <div class="navigation__button-wrapper">
+                    <button class="button button--disabled me-4">
+                      <i class="icon icon--nav fas fa-chevron-circle-left"></i>
+                    </button>
+                    <button class="button">
+                      <i class="icon icon--nav fas fa-chevron-circle-right"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>        
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- Modal -->
+
+{% endblock %}

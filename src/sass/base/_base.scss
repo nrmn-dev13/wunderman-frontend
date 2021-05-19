@@ -6,7 +6,7 @@
  * Set up a decent box model on the root element
  */
 html {
-  box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 /**
@@ -18,25 +18,25 @@ html {
 *,
 *::before,
 *::after {
-  box-sizing: inherit;
+	box-sizing: inherit;
 }
 
 body {
-	font-family: $font-lato;
 	font-weight: 400;
-	font-size: $base-font-size;
 	line-height: 1.5em;
-//	position: absolute;
-	height: 100%;
+	//	position: absolute;
 	color: $color-black;
 	-webkit-font-smoothing: antialiased;
+	font-family: Roboto;
 }
 
-body, html {
+body,
+html {
 	margin: 0;
 	padding: 0;
 	-webkit-tap-highlight-color: transparent;
 	width: 100%;
+	height: 100%;
 }
 
 .scroll-touch {
@@ -45,24 +45,26 @@ body, html {
 }
 
 a {
-	font-family: $font-lato;
 	cursor: pointer;
 	text-decoration: none;
 	&:hover {
 		text-decoration: none;
 		outline: none;
 	}
-	&:active, &:focus {
+	&:active,
+	&:focus {
 		outline: none;
 		text-decoration: none;
 	}
 }
 
-strong, b {
+strong,
+b {
 	font-weight: 700;
 }
 
-em, i {
+em,
+i {
 	font-style: italic;
 }
 
@@ -73,13 +75,22 @@ p {
 	font-weight: 400;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
 	font-weight: 400;
 	line-height: 1.3em;
+}
+
+ul {
+	padding: 0;
+	margin: 0;
+	list-style: none;
 }
 
 button {
 	cursor: pointer;
 }
-
-

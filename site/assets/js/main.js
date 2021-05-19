@@ -23,7 +23,14 @@ $(document).ready(function () {
       $(this).closest(".card--attention").toggleClass('expanded');
     })
   }
+  function handleOpenNav() {
+    $('.toggle--nav').click(function(){
+      $('.sidebar').toggleClass('show--nav');
+    })
+  }
+  
   handleStepForm();
   handleTogglePassword();
   handleReadMore();
+  handleOpenNav();
 }); 
