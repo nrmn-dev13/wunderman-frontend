@@ -60,7 +60,8 @@
           <div class="slide-content step-content">
             <div class="slide-content__panel step-tab-panel" data-step="step1">
               <figure class="slide-content__image-wrapper">
-                <img src="assets/img/guide_one.jpg" alt="" class="slide-content__image slide-content__image--has-border img-fluid">
+                <img src="assets/img/guide_one.jpg" alt=""
+                  class="slide-content__image slide-content__image--has-border img-fluid">
               </figure>
               <div class="slide-content__card">
                 <div class="slide-content__inner-wrapper">
@@ -230,13 +231,22 @@
   <div class="modal-dialog modal-lg modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header">
-        <i class="icon icon--close fas fa-times" data-bs-dismiss="modal" aria-label="Close"></i>
+        <i class="icon icon--close close--modal fas fa-times" data-bs-dismiss="modal" aria-label="Close"></i>
       </div>
       <div class="modal-body">
-        <iframe width="100%" height="315" src="https://www.youtube.com/embed/PkZNo7MFNFg" title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen></iframe>
+        <div class="video-content">
+          <div class="video-content__overlay">
+            <div class="video-content__inner-overlay">
+              <button class="button button--video">
+                <i class="icon icon--play fas fa-play"></i>
+              </button>
+              <h4 class="video-content__title">Installations Guide</h4>
+            </div>
+          </div>
+          <video src="assets/video/sample.mp4" type="video/mp4" class="video-content__source" width="100%"
+            poster="assets/img/poster.jpg">
+          </video>
+        </div>
       </div>
     </div>
   </div>

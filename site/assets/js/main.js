@@ -2,7 +2,7 @@ $(document).ready(function () {
   function handleFormStep() {
     $('#formStep').steps();
   }
-  function handleGuideStep() {    
+  function handleGuideStep() {
     $("#guideStep").steps({
       transitionEffect: "slideLeft"
     });
@@ -32,10 +32,21 @@ $(document).ready(function () {
     $('.toggle--nav').click(function () {
       $('.sidebar').toggleClass('show--nav');
     })
-  }
-  function handleCloseNav() {
-    $('.sidebar__item').click(function () {      
+    $('.sidebar__item').click(function () {
       $('.sidebar').removeClass('show--nav');
+    })
+  }
+  function handleVideo() {
+    var video = document.querySelector('.video-content__source');
+    $('.button--video').click(function () {
+      video.setAttribute("controls", "controls")
+      video.play();
+      $('.video-content').addClass('isPlaying');
+    })
+    $('.close--modal').click(function () {
+      video.removeAttribute("controls", "controls")
+      video.pause();
+      $('.video-content').removeClass('isPlaying');
     })
   }
 
@@ -44,5 +55,5 @@ $(document).ready(function () {
   handleTogglePassword();
   handleReadMore();
   handleToggleNav();
-  handleCloseNav();
+  handleVideo();
 });
