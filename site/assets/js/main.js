@@ -34,7 +34,7 @@ $(document).ready(function () {
     })
   }
   function handleCloseNav() {
-    $('.sidebar__item').click(function () {
+    $('.sidebar__item').click(function () {      
       $('.sidebar').removeClass('show--nav');
     })
   }

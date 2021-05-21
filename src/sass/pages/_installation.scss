@@ -3,8 +3,7 @@
 // -----------------------------------------------------------------------------
 .installation-guide {
   height: 100%;
-  background: rgb(253, 255, 140);
-  background: linear-gradient(180deg, rgba(253, 255, 140, 1) 0%, rgba(255, 255, 255, 1) 100%);
+  background: linear-gradient(180deg, #fdff8c 0%, rgba(253, 255, 140, 0.6) 0.01%, #ffffff 73.44%);
   .sidebar {
     @include fixed(top 0 bottom 0 left 0 right 0);
     transform: translateX(-100%);
@@ -15,7 +14,7 @@
     width: 100%;
     overflow: auto;
     @include for-size(tablet) {
-      width: 33.33%;
+      width: 40%;
       padding: 59px 33px;
     }
     @include for-size(desktop) {
@@ -24,7 +23,7 @@
       padding: 33px 32px;
     }
     @include for-size(ipad-pro) {
-      width: 33.33%;
+      width: 32%;
       transform: translateX(-100%);
       padding: 59px 33px;
     }
@@ -161,7 +160,7 @@
       @include for-size(tablet) {
         padding: 0;
       }
-      @include for-size(desktop) {        
+      @include for-size(desktop) {
         background-color: $bg-white;
         padding: 0;
         border-radius: 15px;
@@ -226,6 +225,10 @@
       @include for-size(ipad-pro) {
         margin: 67px 0 65px;
       }
+      &--has-border {
+        border: 15px solid #ffffff;
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+      }
     }
     &__panel {
       &.active[data-step="step1"] ~ .navigation.step-footer .button--back {
@@ -260,15 +263,23 @@
     &__toggle {
       padding: 30px 27px;
       background-color: $color-green;
-      display: block;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 80px;
       @include for-size(desktop) {
         display: none;
       }
       @include for-size(ipad-pro) {
-        display: block;
+        display: flex;
       }
       .icon.icon--nav {
+        display: flex;
+        align-items: center;
+        justify-content: center;
         cursor: pointer;
+        font-size: 20px;
+        color: $color-white;
       }
     }
     &__bar {
@@ -276,23 +287,39 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 22px 20px;
+      padding: 18px 20px;
+      @include for-size(desktop) {
+        padding: 22px 20px;
+      }
+      padding: 18px 20px;
+      @include for-size(ipad-pro) {
+        padding: 18px 20px;
+      }
     }
     &__button-wrapper {
       display: flex;
+      align-items: center;
       .button {
         padding: 0;
         border: 1px solid $color-black;
         background-color: $color-black;
-        width: 42px;
-        height: 42px;
+        width: 36px;
+        height: 36px;
         display: flex;
         flex: 0 0 auto;
         justify-content: center;
         align-items: center;
         border-radius: 50%;
+        @include for-size(desktop) {
+          width: 42px;
+          height: 42px;
+        }
+        @include for-size(ipad-pro) {
+          width: 36px;
+          height: 36px;
+        }
         .icon.icon--nav {
-          font-size: 30px;
+          font-size: 20px;
           color: $color-white;
         }
         &.button--back {
