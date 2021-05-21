@@ -28,15 +28,21 @@ $(document).ready(function () {
       $(this).closest(".card--attention").toggleClass('expanded');
     })
   }
-  function handleOpenNav() {
+  function handleToggleNav() {
     $('.toggle--nav').click(function () {
       $('.sidebar').toggleClass('show--nav');
     })
   }
+  function handleCloseNav() {
+    $('.sidebar__item').click(function () {
+      $('.sidebar').removeClass('show--nav');
+    })
+  }
 
   handleFormStep();
+  handleGuideStep();
   handleTogglePassword();
   handleReadMore();
-  handleOpenNav();
-  handleGuideStep();
+  handleToggleNav();
+  handleCloseNav();
 });
