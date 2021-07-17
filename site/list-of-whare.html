@@ -1,0 +1,130 @@
+<!-- layout.html -->
+<!DOCTYPE html>
+<!--[if lt IE 7]>      
+<html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> 
+<![endif]-->
+<!--[if IE 7]>         
+<html class="no-js lt-ie9 lt-ie8" lang=""> 
+<![endif]-->
+<!--[if IE 8]>         
+<html class="no-js lt-ie9" lang=""> 
+<![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title></title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="apple-touch-icon" href="apple-touch-icon.png">	
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+		rel="stylesheet">		
+	<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">		
+	<link href="./assets/css/jquery-steps.css" rel="stylesheet">
+	<link href="./assets/css/style.min.css" rel="stylesheet">
+	<script src="./assets/js/vendor/jquery.min.js"></script>	
+	<script src="./assets/js/vendor/jquery-steps.min.js"></script>
+	<script src="./assets/js/vendor/bootstrap.bundle.min.js"></script>
+	<script defer src="./assets/js/main.js"></script>
+	<!-- <script src="./assets/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script> -->
+</head>
+
+<body>
+	<!--[if lt IE 8]>
+			<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+	<![endif]-->
+	
+
+<header>
+  <nav class="navbar navbar-webapp fixed-top navbar-light bg-light">
+  <div class="container-fluid navbar-header">
+    <a class="navbar-brand" href="/">
+      <img src="assets/img/logo.png" alt="" width="27" height="35">
+      <h1 class="title">MANAWA</h1>
+    </a>
+    <div class="nav-action">
+      <div class="menu-button">
+        <span class="menu-text">MENU</span>
+        <span class="hamburger"></span>
+      </div>
+    </div>
+  </div>
+  <ul class="nav-menu">
+    <li class="menu-list">
+      <div class="menu-title">
+        <div class="wrapper">
+          <i class="icon icon--home-plus"></i>
+          <span class="title">Home</span> 
+        </div>
+      </div>
+    </li>
+    <li class="menu-list">
+      <div class="menu-title">        
+        <div class="wrapper">
+          <i class="icon icon--home"></i>
+          <span class="title">Whare</span> 
+        </div>
+        <i class="fas fa-chevron-down" data-bs-toggle="collapse" data-bs-target="#whareContent      " aria-expanded="false" aria-controls="whareContent      "></i>
+      </div>
+      <div class="collapse" id="whareContent      ">
+        <div class="card card-body">
+          Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
+        </div>
+      </div>
+    </li>
+  </ul>
+  <ul class="nav-menu nav-menu--profile">    
+    <li class="menu-list">
+      <div class="menu-title">        
+        <div class="wrapper">
+          <div class="icon icon--profile">
+            R
+          </div>
+          <span class="title">RudiTabuti</span> 
+        </div>
+        <i class="fas fa-chevron-down" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample"></i>
+      </div>
+      <div class="collapse" id="collapseExample">
+        <div class="card card-body">
+          Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
+        </div>
+      </div>
+    </li>
+  </ul>
+</nav>  
+</header>
+<main class="webapp">
+  <section class="section section--list-of-whare">
+    <div class="container-fluid">      
+      <div class="content">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="card card--dashed">
+              <div class="card-body">
+                <div class="content">
+                  <h2 class="title">Add New Whare</h2>
+                  <i class="fas fa-plus-circle"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+
+
+
+</body>
+
+</html>

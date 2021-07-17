@@ -82,6 +82,13 @@
       }
     }
   }
+  &.card--dashed {
+    border-style: dashed;
+    padding: 0;
+    .card-body {
+      padding: 0;
+    }
+  }
   &__description {
     font-family: Roboto;
     font-style: normal;

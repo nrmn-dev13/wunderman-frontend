@@ -1,0 +1,11 @@
+.webapp {
+  .section {
+    padding-top: 56px;    
+    @include for-size(desktop) {
+      padding-top: 0;
+    }
+    @include for-size(ipad-pro) {
+      padding-top: 56px;
+    }
+  }  
+}
