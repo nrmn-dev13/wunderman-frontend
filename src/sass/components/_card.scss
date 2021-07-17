@@ -89,6 +89,33 @@
       padding: 0;
     }
   }
+  &.card--whare {
+    flex-direction: column;
+    .card-header {
+      width: 100%;
+      background-color: $color-white;
+      border: none;
+      .title {
+        font-family: Roboto;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 140.62%;
+        color: $color-black;
+      }
+    }
+    .card-footer {
+      width: 100%;
+      background-color: $color-white;
+      border: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .content-list {
+        justify-content: space-between;
+        flex: 1 1 auto;
+      }
+    }
+  }
   &__description {
     font-family: Roboto;
     font-style: normal;
