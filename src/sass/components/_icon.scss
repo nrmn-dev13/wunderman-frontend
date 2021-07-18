@@ -51,4 +51,19 @@
     font-size: 16px;
     line-height: 140.62%;
   }
+  &.icon--circle-green-sm {
+    margin: 0 10px 0 0;    
+    width: 20px;
+    height: 20px;
+    background: rgba(171, 204, 117, 0.25);
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 140.62%;
+    color: $color-white;
+  }
 }

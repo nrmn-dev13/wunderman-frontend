@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  background: #F5F6F8;
+  background: #f5f6f8;
   height: 100%;
   .section {
     padding-top: 56px;
@@ -14,18 +14,50 @@
       padding-top: 56px;
     }
   }
+  .content {
+    margin: 48px 23px;
+  }
+  .card {
+    margin: 0 15px;
+  }
   .content-list {
     display: flex;
     align-items: center;
     &--column {
       flex-direction: column;
       align-items: flex-start;
+      .content-list__item {
+        margin: 0 0 15px;
+        &:last-child {
+          margin: 0;
+        }
+        .wrapper {
+          i.fas {
+            margin: 0 10px 0 0;
+            color: $color-secondary-grey;
+          }
+          font-family: Roboto;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 14px;
+          line-height: 140.62%;
+          color: $color-black;
+        }
+      }
     }
     &__item {
       .wrapper {
         display: flex;
         align-items: center;
+        .text {
+          font-family: Roboto;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 14px;
+          line-height: 140.62%;
+          color: $color-black;
+        }
       }
     }
-  }  
+  }
 }

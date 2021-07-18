@@ -31,6 +31,11 @@
       margin: 0 0 0 15px;
     }
   }
+  .sidenav {
+    width: 100%;
+    height: calc(100% - 56px);
+    overflow: auto;
+  }
   .nav-action {
     .menu-button {
       display: flex;
@@ -47,7 +52,7 @@
         font-size: 16px;
         line-height: 140.62%;
         color: $color-black;
-      }
+      }      
       .hamburger {
         width: 20px;
         height: 20px;
@@ -74,12 +79,12 @@
     padding: 47px 26px;
     position: relative;
     &::after {
-      content: '';
+      content: "";
       position: absolute;
       bottom: 0;
       left: 0;
       width: 100%;
-      border: 1px solid #E0E0E0;
+      border: 1px solid #e0e0e0;
     }
     .menu-list {
       margin: 0 0 45px;
@@ -106,13 +111,13 @@
     }
     &--profile {
       padding: 30px 15px;
-      &::after {        
+      &::after {
         border: none;
       }
       .menu-list {
         .menu-title {
           padding: 11px 12px;
-          background: #F9F9F9;
+          background: #f9f9f9;
           border-radius: 100px;
         }
       }
