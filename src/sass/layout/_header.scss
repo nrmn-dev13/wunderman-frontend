@@ -10,7 +10,9 @@
   justify-content: flex-start;
   @include fixed(top 0 left 0 bottom 0);
   width: 100%;
+  height: 56px;
   @include for-size(desktop) {
+    height: 100%;
     width: 300px;
     box-shadow: 6px 0px 18px rgba(0, 0, 0, 0.06);
   }
@@ -35,6 +37,38 @@
     width: 100%;
     height: calc(100% - 56px);
     overflow: auto;
+    @include fixed(top 58px right 0 bottom 0);
+    background-color: $color-white;
+    z-index: 2;
+    transform: translateX(100%);
+    transition: transform 400ms ease-in-out;
+    &.show--nav {
+      transform: translateX(0px);
+      ~ .backdrop {
+        display: block;
+      }
+    }
+    @include for-size(tablet) {
+      width: 300px;
+      transform: translateX(300px);
+    }
+    @include for-size(desktop) {
+      position: relative;
+      top: 0;
+      width: 100%;
+      transform: translateX(0px);
+    }
+    @include for-size(ipad-pro) {
+      width: 300px;
+      transform: translateX(300px);
+    }
+  }
+  .backdrop {
+    @include fixed(top 58px right 0 left 0 bottom 0);
+    z-index: 1;
+    background-color: rgba(0,0,0,0.25);
+    width: 100%;
+    display: none;
   }
   .nav-action {
     .menu-button {
@@ -117,7 +151,7 @@
         }
       }
       .menu-sublist {
-        margin: 27px 0 0;
+        margin: 27px 0 0 9px;
         border-left: 3px solid $color-green;
         &__item {
           padding: 16px 21px;

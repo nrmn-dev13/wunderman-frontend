@@ -1,24 +1,45 @@
 .webapp {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
-  background: #f5f6f8;
+  align-items: flex-start;
   height: 100%;
+  @include for-size(desktop) {
+    align-items: flex-end;
+  }
+  @include for-size(ipad-pro) {
+    align-items: flex-start;
+  }
   .section {
+    background: #f5f6f8;
     padding-top: 56px;
-    width: calc(100% - 300px);
+    width: 100%;
+    height: 100%;
+    overflow: auto;
     @include for-size(desktop) {
       padding-top: 0;
+      width: calc(100% - 300px);
     }
     @include for-size(ipad-pro) {
       padding-top: 56px;
     }
   }
   .content {
-    margin: 48px 23px;
+    margin: 31px 18px;
+    @include for-size(desktop) {
+      margin: 48px 23px;
+    }
+    @include for-size(ipad-pro) {
+      margin: 31px 18px;
+    }
   }
   .card {
-    margin: 0 15px 30px;
+    margin: 0 0 30px;
+    @include for-size(desktop) {
+      margin: 0 15px 30px;
+    }
+    @include for-size(ipad-pro) {
+      margin: 0 0 30px;
+    }
   }
   .content-list {
     display: flex;

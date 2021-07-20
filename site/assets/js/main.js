@@ -35,6 +35,9 @@ $(document).ready(function () {
     $('.sidebar__item').click(function () {
       $('.sidebar').removeClass('show--nav');
     })
+    $('.hamburger').click(function () {
+      $('.sidenav').toggleClass('show--nav');
+    })
   }
   function handleVideo() {
     var video = document.querySelector('.video-content__source');
@@ -48,7 +51,7 @@ $(document).ready(function () {
       video.pause();
       $('.video-content').removeClass('isPlaying');
     })
-  }
+  }  
 
   handleFormStep();
   handleGuideStep();
