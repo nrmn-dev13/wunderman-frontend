@@ -27,12 +27,20 @@
             <i class="icon icon--home"></i>
             <span class="title">Whare</span> 
           </div>
-          <i class="fas fa-chevron-down" data-bs-toggle="collapse" data-bs-target="#whareContent" aria-expanded="false" aria-controls="whareContent"></i>
+          <i class="fas fa-chevron-down collapsed" data-bs-toggle="collapse" data-bs-target="#whareContent" aria-expanded="false" aria-controls="whareContent"></i>
         </div>
         <div class="collapse" id="whareContent">
-          <div class="card card-body">
-            Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
-          </div>
+          <ul class="menu-sublist">
+            <li class="menu-sublist__item">
+              <a href="#" class="link">Rudi's House</a>
+            </li>
+            <li class="menu-sublist__item">
+              <a href="#" class="link">10 Silverstream Road</a>
+            </li>
+            <li class="menu-sublist__item">
+              <a href="#" class="link">Garys Home</a>
+            </li>
+          </ul>          
         </div>
       </li>
     </ul>
@@ -45,12 +53,35 @@
             </i>
             <span class="title">RudiTabuti</span> 
           </div>
-          <i class="fas fa-chevron-down" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample"></i>
+          <i class="fas fa-chevron-down collapsed" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample"></i>
         </div>
         <div class="collapse" id="collapseExample">
-          <div class="card card-body">
-            Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
-          </div>
+          <ul class="menu-sublist">
+            <li class="menu-sublist__item menu-sublist__item--title">
+             <h6 class="title">Account</h6>
+            </li>
+            <li class="menu-sublist__item">
+              <a href="#" class="link">
+                <i class="icon icon--account"></i>
+                <h6 class="subtitle">Rudi's House</h6>                
+              </a>
+            </li>
+            <li class="menu-sublist__item">
+              <a href="#" class="link">                
+                <i class="icon icon--circle-red fas fa-sign-out-alt"></i>
+                <h6 class="subtitle text--red">Logout</h6>                
+              </a>
+            </li>
+            <li class="menu-sublist__item menu-sublist__item--title">
+              <h6 class="title">Admin</h6>
+             </li>
+            <li class="menu-sublist__item">
+              <a href="#" class="link">                
+                <i class="icon icon--circle-black fas fa-arrow-left"></i>
+                <h6 class="subtitle">Admin Page</h6>                
+              </a>
+            </li>
+          </ul>
         </div>
       </li>
     </ul>

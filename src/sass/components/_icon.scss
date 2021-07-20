@@ -66,4 +66,44 @@
     line-height: 140.62%;
     color: $color-white;
   }
+  &.icon--account {
+    margin: 0 10px 0 0;    
+    width: 24px;
+    height: 24px;
+    background-repeat: no-repeat;
+    background-size: 12px 17px;
+    background-position: center;
+    background-image: url(/assets/img/webapp/setting-icon.png);
+    background-color: $color-secondary-black;
+    display: flex;
+    flex: 0 0 auto;
+    border-radius: 50%;
+  }
+  &.icon--circle-black {
+    margin: 0 10px 0 0;    
+    width: 24px;
+    height: 24px;
+    background: $color-secondary-black;
+    color: $color-white;
+    border-radius: 50%;
+    display: flex;
+    flex: 0 0 auto;
+    align-items: center;
+    justify-content: center;
+  }
+  &.icon--circle-red {
+    margin: 0 10px 0 0;    
+    width: 24px;
+    height: 24px;
+    background: $color-soft-red;
+    color: $color-white;
+    border-radius: 50%;
+    display: flex;
+    flex: 0 0 auto;
+    align-items: center;
+    justify-content: center;
+    &.fas {
+      font-size: 12px;
+    }
+  }
 }
