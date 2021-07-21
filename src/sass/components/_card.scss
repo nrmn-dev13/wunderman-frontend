@@ -87,11 +87,34 @@
     padding: 0;
     .card-body {
       padding: 0;
+      .wrapper {
+        padding: 61px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .title {
+          font-family: Merriweather;
+          font-style: normal;
+          font-weight: bold;
+          font-size: 16px;
+          line-height: 140.62%;
+          margin-bottom: 10px;
+          color: $color-black;
+        }
+        i.fas {
+          font-weight: 900;
+          font-size: 24px;
+          line-height: 140.62%;
+          color: $color-secondary-black;
+          cursor: pointer;
+        }
+      }
     }
   }
   &.card--whare {
     flex-direction: column;
-    padding: 15px;    
+    padding: 15px;
     .card-header {
       width: 100%;
       background-color: $color-white;
@@ -112,9 +135,9 @@
       width: 100%;
       position: relative;
       &::after {
-        content: '';
+        content: "";
         @include absolute(bottom 0 left 0);
-        border-bottom: 1px solid #D5D5D5;
+        border-bottom: 1px solid #d5d5d5;
         width: 100%;
       }
     }
@@ -144,7 +167,7 @@
               font-style: normal;
               font-weight: normal;
               font-size: 14px;
-              line-height: 140.62%;            
+              line-height: 140.62%;
               &--black {
                 color: $color-black;
               }
@@ -157,10 +180,10 @@
             }
           }
         }
-      }      
+      }
       .content-list {
         justify-content: space-between;
-        flex: 1 1 auto;        
+        flex: 1 1 auto;
       }
       .content-list__item {
         padding: 5px 15px 5px 10px;

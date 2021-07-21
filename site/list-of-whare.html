@@ -140,10 +140,16 @@
     <div class="container-fluid">      
       <div class="content">
         <div class="row">
+          <div class="col-md-12">
+            <div class="alert alert-success" role="alert">
+              <p class="text">Data deleted successfully</p>
+              <button type="button" class="btn btn-close"><i class="fas fa-times"></i></button>
+            </div>
+          </div>
           <div class="col-md-6">
             <div class="card card--dashed">
               <div class="card-body">
-                <div class="content">
+                <div class="wrapper">
                   <h2 class="title">Add New Whare</h2>
                   <i class="fas fa-plus-circle"></i>
                 </div>
@@ -192,7 +198,7 @@
                   </button>
                   <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                     <li><a class="dropdown-item dropdown-item--black " href="#"><i class="fas fa-edit"></i> Edit</a></li>
-                    <li><a class="dropdown-item dropdown-item--red " href="#"><i class="far fa-trash-alt"></i> Delete</a></li>                  
+                    <li><a class="dropdown-item dropdown-item--red " href="#" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="far fa-trash-alt"></i> Delete</a></li>                  
                   </ul>
                 </div>
               </div>
@@ -240,7 +246,7 @@
                   </button>
                   <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                     <li><a class="dropdown-item dropdown-item--black " href="#"><i class="fas fa-edit"></i> Edit</a></li>
-                    <li><a class="dropdown-item dropdown-item--red " href="#"><i class="far fa-trash-alt"></i> Delete</a></li>                  
+                    <li><a class="dropdown-item dropdown-item--red " href="#" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="far fa-trash-alt"></i> Delete</a></li>                  
                   </ul>
                 </div>
               </div>
@@ -288,7 +294,7 @@
                   </button>
                   <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                     <li><a class="dropdown-item dropdown-item--black " href="#"><i class="fas fa-edit"></i> Edit</a></li>
-                    <li><a class="dropdown-item dropdown-item--red " href="#"><i class="far fa-trash-alt"></i> Delete</a></li>                  
+                    <li><a class="dropdown-item dropdown-item--red " href="#" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="far fa-trash-alt"></i> Delete</a></li>                  
                   </ul>
                 </div>
               </div>
@@ -300,6 +306,24 @@
   </section>
 </main>
 
+<!-- Modal -->
+<div class="modal modal--confirmation fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Delete Whare</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><i class="fas fa-times"></i></button>
+      </div>
+      <div class="modal-body">
+        <p class="text">Are you sure to delete this whare - <span class="bold">10 Silverstream Road?</span></p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="button button--soft-black" data-bs-dismiss="modal">Yes</button>
+        <button type="button" class="button button--black-outline">Cancel</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 
 
