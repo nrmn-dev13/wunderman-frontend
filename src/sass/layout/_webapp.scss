@@ -81,4 +81,46 @@
       }
     }
   }
+  .header-navigation {    
+    display: flex;
+    align-items: center;
+    margin: 0 0 30px;
+    .button {
+      margin-right: 14px;
+    }
+    .title {
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 20px;
+      line-height: 140.62%;
+      color: $color-secondary-grey;
+      margin: 0;
+    } 
+  }
+  .form.form--section {
+    background-color: $color-white;
+    border-top: 6px solid $color-green;
+    padding: 20px;
+    .form-group {
+      margin-bottom: 15px;
+    }
+    .label-form {
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 16px;
+      line-height: 140.62%;
+      color: $color-secondary-black;
+      margin: 0 0 15px;
+    }
+    .form__map-wrapper {
+      height: 400px;
+    }
+    .flex-wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
 }

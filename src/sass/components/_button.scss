@@ -43,4 +43,10 @@
     color: $color-black;
     border: 1px solid $color-black;
   }
+  &.button--grey-outline {
+    background-color: transparent;
+    color: $color-secondary-grey;
+    border: 1px solid #E0E0E0;
+    border-radius: 4px; 
+  }
 }
