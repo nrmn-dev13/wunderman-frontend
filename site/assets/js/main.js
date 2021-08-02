@@ -36,7 +36,7 @@ $(document).ready(function () {
       $('.sidebar').removeClass('show--nav');
     })
     $('.hamburger').click(function () {
-      $('.sidenav').toggleClass('show--nav');
+      $('.aside').toggleClass('show--nav');
     })
   }
   function handleVideo() {

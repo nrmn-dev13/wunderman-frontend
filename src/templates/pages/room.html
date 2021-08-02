@@ -1,0 +1,29 @@
+<!-- index.html -->
+{% extends "layout.html" %}
+
+{% block content %}
+
+<header>
+  {% include "partials/webapp/nav.html" %}  
+</header>
+<main class="webapp">
+  <section class="section section--list-of-whare">
+    <div class="container-fluid">      
+      <div class="content">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="header-navigation">
+              <a href="list-of-whare.html" class="button button--grey-outline">
+                <i class="fas fa-arrow-left"></i>
+              </a>
+              <h4 class="title">Back to Whare List</h4>
+            </div> 
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- Modal -->
+{% endblock %}
