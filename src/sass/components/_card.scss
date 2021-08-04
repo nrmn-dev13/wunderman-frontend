@@ -192,6 +192,206 @@
       }
     }
   }
+  &.card--room {
+    padding: 0;
+    border: 1px solid $color-white;
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 30px;
+    .card-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: $color-white-grey;
+      width: 100%;
+      padding: 4px 9px;
+      border: none;
+      .title {
+        font-family: Merriweather;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 140.62%;
+        color: $color-secondary-black;
+        margin: 0;
+      }
+      .subtitle {
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 140.62%;
+        color: $color-secondary-grey;
+        margin: 0;
+      }
+    }
+    .card-body {
+      width: 100%;
+      padding: 30px 1rem;
+      .card-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .title {
+          font-family: Roboto;
+          font-style: normal;
+          font-weight: bold;
+          font-size: 20px;
+          line-height: 140.62%;
+          color: $color-secondary-black;
+          margin: 0;
+        }
+      }
+      .image-wrapper {
+        width: 72px;
+        height: 72px;
+        overflow: hidden;
+        margin: 0 0 20px;
+      }
+      .img {
+        width: 100%;
+        object-fit: cover;
+        image-rendering: -moz-crisp-edges; /* Firefox */
+        image-rendering: -o-crisp-edges; /* Opera */
+        image-rendering: -webkit-optimize-contrast; /* Webkit (non-standard naming) */
+        image-rendering: crisp-edges;
+        -ms-interpolation-mode: nearest-neighbor; /* IE (non-standard property) */
+      }
+    }
+    .card-footer {
+      width: 100%;
+      border: none;
+      background-color: $color-white-grey;
+      padding: 23px 10px 10px;
+      .temperature-section {
+        display: flex;
+        justify-content: space-between;
+        margin: 0 0 18px;
+      }
+      .temperature-column {
+        display: flex;
+        align-items: flex-start;
+        &.temperature--comfortable {
+          .icon-wrapper {
+            background-color: $color-comfortable;
+          }
+          .text-wrapper {
+            .title.title--celcius {
+              color: $color-comfortable;
+            }
+          }
+        }
+        &.temperature--cold {
+          .icon-wrapper {
+            background-color: $color-cold;
+          }
+          .text-wrapper {
+            .title.title--celcius {
+              color: $color-cold;
+            }
+          }
+        }
+        &.temperature--damp {
+          .icon-wrapper {
+            background-color: $color-damp;
+          }
+          .text-wrapper {
+            .title.title--celcius {
+              color: $color-damp;
+            }
+          }
+        }
+        &.temperature--hot {
+          .icon-wrapper {
+            background-color: $color-hot;
+          }
+          .text-wrapper {
+            .title.title--celcius {
+              color: $color-hot;
+            }
+          }
+        }
+        &.temperature--dry {
+          .icon-wrapper {
+            background-color: $color-dry;
+          }
+          .text-wrapper {
+            .title.title--celcius {
+              color: $color-dry;
+            }
+          }
+        }
+        &.temperature--offline {
+          .icon-wrapper {
+            background-color: $color-offline;
+          }
+          .text-wrapper {
+            .title.title--celcius {
+              color: $color-offline;
+            }
+          }
+        }
+      }
+      .icon-wrapper {
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        background-color: transparent;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex: 0 0 auto;
+        margin: 0 13px 0 0;
+      }
+      .text-wrapper {
+        .title.title--celcius {
+          font-family: Roboto;
+          font-style: normal;
+          font-weight: bold;
+          font-size: 18.1991px;
+          line-height: 140.62%;
+          margin: 0;
+        }
+        .text {
+          font-family: Roboto;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 10.9194px;
+          line-height: 140.62%;
+          color: $color-secondary-black;
+        }
+        .time-stamp {
+          font-family: Roboto;
+          font-style: normal;
+          font-weight: 300;
+          font-size: 9.09953px;
+          line-height: 180.62%;
+          color: $color-secondary-grey;
+        }
+      }
+      .button--analys {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 140.62%;
+        color: $color-white;
+        &:hover {
+          color: $color-white;
+        }
+        i.fas {
+          position: absolute;
+          @include absolute(top 50% right 15px);
+          transform: translateY(-50%);
+        }
+      }
+    }
+  }
   &__description {
     font-family: Roboto;
     font-style: normal;

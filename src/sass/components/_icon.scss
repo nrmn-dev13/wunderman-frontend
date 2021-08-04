@@ -23,19 +23,19 @@
   }  
   &.icon--home-plus {
     margin: 0 10px 0 0;
-    background-repeat: no-repeat;
-    background-size: cover;
     width: 25px;
     height: 23px;
-    background-image: url(/assets/img/webapp/home-plus-icon.png);
+    .svg-path {
+      fill: $color-secondary-black;
+    }
   }
   &.icon--home {
     margin: 0 10px 0 0;
-    background-repeat: no-repeat;
-    background-size: cover;
     width: 22px;
     height: 21px;
-    background-image: url(/assets/img/webapp/home-icon.png);
+    .svg-path {
+      fill: $color-secondary-black;
+    }
   }
   &.icon--circle-green {
     margin: 0 10px 0 0;    
