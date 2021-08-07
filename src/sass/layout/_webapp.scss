@@ -110,12 +110,18 @@
             &:checked ~ .form__custom-radio-wrapper .form__custom-radio {
               border: 7px solid $color-green;
             }
+            &:checked ~ .input-wrapper--other {
+              display: block;
+            }
           }
           .form__custom-radio-wrapper {
             .form__custom-radio-title {
               font-size: 16px;
               line-height: 140.62%;
             }
+          }
+          .input-wrapper--other {
+            display: none;
           }
         }
         .form__map-wrapper {
@@ -124,14 +130,18 @@
         &.form__field--has-radio {
           .form__label {
             .form__input--radio {
-              &:checked ~ .form__custom-radio-wrapper .form__custom-radio {
-                border: 7px solid $color-green;                
-              }
-              &:checked ~ .form__custom-radio-wrapper .form__custom-radio-title {
-                color: $color-green;                
+              &:checked ~ .form__custom-radio-wrapper {
+                border: 1px solid $color-green;
+                .form__custom-radio {
+                  border: 7px solid $color-green;
+                }
+                .form__custom-radio-title {
+                  color: $color-green;                
+                }
               }
             }
             .form__custom-radio-wrapper {
+              border: 1px solid $color-secondary-black;
               .form__custom-radio-title {
                 font-size: 16px;
                 line-height: 140.62%; 
@@ -141,12 +151,23 @@
         }
         &.form__field--has-multiple-checkbox {
           .form__label--has-checkbox {
+            padding: 0;
+            border: none;
             .form__input--checkbox {
-              &:checked ~ .form__custom-checkbox-wrapper .form__text-label {
-                color: $color-green;
-              }
+              &:checked ~ .form__custom-checkbox-wrapper {      
+                border: 1px solid $color-green;
+                .form__text-label {
+                  color: $color-green;
+                }
+              } 
             }
-            .form__custom-checkbox-wrapper {
+            .form__custom-checkbox-wrapper {        
+              border: 1px solid $color-secondary-black;
+              padding: 16px 13px;
+              width: 100%;
+              .form__custom-checkbox {
+                left: 16px;
+              }
               .form__text-label {
                 font-size: 16px;
                 line-height: 140.62%;
