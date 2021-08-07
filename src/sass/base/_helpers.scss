@@ -58,14 +58,19 @@
   justify-content: space-between;
   align-items: center;
   margin: 0 15px 30px;
+  .text {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 140.62%;
+  }
   &.alert-success {
-    .text {
-      font-family: Roboto;
-      font-style: normal;
-      font-weight: normal;
-      font-size: 14px;
-      line-height: 140.62%;
+    .btn {
+      color: inherit;
     }
+  }
+  &.alert-danger {
     .btn {
       color: inherit;
     }

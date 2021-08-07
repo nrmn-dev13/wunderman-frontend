@@ -148,6 +148,12 @@
               }              
             }
           }
+          &.form__field--multiple-row {
+            flex-wrap: wrap;
+            .form__label {
+              margin-bottom: 30px !important;
+            }
+          }
         }
         &.form__field--has-multiple-checkbox {
           .form__label--has-checkbox {

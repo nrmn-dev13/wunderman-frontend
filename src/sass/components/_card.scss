@@ -273,18 +273,18 @@
         display: flex;
         align-items: flex-start;
         &.temperature--comfortable {
-          .icon-wrapper {
-            background-color: $color-comfortable;
+          .icon--temperature {            
+            background-image: url(/assets/img/webapp/comfortable-temp-icon.png);
           }
           .text-wrapper {
             .title.title--celcius {
               color: $color-comfortable;
             }
           }
-        }
+        } 
         &.temperature--cold {
-          .icon-wrapper {
-            background-color: $color-cold;
+          .icon--temperature {
+            background-image: url(/assets/img/webapp/cold-temp-icon.png);
           }
           .text-wrapper {
             .title.title--celcius {
@@ -292,7 +292,20 @@
             }
           }
         }
+        &.temperature--hot {
+          .icon--temperature {
+            background-image: url(/assets/img/webapp/hot-temp-icon.png);
+          }          
+          .text-wrapper {
+            .title.title--celcius {
+              color: $color-hot;
+            }
+          }
+        }
         &.temperature--damp {
+          .icon--temperature {
+            background-image: url(/assets/img/webapp/damp-hum-icon.png);
+          }
           .icon-wrapper {
             background-color: $color-damp;
           }
@@ -301,20 +314,20 @@
               color: $color-damp;
             }
           }
-        }
-        &.temperature--hot {
-          .icon-wrapper {
-            background-color: $color-hot;
+        }   
+        &.temperature--offline {
+          .icon--temperature {
+            background-image: url(/assets/img/webapp/offline-temp-icon.png);
           }
           .text-wrapper {
             .title.title--celcius {
-              color: $color-hot;
+              color: $color-offline;
             }
           }
-        }
-        &.temperature--dry {
-          .icon-wrapper {
-            background-color: $color-dry;
+        }     
+        &.humidity--dry {
+          .icon--temperature {
+            background-image: url(/assets/img/webapp/dry-hum-icon.png);
           }
           .text-wrapper {
             .title.title--celcius {
@@ -322,9 +335,29 @@
             }
           }
         }
-        &.temperature--offline {
-          .icon-wrapper {
-            background-color: $color-offline;
+        &.humidity--comfortable {
+          .icon--temperature {
+            background-image: url(/assets/img/webapp/comfortable-hum-icon.png);
+          }
+          .text-wrapper {
+            .title.title--celcius {
+              color: $color-comfortable;
+            }
+          }
+        }
+        &.humidity--damp {
+          .icon--temperature {
+            background-image: url(/assets/img/webapp/damp-hum-icon.png);
+          }
+          .text-wrapper {
+            .title.title--celcius {
+              color: $color-damp;
+            }
+          }
+        }
+        &.humidity--offline {
+          .icon--temperature {
+            background-image: url(/assets/img/webapp/offline-hum-icon.png);
           }
           .text-wrapper {
             .title.title--celcius {
@@ -333,7 +366,7 @@
           }
         }
       }
-      .icon-wrapper {
+      .icon {
         width: 45px;
         height: 45px;
         border-radius: 50%;
@@ -343,6 +376,8 @@
         align-items: center;
         flex: 0 0 auto;
         margin: 0 13px 0 0;
+        background-repeat: no-repeat;
+        background-size: cover;
       }
       .text-wrapper {
         .title.title--celcius {
