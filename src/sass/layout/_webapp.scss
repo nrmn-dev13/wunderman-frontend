@@ -104,8 +104,59 @@
     padding: 20px;
     .form-group {
       margin-bottom: 15px;
+      .form__field {
+        .form__label--inline-radio {
+          .form__input--radio {
+            &:checked ~ .form__custom-radio-wrapper .form__custom-radio {
+              border: 7px solid $color-green;
+            }
+          }
+          .form__custom-radio-wrapper {
+            .form__custom-radio-title {
+              font-size: 16px;
+              line-height: 140.62%;
+            }
+          }
+        }
+        .form__map-wrapper {
+          margin-bottom: 15px;
+        }
+        &.form__field--has-radio {
+          .form__label {
+            .form__input--radio {
+              &:checked ~ .form__custom-radio-wrapper .form__custom-radio {
+                border: 7px solid $color-green;                
+              }
+              &:checked ~ .form__custom-radio-wrapper .form__custom-radio-title {
+                color: $color-green;                
+              }
+            }
+            .form__custom-radio-wrapper {
+              .form__custom-radio-title {
+                font-size: 16px;
+                line-height: 140.62%; 
+              }              
+            }
+          }
+        }
+        &.form__field--has-multiple-checkbox {
+          .form__label--has-checkbox {
+            .form__input--checkbox {
+              &:checked ~ .form__custom-checkbox-wrapper .form__text-label {
+                color: $color-green;
+              }
+            }
+            .form__custom-checkbox-wrapper {
+              .form__text-label {
+                font-size: 16px;
+                line-height: 140.62%;
+              }
+            }
+          }
+        }
+      }
     }
-    .label-form {
+    .label-title {
       font-family: Roboto;
       font-style: normal;
       font-weight: bold;

@@ -24,7 +24,7 @@
             <form class="form form--section">
               <div class="form-group">
                 <div class="form__field">                  
-                  <label class="label-form" for="">Your Whare Name</label>
+                  <label class="label-title" for="">Your Whare Name</label>
                   <div class="input-wrapper">
                     <input type="email" class="form-control" id="" placeholder="10 Silverstren Road">
                   </div>
@@ -32,7 +32,7 @@
               </div>
               <div class="form-group">
                 <div class="form__field">
-                  <label class="label-form" for="">Your Address Detail</label>
+                  <label class="label-title" for="">Your Address Detail</label>
                   <div class="input-wrapper">
                     <textarea name="" id="" cols="3" rows="3" class="form-control"></textarea>
                   </div>
@@ -45,13 +45,14 @@
                   </div>
                   <div class="flex-wrapper">
                     <p class="text">Whitemore St, Near from Rydges Wellington</p>
-                    <button class="button button--black-outline">Update</button>
+                    <button type="button" class="button button--black-outline" data-bs-toggle="modal"
+                    data-bs-target="#exampleModal">Update</button>
                   </div>
                 </div>
               </div>
               <div class="form-group">
                 <div class="form__field">
-                  <label class="label-form" for="">What is the ownership status of your home?</label>
+                  <label class="label-title" for="">What is the ownership status of your home?</label>
                   <label class="form__label form__label--inline-radio" for="ownership-one">
                     <input class="form__input form__input--radio" type="radio" name="inlineRadioOptions" id="ownership-one" value="option1">
                     <div class="form__custom-radio-wrapper">
@@ -90,7 +91,7 @@
                 </div>
               </div>
               <div class="form-group">
-                <label class="label-form" for="">Is anyone aged 14 and under present in the home?</label>
+                <label class="label-title" for="">Is anyone aged 14 and under present in the home?</label>
                 <div class="form__field form__field--has-radio">
                   <label class="form__label" for="inlineRadio1">
                     <input class="form__input form__input--radio" type="radio" name="inlineRadioOptions1" id="inlineRadio1" value="option1">
@@ -109,7 +110,7 @@
                 </div>
               </div>
               <div class="form-group">
-                <label class="label-form" for="">Is anyone aged 65 and over present in the home?</label>
+                <label class="label-title" for="">Is anyone aged 65 and over present in the home?</label>
                 <div class="form__field form__field--has-radio">
                   <label class="form__label" for="inlineRadio3">
                     <input class="form__input form__input--radio" type="radio" name="inlineRadioOptions2" id="inlineRadio3" value="option2">
@@ -128,7 +129,7 @@
                 </div>
               </div>
               <div class="form-group">
-                <label class="label-form" for="">Do any residents in your home identify as?</label>
+                <label class="label-title" for="">Do any residents in your home identify as?</label>
                 <div class="form__field form__field--has-multiple-checkbox">
                   <label for="checkboxOne" class="form__label form__label--has-checkbox">
                     <input id="checkboxOne" type="checkbox" class="form__input form__input--checkbox">
@@ -189,7 +190,7 @@
                 </div>
               </div>
               <div class="form-group">
-                <label class="label-form" for="">Does anyone in your whare have a history of?</label>
+                <label class="label-title" for="">Does anyone in your whare have a history of?</label>
                 <div class="form__field form__field--has-multiple-checkbox">
                   <label for="checkboxOneB" class="form__label form__label--has-checkbox">
                     <input id="checkboxOneB" type="checkbox" class="form__input form__input--checkbox">
@@ -250,7 +251,7 @@
                 </div>
               </div>
               <div class="form-group">
-                <label class="label-form" for="">Select your health organization</label>
+                <label class="label-title" for="">Select your health organization</label>
                 <div class="form__field">
                   <label class="form__label form__label--inline-radio" for="step-seventh-one">
                     <input class="form__input form__input--radio" type="radio" name="inlineRadioOptions" id="step-seventh-one" value="option1">
@@ -269,7 +270,7 @@
                 </div>
               </div>
               <div class="form-group">
-                <label class="label-form" for="">Do you know your NHI Number ?</label>
+                <label class="label-title" for="">Do you know your NHI Number ?</label>
                 <div class="form__field form__field--has-inline-button">
                   <input type="text" class="form__input" placeholder="Eg. AAB9090">
                   <button class="button button--green">Add</button>
@@ -290,7 +291,7 @@
                 </div>
               </div>
               <div class="form-group">
-                <label class="label-form" for="">Do you have a internet capable device in your home?</label>
+                <label class="label-title" for="">Do you have a internet capable device in your home?</label>
                 <div class="form__field form__field--has-radio">
                   <label class="form__label" for="step-nineth-one">
                     <input class="form__input form__input--radio" type="radio" name="inlineRadioOptions" id="step-nineth-one" value="option1">
@@ -309,7 +310,7 @@
                 </div>
               </div>
               <div class="form-group">
-                <label class="label-form" for="">Do you have a internet connection?</label>
+                <label class="label-title" for="">Do you have a internet connection?</label>
                 <div class="form__field form__field--has-radio">
                   <label class="form__label" for="step-tenth-one">
                     <input class="form__input form__input--radio" type="radio" name="inlineRadioOptions" id="step-tenth-one" value="option1">
@@ -337,4 +338,25 @@
 </main>
 
 <!-- Modal -->
+<div class="modal modal--step-guide fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-body">
+        <iframe class="modal-map" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+          src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=1%20Grafton%20Street,%20Dublin,%20Ireland+(My%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
+        <div class="form__field">
+          <div class="form__input-wrapper form__input-wrapper--has-icon">
+            <input type="text" class="form__input" placeholder="Your address">
+            <i class="icon icon--location fas fa-map-marker-alt"></i>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="button button--white" data-bs-dismiss="modal">Cancel</button>
+        <button class="button button--green">Confirmation</button>
+      </div>
+    </div>
+  </div>
+</div>
 {% endblock %}
