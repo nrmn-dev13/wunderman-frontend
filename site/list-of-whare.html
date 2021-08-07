@@ -63,6 +63,13 @@
   <aside class="aside">
   <div class="sidenav">
     <ul class="nav-menu">
+      <li class="menu-list menu-list--room active">
+        <a href="list-of-whare.html" class="menu-title">
+          <div class="wrapper">                        
+            <span class="title title--house">Rudi’s House</span> 
+          </div>
+        </a>        
+      </li>
       <li class="menu-list active">
         <a href="list-of-whare.html" class="menu-title">
           <div class="wrapper">            
@@ -76,7 +83,7 @@
           </div>
         </a>        
       </li>
-      <li class="menu-list">
+      <li class="menu-list menu-list--whare">
         <div class="menu-title">        
           <div class="wrapper">            
             <svg class="icon icon--home" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -99,6 +106,64 @@
             </li>
           </ul>          
         </div>
+      </li>
+      <li class="menu-list menu-list--room">
+        <div class="menu-title">        
+          <div class="wrapper">
+              <svg class="icon icon--room" viewBox="0 0 16 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path class="svg-path" d="M0.117188 3.73996C0.117188 2.97521 0.659777 2.31799 1.41069 2.17319L9.68337 0.577882C10.6677 0.388069 11.5812 1.14222 11.5812 2.14466V19.849C11.5812 20.8541 10.6631 21.6089 9.67695 21.4145L1.40427 19.784C0.65637 19.6366 0.117188 18.9808 0.117188 18.2185V3.73996Z" fill="#333333"/>
+                <circle cx="8.57996" cy="11.0009" r="1.00184" fill="white"/>
+                <path class="svg-path" d="M13.3359 2.47266H14.1731C14.7606 2.47266 15.2368 2.94892 15.2368 3.53642V18.6713C15.2368 19.2588 14.7606 19.7351 14.1731 19.7351H13.3359V2.47266Z" fill="#333333"/>
+              </svg>
+            <span class="title">Rooms</span> 
+          </div>
+          <i class="fas fa-chevron-down collapsed" data-bs-toggle="collapse" data-bs-target="#whareContent" aria-expanded="false" aria-controls="whareContent"></i>
+        </div>
+        <div class="collapse" id="whareContent">
+          <ul class="menu-sublist">
+            <li class="menu-sublist__item">
+              <a href="#" class="link">Rudi's House</a>
+            </li>
+            <li class="menu-sublist__item">
+              <a href="#" class="link">10 Silverstream Road</a>
+            </li>
+            <li class="menu-sublist__item">
+              <a href="#" class="link">Garys Home</a>
+            </li>
+          </ul>          
+        </div>
+      </li>
+      <li class="menu-list menu-list--room">
+        <a href="list-of-whare.html" class="menu-title">
+          <div class="wrapper">
+            <svg class="icon icon--add-whanau" viewBox="0 0 24 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect class="svg-path" x="0.96875" y="0.0429688" width="19.9027" height="4.69924" rx="2.34962" fill="#333333"/>
+              <circle cx="4.19195" cy="2.39214" r="0.723198" fill="white"/>
+              <circle cx="6.31695" cy="2.39214" r="0.723198" fill="white"/>
+              <rect class="svg-path" x="0.96875" y="6.96484" width="19.9027" height="4.69924" rx="2.34962" fill="#333333"/>
+              <circle cx="4.19195" cy="9.31402" r="0.723198" fill="white"/>
+              <circle cx="6.31695" cy="9.31402" r="0.723198" fill="white"/>
+              <rect class="svg-path" x="0.96875" y="13.8857" width="19.9027" height="4.69924" rx="2.34962" fill="#333333"/>
+              <circle cx="4.19195" cy="16.2359" r="0.723198" fill="white"/>
+              <circle cx="6.31695" cy="16.2359" r="0.723198" fill="white"/>
+              <circle class="svg-path" cx="16.9931" cy="13.8856" r="5.53672" fill="#333333" stroke="white" stroke-width="1.06895"/>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M16.99 10.5664C16.577 10.5664 16.2422 10.9012 16.2422 11.3141V13.1379H14.4196C14.0067 13.1379 13.6719 13.4727 13.6719 13.8857C13.6719 14.2986 14.0067 14.6334 14.4196 14.6334H16.2422V16.4583C16.2422 16.8712 16.577 17.206 16.99 17.206C17.4029 17.206 17.7377 16.8712 17.7377 16.4583V14.6334H19.5637C19.9767 14.6334 20.3115 14.2986 20.3115 13.8857C20.3115 13.4727 19.9767 13.1379 19.5637 13.1379H17.7377V11.3142C17.7377 10.9012 17.4029 10.5664 16.99 10.5664Z" fill="white"/>
+              </svg>
+            <span class="title">Add Whānau</span> 
+          </div>
+        </a>        
+      </li>
+      <li class="menu-list menu-list--room">
+        <a href="list-of-whare.html" class="menu-title">
+          <div class="wrapper">            
+            <svg class="icon icon--edit-whare" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path class="svg-path" d="M12.2333 3.24973H11.2709C10.9822 2.24364 10.0549 1.5 8.95252 1.5C7.85019 1.5 6.92283 2.24364 6.63413 3.24973H5.67177C5.31308 3.24973 5.01562 3.54719 5.01562 3.90588V5.21818C5.01562 6.05805 5.70677 6.7492 6.54664 6.7492H11.3584C12.1983 6.7492 12.8894 6.05805 12.8894 5.21818V3.90588C12.8894 3.54719 12.592 3.24973 12.2333 3.24973Z" fill="black"/>
+              <path class="svg-path" d="M13.9825 4.125H13.7637V5.21858C13.7637 6.54838 12.6877 7.62446 11.3579 7.62446H6.5461C5.21631 7.62446 4.14022 6.54838 4.14022 5.21858V4.125H3.92151C2.59171 4.125 1.51562 5.20108 1.51562 6.53088V17.4667C1.51562 18.7965 2.59171 19.8726 3.92151 19.8726H10.378L10.5705 18.7965C10.658 18.3066 10.8854 17.8691 11.2354 17.5104L11.9353 16.8106H4.79637C4.43768 16.8106 4.14022 16.5131 4.14022 16.1544C4.14022 15.7957 4.43768 15.4983 4.79637 15.4983H13.1076C13.1513 15.4983 13.1863 15.4983 13.2301 15.5158H13.2388L16.3883 12.3662V6.53088C16.3883 5.20108 15.3123 4.125 13.9825 4.125ZM13.1076 13.9672H4.79637C4.43768 13.9672 4.14022 13.6698 4.14022 13.3111C4.14022 12.9524 4.43768 12.6549 4.79637 12.6549H13.1076C13.4663 12.6549 13.7637 12.9524 13.7637 13.3111C13.7637 13.6698 13.4663 13.9672 13.1076 13.9672ZM13.1076 11.1239H4.79637C4.43768 11.1239 4.14022 10.8265 4.14022 10.4678C4.14022 10.1091 4.43768 9.81163 4.79637 9.81163H13.1076C13.4663 9.81163 13.7637 10.1091 13.7637 10.4678C13.7637 10.8265 13.4663 11.1239 13.1076 11.1239Z" fill="black"/>
+              <path class="svg-path" d="M12.4761 22.4979C12.3038 22.4979 12.1358 22.4296 12.0124 22.3054C11.8611 22.154 11.7929 21.9388 11.8305 21.7271L12.2941 19.0981C12.3169 18.966 12.3816 18.8435 12.4761 18.7482L18.972 12.2532C19.7699 11.4535 20.5538 11.6696 20.9824 12.0983L22.0647 13.1805C22.6622 13.7772 22.6622 14.7483 22.0647 15.3458L15.5688 21.8417C15.4743 21.9371 15.3518 22.0009 15.2188 22.0237L12.5899 22.4874C12.5522 22.4944 12.5137 22.4979 12.4761 22.4979ZM15.1051 21.378H15.1138H15.1051Z" fill="black"/>
+            </svg>              
+            <span class="title">Edit Whare</span> 
+          </div>
+        </a>        
       </li>
     </ul>
     <ul class="nav-menu nav-menu--profile">    

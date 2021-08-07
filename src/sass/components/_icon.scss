@@ -37,6 +37,30 @@
       fill: $color-secondary-black;
     }
   }
+  &.icon--room {
+    margin: 0 10px 0 0;
+    width: 15px;
+    height: 21px;
+    .svg-path {
+      fill: $color-secondary-black;
+    }
+  }
+  &.icon--add-whanau {
+    margin: 0 10px 0 0;
+    width: 22px;
+    height: 19px;
+    .svg-path {
+      fill: $color-secondary-black;
+    }
+  }
+  &.icon--edit-whare {
+    margin: 0 10px 0 0;
+    width: 21px;
+    height: 21px;
+    .svg-path {
+      fill: $color-secondary-black;
+    }
+  }
   &.icon--circle-green {
     margin: 0 10px 0 0;    
     width: 38px;

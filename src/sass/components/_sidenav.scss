@@ -64,6 +64,9 @@
             color: $color-green !important;
           }
         }
+        i.fas {
+          color: $color-green !important;
+        }
       }
       .menu-title {
         display: flex;
@@ -79,6 +82,11 @@
             font-size: 20px;
             line-height: 140.62%;
             color: #333333;
+            &--house {
+              font-family: Merriweather;
+              font-size: 20px;
+              line-height: 140.62%;
+            }
           }
         }
         i.fas {
@@ -131,6 +139,12 @@
           }
         }
       }
+      &--whare {
+        display: block;
+      }
+      &--room {
+        display: none;
+      }
     }
     &--profile {
       padding: 30px 15px;
@@ -151,6 +165,6 @@
           padding: 16px 12px;
         }
       }
-    }
+    }    
   }
 }

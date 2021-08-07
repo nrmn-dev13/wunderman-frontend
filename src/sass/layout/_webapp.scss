@@ -9,6 +9,22 @@
   @include for-size(ipad-pro) {
     align-items: flex-start;
   }
+  &--room-page {
+    .aside {
+      .sidenav {
+        .nav-menu {
+          .menu-list {
+            &.menu-list--room {
+              display: block;
+            }
+            &.menu-list--whare {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
   .section {
     background: #f5f6f8;
     padding-top: 56px;
