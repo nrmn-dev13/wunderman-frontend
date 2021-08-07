@@ -143,6 +143,42 @@
         .form__map-wrapper {
           margin-bottom: 15px;
         }
+        .flex-wrapper {
+          flex-direction: column;
+          @include for-size(tablet) {
+            flex-direction: row;
+          }
+          @include for-size(desktop) {
+            flex-direction: row;
+          }
+          @include for-size(ipad-pro) {
+            flex-direction: row;
+          }
+          .text {
+            margin: 0 0 15px;
+            @include for-size(tablet) {
+              margin: 0;
+            }
+            @include for-size(desktop) {
+              margin: 0;
+            }
+            @include for-size(ipad-pro) {
+              margin: 0;
+            }
+          }
+          .button {
+            width: 100%;
+            @include for-size(tablet) {
+              width: max-content;
+            }
+            @include for-size(desktop) {
+              width: max-content;
+            }
+            @include for-size(ipad-pro) {
+              width: max-content;
+            }
+          }
+        }
         &.form__field--has-radio {
           .form__label {
             .form__input--radio {
@@ -197,6 +233,46 @@
             }
           }
         }
+        &.form__field--has-inline-button {
+          flex-direction: column;
+          @include for-size (tablet) {
+            flex-direction: row;
+          }
+          @include for-size (desktop) {
+            flex-direction: row;
+          }
+          @include for-size (ipad-pro) {
+            flex-direction: row;
+          }
+          .form__input {
+            margin-right: 0;
+            margin-bottom: 14px;
+            @include for-size (tablet) {
+              margin-right: 15px;
+              margin-bottom: 0;
+            }
+            @include for-size (desktop) {
+              margin-right: 15px;
+              margin-bottom: 0;
+            }
+            @include for-size (ipad-pro) {
+              margin-right: 15px;
+              margin-bottom: 0;
+            }
+          }
+          .button {
+            justify-content: center;
+            @include for-size (tablet) {
+              justify-content: flex-start;
+            }
+            @include for-size (desktop) {
+              justify-content: flex-start;
+            }
+            @include for-size (ipad-pro) {
+              justify-content: flex-start;
+            }
+          }
+        }
       }
     }
     .label-title {
@@ -215,6 +291,18 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+    }
+    .button {
+      width: 100%;
+      @include for-size(tablet) {
+        width: max-content;
+      }
+      @include for-size(desktop) {
+        width: max-content;
+      }
+      @include for-size(ipad-pro) {
+        width: max-content;
+      }
     }
   }
 }
