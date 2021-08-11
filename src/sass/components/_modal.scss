@@ -269,8 +269,21 @@
     .modal-footer {
       justify-content: flex-start;
       border-top: none;
+      flex-direction: column;
+      @include for-size(tablet) {
+        flex-direction: row;
+      }
+      @include for-size(desktop) {
+        flex-direction: row;
+      }
       .button {
-        min-width: 80px;
+        min-width: 100%;
+        @include for-size(tablet) {
+          min-width: 80px;
+        }
+        @include for-size(desktop) {
+          min-width: 80px;
+        }
       }
     }
   }

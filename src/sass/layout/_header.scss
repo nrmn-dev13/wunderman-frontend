@@ -49,6 +49,13 @@
         font-size: 16px;
         line-height: 140.62%;
         color: $color-black;
+        display: none;
+        @include for-size(tablet) {
+          display: block;
+        }        
+        @include for-size(desktop) {
+          display: none;
+        }        
       }
       .hamburger {
         width: 20px;
