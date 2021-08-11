@@ -83,8 +83,14 @@
     }
   }
   &.card--dashed {
-    border-style: dashed;
+    border: 2px dashed #D5D5D5;
     padding: 0;
+    @include for-size(tablet) {
+      border: 3px dashed #D5D5D5;
+    }
+    @include for-size(desktop) {
+      border: 3px dashed #D5D5D5;
+    }
     .card-body {
       padding: 0;
       .wrapper {

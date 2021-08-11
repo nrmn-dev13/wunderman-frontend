@@ -72,6 +72,12 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        cursor: pointer;
+        &.collapsed {
+          i.fas {
+            transform: rotate(0deg);
+          }
+        }
         .wrapper {
           display: flex;
           align-items: center;
@@ -92,10 +98,7 @@
         i.fas {
           cursor: pointer;
           transform: rotate(180deg);
-          transition: transform 400ms ease-in-out;
-          &.collapsed {
-            transform: rotate(0deg);
-          }
+          transition: transform 400ms ease-in-out;          
         }
       }
       .menu-sublist {

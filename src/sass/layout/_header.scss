@@ -8,6 +8,7 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  border-bottom: 1px solid #e0e0e0;
   @include fixed(top 0 left 0 bottom 0);
   width: 100%;
   height: 56px;
