@@ -21,6 +21,12 @@
     width: 100%;
     border-bottom: 0px solid #e0e0e0;
   }
+  .navbar-header {
+    justify-content: space-between;    
+    @include for-size(desktop) {
+      justify-content: center;
+    }
+  }
   .navbar-brand {
     display: flex;
     align-items: center;
