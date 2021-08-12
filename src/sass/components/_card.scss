@@ -85,11 +85,14 @@
   &.card--dashed {
     border: 2px dashed #D5D5D5;
     padding: 0;
+    display: none;
     @include for-size(tablet) {
       border: 3px dashed #D5D5D5;
+      display: block;
     }
     @include for-size(desktop) {
       border: 3px dashed #D5D5D5;
+      display: block;
     }
     .card-body {
       padding: 0;
