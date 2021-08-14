@@ -32,13 +32,15 @@
     align-items: center;
     padding: 0;
     margin: 0;
-    .title {
-      font-family: Roboto;
-      font-weight: bold;
-      font-size: 32px;
-      line-height: 140.62%;
-      color: $color-black;
-      margin: 0 0 0 15px;
+    width: 188px;
+    height: 35px;
+    .img-logo {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      image-rendering: auto;
+      image-rendering: crisp-edges;
+      image-rendering: -webkit-optimize-contrast;
     }
   }
   .nav-action {

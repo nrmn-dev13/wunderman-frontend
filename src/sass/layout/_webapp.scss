@@ -121,7 +121,11 @@
     .form-group {
       margin-bottom: 15px;
       .form__field {
+        margin-bottom: 25px;
         .form__label--inline-radio {
+          &:last-child {
+            margin-bottom: 0;
+          }
           .form__input--radio {
             &:checked ~ .form__custom-radio-wrapper .form__custom-radio {
               border: 7px solid $color-green;
@@ -208,6 +212,7 @@
           }
         }
         &.form__field--has-multiple-checkbox {
+          margin-bottom: 0;
           .form__label--has-checkbox {
             padding: 0;
             border: none;
