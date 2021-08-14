@@ -206,8 +206,9 @@
           }
           &.form__field--multiple-row {
             flex-wrap: wrap;
+            margin-bottom: 0;
             .form__label {
-              margin-bottom: 30px !important;
+              margin-bottom: 25px !important;
             }
           }
         }
