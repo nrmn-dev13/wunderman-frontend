@@ -47,13 +47,7 @@
         font-size: 16px;
         -webkit-line-clamp: inherit;
         -webkit-box-orient: unset;
-      }
-      @include for-size(ipad-pro) {
-        line-height: 28px;
-        font-size: 14px;
-        -webkit-line-clamp: inherit;
-        -webkit-box-orient: unset;
-      }
+      }      
     }
     &.expanded {
       .card__description {
@@ -74,12 +68,7 @@
         display: none;
         line-height: 28px;
         font-size: 16px;
-      }
-      @include for-size(ipad-pro) {
-        display: none;
-        line-height: 28px;
-        font-size: 14px;
-      }
+      }      
     }
   }
   &.card--dashed {

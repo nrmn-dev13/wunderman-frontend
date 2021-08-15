@@ -16,11 +16,7 @@
     width: 300px;
     box-shadow: 6px 0px 18px rgba(0, 0, 0, 0.06);
     border-bottom: 1px solid #e0e0e0;
-  }
-  @include for-size(ipad-pro) {
-    width: 100%;
-    border-bottom: 0px solid #e0e0e0;
-  }
+  }  
   .navbar-header {
     justify-content: space-between;    
     @include for-size(desktop) {
@@ -51,10 +47,7 @@
       align-items: center;
       @include for-size(desktop) {
         display: none;
-      }
-      @include for-size(ipad-pro) {
-        display: flex;
-      }
+      }      
       .menu-text {
         font-family: Roboto;
         font-weight: normal;

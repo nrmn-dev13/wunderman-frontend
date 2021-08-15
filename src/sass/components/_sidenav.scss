@@ -16,13 +16,7 @@
   @include for-size(desktop) {    
     width: 300px;
     transform: translateX(0px);
-  }
-  @include for-size(ipad-pro) {
-    width: 300px;
-    left: auto;
-    right: 0;
-    transform: translateX(300px);
-  }
+  }  
   &.show--nav {
     transform: translateX(0px);
     ~ .backdrop {

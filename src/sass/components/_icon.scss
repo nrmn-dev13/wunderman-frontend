@@ -16,10 +16,7 @@
     display: none;
     @include for-size(desktop) {
       display: block;
-    }
-    @include for-size(ipad-pro) {
-      display: none;
-    }
+    }    
   }  
   &.icon--home-plus {
     margin: 0 10px 0 0;

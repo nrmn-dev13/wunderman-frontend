@@ -10,8 +10,5 @@
   }
   @include for-size(desktop) {
     display: flex;
-  }
-  @include for-size(ipad-pro) {
-    display: flex;
-  }
+  }  
 }
