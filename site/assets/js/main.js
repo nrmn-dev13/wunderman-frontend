@@ -51,6 +51,11 @@ $(document).ready(function () {
       video.pause();
       $('.video-content').removeClass('isPlaying');
     })
+  }
+  function handleAlert() {
+    $('.btn-close--alert').click(function () {
+      $('.alert-section').addClass('active');
+    })
   }  
 
   handleFormStep();
@@ -59,4 +64,5 @@ $(document).ready(function () {
   handleReadMore();
   handleToggleNav();
   handleVideo();
+  handleAlert()
 });
