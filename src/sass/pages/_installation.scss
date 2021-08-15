@@ -21,12 +21,7 @@
       width: 25%;
       transform: translateX(0%);
       padding: 33px 32px;
-    }
-    @include for-size(ipad-pro) {
-      width: 32%;
-      transform: translateX(-100%);
-      padding: 59px 33px;
-    }
+    }    
     &.show--nav {
       transform: translateX(0%);
       transition: transform 200ms ease-in-out;
@@ -58,10 +53,7 @@
       }
       @include for-size(desktop) {
         margin-bottom: 42px;
-      }
-      @include for-size(ipad-pro) {
-        margin-bottom: 32px;
-      }
+      }      
       &.active {
         .sidebar__link {
           color: $color-yellow;
@@ -93,10 +85,7 @@
       display: block;
       @include for-size(desktop) {
         display: none;
-      }
-      @include for-size(ipad-pro) {
-        display: block;
-      }
+      }      
     }
   }
   .slide-content {
@@ -110,11 +99,7 @@
     @include for-size(desktop) {
       padding: 0 23px;
       max-width: 75%;
-    }
-    @include for-size(ipad-pro) {
-      padding: 0 27px;
-      max-width: 100%;
-    }
+    }    
     &__title {
       font-family: Roboto;
       font-weight: bold;
@@ -146,11 +131,7 @@
       @include for-size(desktop) {
         font-size: 16px;
         line-height: 32px;
-      }
-      @include for-size(ipad-pro) {
-        font-size: 16px;
-        line-height: 30px;
-      }
+      }      
       .bold {
         font-weight: bold;
       }
@@ -170,13 +151,7 @@
         border-bottom-left-radius: 0;
         border-bottom-right-radius: 0;
         box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
-      }
-      @include for-size(ipad-pro) {
-        background-color: transparent;
-        padding: 0;
-        border-radius: 0px;
-        box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.15);
-      }
+      }      
     }
     &__inner-wrapper {
       padding: 0;
@@ -185,10 +160,7 @@
       }
       @include for-size(desktop) {
         padding: 25px;
-      }
-      @include for-size(ipad-pro) {
-        padding: 0;
-      }
+      }      
       .button {
         width: 100%;
         background-color: transparent;
@@ -197,10 +169,7 @@
         }
         @include for-size(desktop) {
           width: max-content;
-        }
-        @include for-size(ipad-pro) {
-          width: max-content;
-        }
+        }        
       }      
     }
     &__image-wrapper {
@@ -224,10 +193,7 @@
       }
       @include for-size(desktop) {
         margin: 45px 0 44px;
-      }
-      @include for-size(ipad-pro) {
-        margin: 67px 0 65px;
-      }
+      }      
       &--has-border {
         border: 15px solid #ffffff;
         filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
@@ -258,11 +224,7 @@
     @include for-size(desktop) {
       position: relative;
       box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
-    }
-    @include for-size(ipad-pro) {
-      position: fixed;
-      box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.15);
-    }
+    }    
     &__title {
       color: $black;
       font-family: Roboto;
@@ -280,10 +242,7 @@
       width: 80px;
       @include for-size(desktop) {
         display: none;
-      }
-      @include for-size(ipad-pro) {
-        display: flex;
-      }
+      }      
       .icon.icon--nav {
         display: flex;
         align-items: center;
@@ -301,11 +260,7 @@
       padding: 18px 20px;
       @include for-size(desktop) {
         padding: 22px 20px;
-      }
-      padding: 18px 20px;
-      @include for-size(ipad-pro) {
-        padding: 18px 20px;
-      }
+      }      
     }
     &__button-wrapper {
       display: flex;
@@ -324,11 +279,7 @@
         @include for-size(desktop) {
           width: 42px;
           height: 42px;
-        }
-        @include for-size(ipad-pro) {
-          width: 36px;
-          height: 36px;
-        }
+        }        
         .icon.icon--nav {
           font-size: 20px;
           color: $color-white;
@@ -351,9 +302,6 @@
     justify-content: center;
     @include for-size(desktop) {
       justify-content: flex-end;
-    }
-    @include for-size(ipad-pro) {
-      justify-content: center;
-    }
+    }    
   }
 }

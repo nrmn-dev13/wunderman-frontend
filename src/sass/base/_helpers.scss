@@ -63,10 +63,7 @@
   }
   @include for-size(desktop) {
     margin: 0 15px 30px;
-  }
-  @include for-size(ipad-pro) {
-    margin: 0 0 30px;
-  }
+  }  
   .text {
     font-family: Roboto;
     font-style: normal;
