@@ -17,47 +17,42 @@
     @include for-size(desktop) {
       display: block;
     }    
+  }
+  &.ic-fo-ic-home-plus {
+    font-size: 26px;
+    color: $color-secondary-black;
+    margin: 0 10px 0 0;
+  }
+  &.ic-fo-ic-account-setting-1 {
+    font-size: 24px;
+    color: $color-secondary-black;
+    margin: 0 10px 0 0;
+  }
+  &.ic-fo-ic-logout {
+    font-size: 24px;
+    color: $color-soft-red;
+    margin: 0 10px 0 0;
+  }
+  &.ic-fo-ic-rooms-1 {
+    font-size: 24px;
+    color: $color-secondary-black;
+    margin: 0 10px 0 0;
+  }
+  &.ic-fo-asset-3 {
+    font-size: 20px;
+    color: $color-secondary-black;
+    margin: 0 10px 0 0;
+  }
+  &.ic-fo-ic-edit-whare-1 {
+    font-size: 24px;
+    color: $color-secondary-black;
+    margin: 0 10px 0 0;
+  }
+  &.fas.fa-home {
+    font-size: 24px;
+    color: $color-secondary-black;
+    margin: 0 10px 0 0;
   }  
-  &.icon--home-plus {
-    margin: 0 10px 0 0;
-    width: 25px;
-    height: 23px;
-    .svg-path {
-      fill: $color-secondary-black;
-    }
-  }
-  &.icon--home {
-    margin: 0 10px 0 0;
-    width: 22px;
-    height: 21px;
-    .svg-path {
-      fill: $color-secondary-black;
-    }
-  }
-  &.icon--room {
-    margin: 0 10px 0 0;
-    width: 15px;
-    height: 21px;
-    .svg-path {
-      fill: $color-secondary-black;
-    }
-  }
-  &.icon--add-whanau {
-    margin: 0 10px 0 0;
-    width: 22px;
-    height: 19px;
-    .svg-path {
-      fill: $color-secondary-black;
-    }
-  }
-  &.icon--edit-whare {
-    margin: 0 10px 0 0;
-    width: 21px;
-    height: 21px;
-    .svg-path {
-      fill: $color-secondary-black;
-    }
-  }
   &.icon--circle-green {
     margin: 0 10px 0 0;    
     width: 38px;
@@ -86,20 +81,7 @@
     font-size: 14px;
     line-height: 140.62%;
     color: $color-white;
-  }
-  &.icon--account {
-    margin: 0 10px 0 0;    
-    width: 24px;
-    height: 24px;
-    background-repeat: no-repeat;
-    background-size: 12px 17px;
-    background-position: center;
-    background-image: url(/assets/img/webapp/setting-icon.svg);
-    background-color: $color-secondary-black;
-    display: flex;
-    flex: 0 0 auto;
-    border-radius: 50%;
-  }
+  }  
   &.icon--circle-black {
     margin: 0 10px 0 0;    
     width: 24px;

@@ -50,9 +50,7 @@
       &.active {
         .wrapper {
           .icon {
-            .svg-path {
-              fill: $color-green;
-            }
+            color: $color-green !important;
           }
           .title {
             color: $color-green !important;
@@ -68,7 +66,7 @@
         align-items: center;
         cursor: pointer;
         &.collapsed {
-          i.fas {
+          i.fa-chevron-down {
             transform: rotate(0deg);
           }
         }
@@ -89,7 +87,7 @@
             }
           }
         }
-        i.fas {
+        i.fa-chevron-down {
           cursor: pointer;
           transform: rotate(180deg);
           transition: transform 400ms ease-in-out;          
