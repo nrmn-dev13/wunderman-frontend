@@ -472,7 +472,8 @@
     height: 100%;
   }
 }
-.form-control:disabled, .form-control[readonly] {
-  background-color: inherit;
+.form-control:disabled, .form-control[readonly], .form-control--disabled {  
+  background: rgba(248, 247, 246, 0.8);
   opacity: 1;
+  pointer-events: none;
 }
