@@ -98,6 +98,11 @@
         border-left: 3px solid $color-green;
         &__item {
           padding: 16px 21px;
+          &.active {
+            .link {
+              color: $color-green;
+            }
+          }
           .link {
             font-family: Roboto;
             font-style: normal;
