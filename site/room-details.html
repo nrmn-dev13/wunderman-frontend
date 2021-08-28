@@ -57,9 +57,9 @@
       </div>
     </div>
   </div>  
-</nav>
+</nav>  
 </header>
-<main class="webapp">
+<main class="webapp webapp--room-page">
   <aside class="aside">
   <div class="sidenav">
     <ul class="nav-menu">
@@ -186,195 +186,236 @@
   </div>
   <div class="backdrop"></div>
 </aside>
-  <section class="section section--list-of-whare">
+  <section class="section">
     <div class="container-fluid">      
       <div class="content">
         <div class="row">
-          <div class="col-md-12 alert-section">
-            <div class="alert alert-success" role="alert">
-              <p class="text">Whare removed successfully - as we still hold the data</p>              
-              <button type="button" class="btn btn-close btn-close--alert"><i class="fas fa-times"></i></button>
-            </div>
+          <div class="col-md-12">
+            <div class="header-navigation">
+              <a href="list-of-whare.html" class="button button--grey-outline">
+                <i class="fas fa-arrow-left"></i>
+              </a>
+              <h4 class="title">Sensor : AC243FA5A250</h4>
+            </div> 
           </div>
-          <div class="col-md-6">
-            <div class="card card--dashed">
-              <div class="card-body">
-                <div class="wrapper">
-                  <h2 class="title">Add New Whare</h2>                  
-                  <i class="fas fa-plus-circle"></i>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="card card--whare">
+          <div class="col-12">
+            <div class="card card--room-details">
               <div class="card-header">
                 <div class="title-wrapper">
-                  <h4 class="title">Rudi'house</h4>
+                  <h4 class="title">Dan's Study</h4>
+                  <h6 class="subtitle">Adult's bedroom</h6>
                 </div>
+                <a href="edit-room.html" class="button button--sm button--grey">
+                  <i class="fas fa-pencil-alt"></i>
+                </a>
               </div>
               <div class="card-body">
-                <div class="content-list content-list--column">
-                  <div class="content-list__item">
-                    <div class="wrapper">
-                      <i class="fas fa-home"></i> Private Rental
+                <div class="summary-content">                  
+                  <div class="row">
+                    <div class="col-sm-4">
+                      <figure class="image-wrapper">
+                        <img src="assets/img/comfortable.png" alt="" class="img img-fluid">
+                      </figure>
+                    </div>
+                    <div class="col-sm-8">
+                      <ul class="list-unstyled">
+                        <li class="list-item">
+                          <i class="fas fa-check-circle"></i>
+                          <span class="text">Comfortable Temperature</span>
+                        </li>
+                        <li class="list-item">
+                          <i class="fas fa-check-circle"></i>
+                          <span class="text">Comfortable humidity</span>
+                        </li>
+                        <li class="list-item">
+                          <i class="fas fa-check-circle"></i>
+                          <span class="text">Acceptable dewpoint</span>
+                        </li>
+                        <li class="list-item">
+                          <i class="fas fa-check-circle"></i>
+                          <span class="text">Temp is well above dewpoint</span>
+                        </li>
+                      </ul>
                     </div>
                   </div>
-                  <div class="content-list__item">
-                    <div class="wrapper">
-                      <i class="fas fa-envelope"></i> rudi.house@gmail.com
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="card-footer">
-                <div class="content-list">
-                  <div class="content-list__item">
-                    <div class="wrapper">
-                      <i class="icon icon--circle-green-sm">4</i>
-                      <p class="text">Room</p>
-                    </div>
-                  </div>                
-                  <div class="content-list__item">
-                    <div class="wrapper">
-                      <i class="icon icon--circle-green-sm">4</i>
-                      <p class="text">Sensors</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="card-cta">
-                  <button class="btn btn--sm" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                    <i class="fas fa-ellipsis-v"></i>
-                  </button>
-                  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                    <li><a class="dropdown-item dropdown-item--black " href="#"><i class="fas fa-edit"></i> Edit</a></li>
-                    <li><a class="dropdown-item dropdown-item--red " href="#" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="far fa-trash-alt"></i> Delete</a></li>                  
-                  </ul>
                 </div>
               </div>
             </div>
           </div>
-          <div class="col-md-6">
-            <div class="card card--whare">
-              <div class="card-header">
-                <div class="title-wrapper">
-                  <h4 class="title">Rudi'house</h4>
-                </div>
-              </div>
-              <div class="card-body">
-                <div class="content-list content-list--column">
-                  <div class="content-list__item">
-                    <div class="wrapper">
-                      <i class="fas fa-home"></i> Private Rental
-                    </div>
-                  </div>
-                  <div class="content-list__item">
-                    <div class="wrapper">
-                      <i class="fas fa-envelope"></i> rudi.house@gmail.com
-                    </div>
-                  </div>
-                </div>
-              </div>
+          <div class="col-sm-4">
+            <div class="card card--room-details">
               <div class="card-footer">
-                <div class="content-list">
-                  <div class="content-list__item">
-                    <div class="wrapper">
-                      <i class="icon icon--circle-green-sm">4</i>
-                      <p class="text">Room</p>
-                    </div>
-                  </div>                
-                  <div class="content-list__item">
-                    <div class="wrapper">
-                      <i class="icon icon--circle-green-sm">4</i>
-                      <p class="text">Sensors</p>
+                <div class="temperature-section">
+                  <div class="temperature-column temperature--comfortable">
+                    <i class="icon icon--temperature"></i>                    
+                    <div class="text-wrapper">
+                      <h6 class="title title--celcius">22.2°C</h6>
+                      <p class="text">Temperature</p>
+                      <p class="time-stamp">7 minutes ago</p>
                     </div>
                   </div>
-                </div>
-                <div class="card-cta">
-                  <button class="btn btn--sm" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                    <i class="fas fa-ellipsis-v"></i>
-                  </button>
-                  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                    <li><a class="dropdown-item dropdown-item--black " href="#"><i class="fas fa-edit"></i> Edit</a></li>
-                    <li><a class="dropdown-item dropdown-item--red " href="#" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="far fa-trash-alt"></i> Delete</a></li>                  
-                  </ul>
                 </div>
               </div>
             </div>
           </div>
-          <div class="col-md-6">
-            <div class="card card--whare">
+          <div class="col-sm-4">
+            <div class="card card--room-details">
+              <div class="card-footer">
+                <div class="temperature-section">
+                  <div class="temperature-column temperature--cold">
+                    <i class="icon icon--temperature"></i>                    
+                    <div class="text-wrapper">
+                      <h6 class="title title--celcius">22.2°C</h6>
+                      <p class="text">Temperature</p>
+                      <p class="time-stamp">7 minutes ago</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="card card--room-details">
+              <div class="card-footer">
+                <div class="temperature-section">
+                  <div class="temperature-column temperature--damp">
+                    <i class="icon icon--temperature"></i>                    
+                    <div class="text-wrapper">
+                      <h6 class="title title--celcius">22.2°C</h6>
+                      <p class="text">Temperature</p>
+                      <p class="time-stamp">7 minutes ago</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- IF Cold Condition with Impact and Next Steps -->
+          <!-- IF Damp Condition with Impact and Next Steps -->
+          <div class="col-12">
+            <div class="card card--room-line">
               <div class="card-header">
                 <div class="title-wrapper">
-                  <h4 class="title">Rudi'house</h4>
+                  <h4 class="title">Health impact</h4>
                 </div>
               </div>
               <div class="card-body">
-                <div class="content-list content-list--column">
-                  <div class="content-list__item">
-                    <div class="wrapper">
-                      <i class="fas fa-home"></i> Private Rental
-                    </div>
-                  </div>
-                  <div class="content-list__item">
-                    <div class="wrapper">
-                      <i class="fas fa-envelope"></i> rudi.house@gmail.com
-                    </div>
-                  </div>
+               <div class="text-wrapper">
+                 <div class="text">This can cause asthma, allergies and respiratory illness. </div>
+               </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="card card--room-line">
+              <div class="card-header">
+                <div class="title-wrapper">
+                  <h4 class="title">Enviro Impact</h4>
                 </div>
               </div>
-              <div class="card-footer">
-                <div class="content-list">
-                  <div class="content-list__item">
-                    <div class="wrapper">
-                      <i class="icon icon--circle-green-sm">4</i>
-                      <p class="text">Room</p>
-                    </div>
-                  </div>                
-                  <div class="content-list__item">
-                    <div class="wrapper">
-                      <i class="icon icon--circle-green-sm">4</i>
-                      <p class="text">Sensors</p>
-                    </div>
+              <div class="card-body">
+               <div class="text-wrapper">
+                 <div class="text">Mould growth and dustmites</div>
+               </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="card card--room-line">
+              <div class="card-header">
+                <div class="title-wrapper">
+                  <h4 class="title">Next steps</h4>
+                </div>
+              </div>
+              <div class="card-body">
+               <div class="text-wrapper">
+                 <div class="text">Open windows and doors for 2mins to remove damp air then heat the room</div>
+               </div>
+              </div>
+            </div>
+          </div>
+          <!-- end condition -->
+
+          filter component
+
+          <div class="col-12">
+            <div class="card card--room-line">
+              <div class="card-header">
+                <div class="title-wrapper">
+                  <h4 class="title">Temperature Chart</h4>
+                </div>
+              </div>
+              <div class="card-body">
+                <div class="chart-wrapper">
+                  <canvas id="tempChart"></canvas>
+                  <div class="legends">
+                    <span class="item">
+                      <span class="color cold"></span>
+                      <span class="text">Cold</span>
+                    </span>
+                    <span class="item">
+                      <span class="color comfortable"></span>
+                      <span class="text">Comfortable</span>
+                    </span>
+                    <span class="item">
+                      <span class="color hot"></span>
+                      <span class="text">Hot</span>
+                    </span>
                   </div>
+                 </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="card card--room-line">
+              <div class="card-header">
+                <div class="title-wrapper">
+                  <h4 class="title">Humidity Chart</h4>
                 </div>
-                <div class="card-cta">
-                  <button class="btn btn--sm" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                    <i class="fas fa-ellipsis-v"></i>
-                  </button>
-                  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                    <li><a class="dropdown-item dropdown-item--black " href="#"><i class="fas fa-edit"></i> Edit</a></li>
-                    <li><a class="dropdown-item dropdown-item--red " href="#" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="far fa-trash-alt"></i> Delete</a></li>                  
-                  </ul>
+              </div>
+              <div class="card-body">
+                <div class="chart-wrapper">
+                  <canvas id="humidityChart"></canvas>
+                  <div class="legends">
+                    <span class="item">
+                      <span class="color hot"></span>
+                      <span class="text">Damp</span>
+                    </span>
+                    <span class="item">
+                      <span class="color comfortable"></span>
+                      <span class="text">Comfortable</span>
+                    </span>
+                    <span class="item">
+                      <span class="color cold"></span>
+                      <span class="text">Dry</span>
+                    </span>
+                  </div>
+                 </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="card card--room-line">
+              <div class="card-header">
+                <div class="title-wrapper">
+                  <h4 class="title">Sensor Description</h4>
                 </div>
+              </div>
+              <div class="card-body">
+               <div class="text-wrapper">
+                 <div class="text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum, non? Sit eveniet inventore dignissimos eligendi amet voluptates maiores natus sed, commodi quibusdam iure eum perspiciatis nostrum repellendus accusantium recusandae blanditiis!</div>
+               </div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <button class="button button--green button--fab"><i class="fas fa-plus"></i></button>
   </section>
 </main>
 
 <!-- Modal -->
-<div class="modal modal--confirmation fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Delete Whare</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><i class="fas fa-times"></i></button>
-      </div>
-      <div class="modal-body">
-        <p class="text">Are you sure to delete this whare - <span class="bold">10 Silverstream Road?</span></p>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="button button--soft-black" data-bs-dismiss="modal">Yes</button>
-        <button type="button" class="button button--black-outline">Cancel</button>
-      </div>
-    </div>
-  </div>
-</div>
 
 
 
