@@ -159,7 +159,55 @@
           </div>
           <!-- end condition -->
 
-          filter component
+          <div class="chart-filter">
+            <div class="left">
+
+            <div class="sd-container input-group date datepicker">
+              <input class="sd form-control" type="date" name="selected_date" />
+              <span class="open-button">
+                <button type="button icon">
+                  <i class="fas fa-calendar-day"></i>
+                </button>
+              </span>
+            </div>
+
+              <!-- <div class="input-group date datepicker" id="datepicker">
+                <input type="date" class="form-control" value="12-02-2021" />
+                <span class="input-group-text">
+                  <i class="fas fa-calendar-day"></i>
+                </span>
+            </div> -->
+
+            <!-- <input id="datepicker" width="276" /> -->
+            <!-- <div class="input-group date datepicker" id="dp3" data-date="12-02-2012" data-date-format="dd-mm-yyyy">
+              <input class="form-control" type="text" value="12-02-2012">
+              <span class="add-on">
+                <i class="fas fa-calendar-day"></i>
+              </span>
+            </div> -->
+              <select class="form-select" aria-label="Select Time">
+                <option selected>Select Time</option>
+                <option value="1">00:00 - 05:00</option>
+                <option value="2">06:00 - 11:00</option>
+                <option value="3">12:00 - 17:00</option>
+                <option value="3">18:00 - 23:00</option>
+              </select>
+            </div>
+            <div class="right">
+              <div class="dropdown">
+                <button class="button button--white dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                  <i class="fas fa-download"></i>
+                  <span>Report</span>
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                  <li><a class="dropdown-item" href="#">Report by Filter</a></li>
+                  <li><a class="dropdown-item" href="#">Today’s report</a></li>
+                  <li><a class="dropdown-item" href="#">This week’s report</a></li>
+                  <li><a class="dropdown-item" href="#">This month’s report</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
 
           <div class="col-12">
             <div class="card card--room-line">
@@ -225,8 +273,33 @@
                 </div>
               </div>
               <div class="card-body">
-               <div class="text-wrapper">
-                 <div class="text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum, non? Sit eveniet inventore dignissimos eligendi amet voluptates maiores natus sed, commodi quibusdam iure eum perspiciatis nostrum repellendus accusantium recusandae blanditiis!</div>
+               <div class="sensor-wrapper">
+                 <div class="row">
+                   <div class="col-sm-3">
+                     <div class="item">
+                       <h3 class="label">FIRST DETECTED</h3>
+                       <h4 class="text">2021-05-29</h4>
+                     </div>
+                   </div>
+                   <div class="col-sm-3">
+                    <div class="item">
+                      <h3 class="label">LAST READING</h3>
+                      <h4 class="text">5 minutes ago</h4>
+                    </div>
+                  </div>
+                  <div class="col-sm-3">
+                    <div class="item">
+                      <h3 class="label">BATTERY LEVEL</h3>
+                      <h4 class="text">100%</h4>
+                    </div>
+                  </div>
+                  <div class="col-sm-3">
+                    <div class="item">
+                      <h3 class="label">SOFTWARE</h3>
+                      <h4 class="text">Unkknown</h4>
+                    </div>
+                  </div>
+                 </div>
                </div>
               </div>
             </div>

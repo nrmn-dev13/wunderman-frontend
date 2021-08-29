@@ -191,6 +191,26 @@
     }
   }
 
+  .sensor-wrapper {
+    .item {
+      .label {
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 140.62%;
+      }
+
+      .text {
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 12px;
+        line-height: 140.62%;
+      }
+    }
+  }
+
   &.card--attention {
     background: $bg-yellow;
     width: 100%;

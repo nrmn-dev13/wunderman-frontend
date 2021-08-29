@@ -186,3 +186,8 @@ var myChart = new Chart(ctx, {
     }
   }
 });
+
+// datepicker
+$('.datepicker').datepicker({
+  uiLibrary: 'bootstrap4'
+});

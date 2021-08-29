@@ -12,17 +12,21 @@
   @include fixed(top 0 left 0 bottom 0);
   width: 100%;
   height: 56px;
-  @include for-size(desktop) {    
+
+  @include for-size(desktop) {
     width: 300px;
     box-shadow: 6px 0px 18px rgba(0, 0, 0, 0.06);
     border-bottom: 1px solid #e0e0e0;
-  }  
+  }
+
   .navbar-header {
-    justify-content: space-between;    
+    justify-content: space-between;
+
     @include for-size(desktop) {
       justify-content: center;
     }
   }
+
   .navbar-brand {
     display: flex;
     align-items: center;
@@ -30,24 +34,32 @@
     margin: 0;
     width: 188px;
     height: 35px;
+
     .img-logo {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      image-rendering: -moz-crisp-edges; /* Firefox */
-      image-rendering: -o-crisp-edges; /* Opera */
-      image-rendering: -webkit-optimize-contrast; /* Webkit (non-standard naming) */
+      image-rendering: -moz-crisp-edges;
+      /* Firefox */
+      image-rendering: -o-crisp-edges;
+      /* Opera */
+      image-rendering: -webkit-optimize-contrast;
+      /* Webkit (non-standard naming) */
       image-rendering: crisp-edges;
-      -ms-interpolation-mode: nearest-neighbor; /* IE (non-standard property) */
+      -ms-interpolation-mode: nearest-neighbor;
+      /* IE (non-standard property) */
     }
   }
+
   .nav-action {
     .menu-button {
       display: flex;
       align-items: center;
+
       @include for-size(desktop) {
         display: none;
-      }      
+      }
+
       .menu-text {
         font-family: Roboto;
         font-weight: normal;
@@ -55,13 +67,16 @@
         line-height: 140.62%;
         color: $color-black;
         display: none;
+
         @include for-size(tablet) {
           display: block;
-        }        
+        }
+
         @include for-size(desktop) {
           display: none;
-        }        
+        }
       }
+
       .hamburger {
         width: 20px;
         height: 20px;
@@ -73,6 +88,7 @@
         position: relative;
         cursor: pointer;
         margin: 0 0 0 15px;
+
         &::after {
           content: "";
           @include absolute(top 50% left 0);

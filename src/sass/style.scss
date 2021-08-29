@@ -2,9 +2,9 @@
 
 // 1. Configuration and helpers
 @import "abstracts/variables",
-  "abstracts/functions",
-  "abstracts/mixins",
-  "abstracts/_placeholders";
+"abstracts/functions",
+"abstracts/mixins",
+"abstracts/_placeholders";
 
 // 2. Vendors
 @import "../../node_modules/bootstrap/scss/bootstrap";
@@ -16,20 +16,20 @@
 @import "layout/header", "layout/footer", "layout/form", "layout/webapp";
 
 // 5. Components
-@import "components/button", 
-  "components/badge", 
-  "components/navbar", 
-  "components/fontastic",
-  "components/fontello",
-  "components/icon",
-  "components/card",
-  "components/sidenav", 
-  "components/modal";
+@import "components/button",
+"components/badge",
+"components/navbar",
+"components/fontastic",
+"components/fontello",
+"components/icon",
+"components/card",
+"components/sidenav",
+"components/modal",
+"components/input",
+"components/datepicker";
 
 // 6. Page-specific styles
 @import "pages/home", "pages/auth", "pages/step-guide", "pages/installation", "pages/webapp/rooms";
 
 // 7. Themes
 @import "themes/default";
-
-
