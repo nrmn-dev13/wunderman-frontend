@@ -21,12 +21,7 @@
       text-align: left;
       font-size: 75px;
       line-height: 88px;
-    }
-    @include for-size(ipad-pro) {
-      font-size: 65px;
-      line-height: 76px;
-      text-align: center;
-    }
+    }    
   }
   &__sub-title {
     font-family: Roboto;
@@ -43,12 +38,7 @@
       text-align: left;
       font-size: 27px;
       line-height: 59px;
-    }
-    @include for-size(ipad-pro) {
-      font-size: 24px;
-      line-height: 47px;
-      text-align: center;
-    }
+    }    
   }
   &__section {
     height: 100%;
@@ -62,10 +52,7 @@
       }
       @include for-size(desktop) {
         height: 100%;
-      }
-      @include for-size(ipad-pro) {
-        height: 100%;
-      }
+      }      
     }
     .button {
       width: 100%;
@@ -79,13 +66,7 @@
       }
       @include for-size(desktop) {
         width: 100%;
-      }
-      @include for-size(ipad-pro) {
-        width: 100%;
-      }
-      @include for-size(ipad-pro-portrait) {
-        width: 50%;
-      }  
+      }      
     }
   }
   &__row {
@@ -103,13 +84,7 @@
       }
       @include for-size(desktop) {
         width: 66.66667%;
-      }
-      @include for-size(ipad-pro) {
-        width: 50%;
-      }
-      @include for-size(ipad-pro-portrait) {
-        width: 100%;
-      }
+      }      
     }
     &--form {
       width: 100%;
@@ -121,13 +96,7 @@
       }
       @include for-size(desktop) {        
         width: 33.33333%;
-      }
-      @include for-size(ipad-pro) {
-        width: 50%;
-      }
-      @include for-size(ipad-pro-portrait) {
-        width: 100%;
-      }
+      }      
     }
   }
   &__form {
@@ -141,12 +110,6 @@
     }
     @include for-size(desktop) {
       height: 100%;
-    }
-    @include for-size(ipad-pro) {
-      height: 100%;
-    }
-    @include for-size(ipad-pro-portrait) {
-      height: auto;
     }    
   }
   &__content {    
@@ -161,11 +124,7 @@
     @include for-size(desktop) {
       margin: 0 auto;
       height: 100%;
-    }
-    @include for-size(ipad-pro) {
-      margin: 0 auto;
-      height: 100%;
-    }
+    }    
   }
   &__content-wrapper { 
     width: 100%;
@@ -180,10 +139,7 @@
     }
     @include for-size(desktop) {
       margin: 0;
-    }
-    @include for-size(ipad-pro) {
-      margin: 0;
-    }
+    }    
   }
   &__text-helper {
     font-family: Roboto;

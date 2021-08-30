@@ -26,10 +26,7 @@
       position: relative;
       @include for-size(desktop) {
         padding: 22px 22px 0;
-      }
-      @include for-size(ipad-pro) {
-        padding: 0;
-      }
+      }      
       .form__field {
         @include absolute(top 55px left 0 right 0);
         width: 90%;
@@ -52,13 +49,7 @@
         align-items: center;
         height: auto;
         margin: 1.75rem auto;
-      }
-      @include for-size(ipad-pro) {
-        max-width: 100%;
-        align-items: normal;
-        height: 100%;
-        margin: 0;
-      }
+      }      
     }
     .modal-map {
       width: 100%;
@@ -70,10 +61,7 @@
       }
       @include for-size(desktop) {
         min-height: 450px;
-      }
-      @include for-size(ipad-pro) {
-        min-height: 450px;
-      }
+      }      
     }
     .modal-footer {
       padding: 22px 16px;
@@ -109,13 +97,7 @@
           font-size: 20px;
           line-height: 28px;
           padding: 10px;
-        }
-        @include for-size(ipad-pro) {
-          width: 45%;
-          font-size: 20px;
-          line-height: 28px;
-          padding: 10px;
-        }
+        }        
       }
     }
   }
@@ -140,11 +122,7 @@
         @include for-size(desktop) {
           font-size: 36px;
           margin-bottom: 26px;
-        }
-        @include for-size(ipad-pro) {
-          font-size: 21px;
-          margin-bottom: 17px;
-        }
+        }        
       }
     }
     .modal-body {
@@ -193,11 +171,7 @@
               width: 120px;
               height: 120px;
               margin-bottom: 57px;
-            }
-            @include for-size(ipad-pro) {
-              width: 72px;
-              height: 72px;
-            }
+            }            
             &:focus {
               outline: -webkit-focus-ring-color auto 0px;
             }
@@ -209,10 +183,7 @@
               }
               @include for-size(desktop) {
                 font-size: 30px;
-              }
-              @include for-size(ipad-pro) {
-                font-size: 22px;
-              }
+              }              
             }
           }
         }
@@ -229,11 +200,7 @@
           @include for-size(desktop) {
             font-size: 28px;
             line-height: 39px;
-          }
-          @include for-size(ipad-pro) {
-            font-size: 24px;
-            line-height: 34px;
-          }
+          }          
         }
       }
     }
@@ -269,8 +236,21 @@
     .modal-footer {
       justify-content: flex-start;
       border-top: none;
+      flex-direction: column;
+      @include for-size(tablet) {
+        flex-direction: row;
+      }
+      @include for-size(desktop) {
+        flex-direction: row;
+      }
       .button {
-        min-width: 80px;
+        min-width: 100%;
+        @include for-size(tablet) {
+          min-width: 80px;
+        }
+        @include for-size(desktop) {
+          min-width: 80px;
+        }
       }
     }
   }

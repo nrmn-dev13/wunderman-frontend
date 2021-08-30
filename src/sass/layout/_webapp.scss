@@ -5,10 +5,7 @@
   height: 100%;
   @include for-size(desktop) {
     align-items: flex-end;
-  }
-  @include for-size(ipad-pro) {
-    align-items: flex-start;
-  }
+  }  
   &--room-page {
     .aside {
       .sidenav {
@@ -34,28 +31,19 @@
     @include for-size(desktop) {
       padding-top: 0;
       width: calc(100% - 300px);
-    }
-    @include for-size(ipad-pro) {
-      padding-top: 56px;
-    }
+    }    
   }
   .content {
     margin: 31px 18px;
     @include for-size(desktop) {
       margin: 48px 23px;
-    }
-    @include for-size(ipad-pro) {
-      margin: 31px 18px;
-    }
+    }    
   }
   .card {
     margin: 0 0 30px;
     @include for-size(desktop) {
       margin: 0 15px 30px;
-    }
-    @include for-size(ipad-pro) {
-      margin: 0 0 30px;
-    }
+    }    
   }
   .content-list {
     display: flex;
@@ -121,7 +109,11 @@
     .form-group {
       margin-bottom: 15px;
       .form__field {
+        margin-bottom: 25px;
         .form__label--inline-radio {
+          &:last-child {
+            margin-bottom: 0;
+          }
           .form__input--radio {
             &:checked ~ .form__custom-radio-wrapper .form__custom-radio {
               border: 7px solid $color-green;
@@ -150,10 +142,7 @@
           }
           @include for-size(desktop) {
             flex-direction: row;
-          }
-          @include for-size(ipad-pro) {
-            flex-direction: row;
-          }
+          }          
           .text {
             margin: 0 0 15px;
             @include for-size(tablet) {
@@ -161,10 +150,7 @@
             }
             @include for-size(desktop) {
               margin: 0;
-            }
-            @include for-size(ipad-pro) {
-              margin: 0;
-            }
+            }            
           }
           .button {
             width: 100%;
@@ -173,10 +159,7 @@
             }
             @include for-size(desktop) {
               width: max-content;
-            }
-            @include for-size(ipad-pro) {
-              width: max-content;
-            }
+            }            
           }
         }
         &.form__field--has-radio {
@@ -202,12 +185,14 @@
           }
           &.form__field--multiple-row {
             flex-wrap: wrap;
+            margin-bottom: 0;
             .form__label {
-              margin-bottom: 30px !important;
+              margin-bottom: 25px !important;
             }
           }
         }
         &.form__field--has-multiple-checkbox {
+          margin-bottom: 0;
           .form__label--has-checkbox {
             padding: 0;
             border: none;
@@ -240,10 +225,7 @@
           }
           @include for-size (desktop) {
             flex-direction: row;
-          }
-          @include for-size (ipad-pro) {
-            flex-direction: row;
-          }
+          }          
           .form__input {
             margin-right: 0;
             margin-bottom: 14px;
@@ -254,11 +236,7 @@
             @include for-size (desktop) {
               margin-right: 15px;
               margin-bottom: 0;
-            }
-            @include for-size (ipad-pro) {
-              margin-right: 15px;
-              margin-bottom: 0;
-            }
+            }            
           }
           .button {
             justify-content: center;
@@ -267,10 +245,7 @@
             }
             @include for-size (desktop) {
               justify-content: flex-start;
-            }
-            @include for-size (ipad-pro) {
-              justify-content: flex-start;
-            }
+            }            
           }
         }
       }
@@ -286,6 +261,13 @@
     }
     .form__map-wrapper {
       height: 400px;
+      .form__map-overlay {
+        .button.button--black {
+          width: max-content;
+          padding: 7px 20px;
+          font-size: 16px;
+        }
+      }
     }
     .flex-wrapper {
       display: flex;
@@ -294,15 +276,13 @@
     }
     .button {
       width: 100%;
+      padding: 7px 47px;
       @include for-size(tablet) {
         width: max-content;
       }
       @include for-size(desktop) {
         width: max-content;
-      }
-      @include for-size(ipad-pro) {
-        width: max-content;
-      }
+      }      
     }
   }
 }

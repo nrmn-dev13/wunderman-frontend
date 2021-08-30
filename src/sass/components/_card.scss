@@ -6,6 +6,211 @@
   align-items: flex-start;
   flex-direction: row;
   padding: 12px;
+
+  .temperature-column {
+    display: flex;
+    align-items: flex-start;
+
+    .icon {
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      background-color: transparent;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex: 0 0 auto;
+      margin: 0 13px 0 0;
+      background-repeat: no-repeat;
+      background-size: cover;
+      image-rendering: -moz-crisp-edges;
+      /* Firefox */
+      image-rendering: -o-crisp-edges;
+      /* Opera */
+      image-rendering: -webkit-optimize-contrast;
+      /* Webkit (non-standard naming) */
+      image-rendering: crisp-edges;
+      -ms-interpolation-mode: nearest-neighbor;
+      /* IE (non-standard property) */
+    }
+
+    &.temperature--comfortable {
+      .icon--temperature {
+        background-image: url(/assets/img/webapp/comfortable-temp-icon.png);
+      }
+
+      .text-wrapper {
+        .title.title--celcius {
+          color: $color-comfortable;
+        }
+      }
+    }
+
+    &.temperature--cold {
+      .icon--temperature {
+        background-image: url(/assets/img/webapp/cold-temp-icon.png);
+      }
+
+      .text-wrapper {
+        .title.title--celcius {
+          color: $color-cold;
+        }
+      }
+    }
+
+    &.temperature--hot {
+      .icon--temperature {
+        background-image: url(/assets/img/webapp/hot-temp-icon.png);
+      }
+
+      .text-wrapper {
+        .title.title--celcius {
+          color: $color-hot;
+        }
+      }
+    }
+
+    &.temperature--damp {
+      .icon--temperature {
+        background-image: url(/assets/img/webapp/damp-hum-icon.png);
+      }
+
+      .icon-wrapper {
+        background-color: $color-damp;
+      }
+
+      .text-wrapper {
+        .title.title--celcius {
+          color: $color-damp;
+        }
+      }
+    }
+
+    &.temperature--offline {
+      .icon--temperature {
+        background-image: url(/assets/img/webapp/offline-temp-icon.png);
+      }
+
+      .text-wrapper {
+        .title.title--celcius {
+          color: $color-offline;
+        }
+      }
+    }
+
+    &.humidity--dry {
+      .icon--temperature {
+        background-image: url(/assets/img/webapp/dry-hum-icon.png);
+      }
+
+      .text-wrapper {
+        .title.title--celcius {
+          color: $color-dry;
+        }
+      }
+    }
+
+    &.humidity--comfortable {
+      .icon--temperature {
+        background-image: url(/assets/img/webapp/comfortable-hum-icon.png);
+      }
+
+      .text-wrapper {
+        .title.title--celcius {
+          color: $color-comfortable;
+        }
+      }
+    }
+
+    &.humidity--damp {
+      .icon--temperature {
+        background-image: url(/assets/img/webapp/damp-hum-icon.png);
+      }
+
+      .text-wrapper {
+        .title.title--celcius {
+          color: $color-damp;
+        }
+      }
+    }
+
+    &.humidity--offline {
+      .icon--temperature {
+        background-image: url(/assets/img/webapp/offline-hum-icon.png);
+      }
+
+      .text-wrapper {
+        .title.title--celcius {
+          color: $color-offline;
+        }
+      }
+    }
+  }
+
+  .chart-wrapper {
+    .legends {
+      text-align: center;
+      margin-top: 30px;
+
+      .item {
+        margin-right: 30px;
+        display: inline-flex;
+
+        &:last-child {
+          margin-right: 0;
+        }
+
+        .color {
+          margin-right: 5px;
+          width: 25px;
+          height: 12.5px;
+          display: block;
+
+          &.cold {
+            background-color: rgba(205, 98, 118, 0.5);
+          }
+
+          &.comfortable {
+            background-color: rgba(77, 157, 46, 0.5);
+          }
+
+          &.hot {
+            background-color: rgba(89, 162, 201, 0.5);
+          }
+        }
+
+        .text {
+          font-family: Roboto;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 11.6294px;
+          line-height: 14px;
+          color: $color-secondary-black;
+        }
+      }
+    }
+  }
+
+  .sensor-wrapper {
+    .item {
+      .label {
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 140.62%;
+      }
+
+      .text {
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 12px;
+        line-height: 140.62%;
+      }
+    }
+  }
+
   &.card--attention {
     background: $bg-yellow;
     width: 100%;
@@ -14,20 +219,25 @@
     border-bottom: 5px solid $color-green;
     display: flex;
     align-items: center;
+
     .icon {
       margin: 0 15px 0 0;
       font-size: 36px;
       opacity: 0.5;
+
       @include for-size(tablet) {
         margin: 0 21px 0 0;
       }
+
       @include for-size(tablet) {
         margin: 0 24px 0 0;
       }
+
       @include for-size(tablet) {
         margin: 0 21px 0 0;
       }
     }
+
     .card__description {
       font-size: 12px;
       line-height: 26px;
@@ -36,63 +246,78 @@
       -webkit-line-clamp: 2;
       -webkit-box-orient: vertical;
       overflow: hidden;
+
       @include for-size(tablet) {
         font-size: 14px;
         line-height: 28px;
         -webkit-line-clamp: inherit;
         -webkit-box-orient: unset;
       }
+
       @include for-size(desktop) {
         line-height: 28px;
         font-size: 16px;
         -webkit-line-clamp: inherit;
         -webkit-box-orient: unset;
       }
-      @include for-size(ipad-pro) {
-        line-height: 28px;
-        font-size: 14px;
-        -webkit-line-clamp: inherit;
-        -webkit-box-orient: unset;
-      }
     }
+
     &.expanded {
       .card__description {
         -webkit-line-clamp: inherit;
         -webkit-box-orient: unset;
       }
     }
+
     .button--read-more {
       font-size: 12px;
       line-height: 26px;
       display: block;
+
       @include for-size(tablet) {
         display: none;
         font-size: 14px;
         line-height: 28px;
       }
+
       @include for-size(desktop) {
         display: none;
         line-height: 28px;
         font-size: 16px;
       }
-      @include for-size(ipad-pro) {
-        display: none;
-        line-height: 28px;
-        font-size: 14px;
-      }
     }
   }
+
   &.card--dashed {
-    border-style: dashed;
+    border: 2px dashed #D5D5D5;
     padding: 0;
+    display: none;
+
+    @include for-size(phone-landscape) {
+      border: 3px dashed #D5D5D5;
+      display: block;
+    }
+
+    @include for-size(tablet) {
+      border: 3px dashed #D5D5D5;
+      display: block;
+    }
+
+    @include for-size(desktop) {
+      border: 3px dashed #D5D5D5;
+      display: block;
+    }
+
     .card-body {
       padding: 0;
+
       .wrapper {
         padding: 61px;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+
         .title {
           font-family: Merriweather;
           font-style: normal;
@@ -102,6 +327,7 @@
           margin-bottom: 10px;
           color: $color-black;
         }
+
         i.fas {
           font-weight: 900;
           font-size: 24px;
@@ -112,14 +338,17 @@
       }
     }
   }
+
   &.card--whare {
     flex-direction: column;
     padding: 15px;
+
     .card-header {
       width: 100%;
       background-color: $color-white;
       border: none;
       padding: 0;
+
       .title {
         font-family: Roboto;
         font-weight: bold;
@@ -129,11 +358,13 @@
         margin: 0;
       }
     }
+
     .card-body {
       padding: 15px 0;
       margin: 0 0 15px;
       width: 100%;
       position: relative;
+
       &::after {
         content: "";
         @include absolute(bottom 0 left 0);
@@ -141,6 +372,7 @@
         width: 100%;
       }
     }
+
     .card-footer {
       padding: 0;
       width: 100%;
@@ -149,31 +381,41 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+
       .card-cta {
         margin-left: 15px;
+
         .btn--sm {
           padding: 5px 10px;
           background: rgba(248, 247, 246, 0.8);
           border-radius: 4px;
         }
+
         .dropdown-menu {
+          inset: -30px auto auto 0px !important;
+
           li {
             margin: 0 0 11px 0;
+
             &:last-child {
               margin: 0;
             }
+
             .dropdown-item {
               font-family: Roboto;
               font-style: normal;
               font-weight: normal;
               font-size: 14px;
               line-height: 140.62%;
+
               &--black {
                 color: $color-black;
               }
+
               &--red {
                 color: $color-soft-red;
               }
+
               i {
                 margin: 0 15px 0 0;
               }
@@ -181,23 +423,31 @@
           }
         }
       }
+
       .content-list {
-        justify-content: space-between;
         flex: 1 1 auto;
       }
+
       .content-list__item {
         padding: 5px 15px 5px 10px;
         background: rgba(248, 247, 246, 0.8);
         border-radius: 4px;
+        margin-right: 15px;
+
+        &:last-child {
+          margin-right: 0;
+        }
       }
     }
   }
+
   &.card--room {
     padding: 0;
     border: 1px solid $color-white;
     display: flex;
     flex-direction: column;
     margin: 0 0 30px;
+
     .card-header {
       display: flex;
       align-items: center;
@@ -206,6 +456,7 @@
       width: 100%;
       padding: 4px 9px;
       border: none;
+
       .title {
         font-family: Merriweather;
         font-style: normal;
@@ -215,6 +466,7 @@
         color: $color-secondary-black;
         margin: 0;
       }
+
       .subtitle {
         font-family: Roboto;
         font-style: normal;
@@ -225,14 +477,17 @@
         margin: 0;
       }
     }
+
     .card-body {
       width: 100%;
       padding: 30px 1rem;
+
       .card-content {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+
         .title {
           font-family: Roboto;
           font-style: normal;
@@ -243,142 +498,182 @@
           margin: 0;
         }
       }
+
       .image-wrapper {
         width: 72px;
         height: 72px;
         overflow: hidden;
         margin: 0 0 20px;
       }
+
       .img {
         width: 100%;
         object-fit: cover;
-        image-rendering: -moz-crisp-edges; /* Firefox */
-        image-rendering: -o-crisp-edges; /* Opera */
-        image-rendering: -webkit-optimize-contrast; /* Webkit (non-standard naming) */
+        image-rendering: -moz-crisp-edges;
+        /* Firefox */
+        image-rendering: -o-crisp-edges;
+        /* Opera */
+        image-rendering: -webkit-optimize-contrast;
+        /* Webkit (non-standard naming) */
         image-rendering: crisp-edges;
-        -ms-interpolation-mode: nearest-neighbor; /* IE (non-standard property) */
+        -ms-interpolation-mode: nearest-neighbor;
+        /* IE (non-standard property) */
       }
     }
+
     .card-footer {
       width: 100%;
       border: none;
       background-color: $color-white-grey;
       padding: 23px 10px 10px;
+
       .temperature-section {
         display: flex;
         justify-content: space-between;
         margin: 0 0 18px;
       }
-      .temperature-column {
-        display: flex;
-        align-items: flex-start;
-        &.temperature--comfortable {
-          .icon--temperature {            
-            background-image: url(/assets/img/webapp/comfortable-temp-icon.png);
-          }
-          .text-wrapper {
-            .title.title--celcius {
-              color: $color-comfortable;
-            }
-          }
-        } 
-        &.temperature--cold {
-          .icon--temperature {
-            background-image: url(/assets/img/webapp/cold-temp-icon.png);
-          }
-          .text-wrapper {
-            .title.title--celcius {
-              color: $color-cold;
-            }
-          }
-        }
-        &.temperature--hot {
-          .icon--temperature {
-            background-image: url(/assets/img/webapp/hot-temp-icon.png);
-          }          
-          .text-wrapper {
-            .title.title--celcius {
-              color: $color-hot;
-            }
-          }
-        }
-        &.temperature--damp {
-          .icon--temperature {
-            background-image: url(/assets/img/webapp/damp-hum-icon.png);
-          }
-          .icon-wrapper {
-            background-color: $color-damp;
-          }
-          .text-wrapper {
-            .title.title--celcius {
-              color: $color-damp;
-            }
-          }
-        }   
-        &.temperature--offline {
-          .icon--temperature {
-            background-image: url(/assets/img/webapp/offline-temp-icon.png);
-          }
-          .text-wrapper {
-            .title.title--celcius {
-              color: $color-offline;
-            }
-          }
-        }     
-        &.humidity--dry {
-          .icon--temperature {
-            background-image: url(/assets/img/webapp/dry-hum-icon.png);
-          }
-          .text-wrapper {
-            .title.title--celcius {
-              color: $color-dry;
-            }
-          }
-        }
-        &.humidity--comfortable {
-          .icon--temperature {
-            background-image: url(/assets/img/webapp/comfortable-hum-icon.png);
-          }
-          .text-wrapper {
-            .title.title--celcius {
-              color: $color-comfortable;
-            }
-          }
-        }
-        &.humidity--damp {
-          .icon--temperature {
-            background-image: url(/assets/img/webapp/damp-hum-icon.png);
-          }
-          .text-wrapper {
-            .title.title--celcius {
-              color: $color-damp;
-            }
-          }
-        }
-        &.humidity--offline {
-          .icon--temperature {
-            background-image: url(/assets/img/webapp/offline-hum-icon.png);
-          }
-          .text-wrapper {
-            .title.title--celcius {
-              color: $color-offline;
-            }
-          }
-        }
-      }
-      .icon {
-        width: 45px;
-        height: 45px;
-        border-radius: 50%;
-        background-color: transparent;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex: 0 0 auto;
-        margin: 0 13px 0 0;
-        background-repeat: no-repeat;
-        background-size: cover;
-      }
+
+      // move dibuat global
+      // .temperature-column {
+      //   display: flex;
+      //   align-items: flex-start;
+
+      //   &.temperature--comfortable {
+      //     .icon--temperature {
+      //       background-image: url(/assets/img/webapp/comfortable-temp-icon.png);
+      //     }
+
+      //     .text-wrapper {
+      //       .title.title--celcius {
+      //         color: $color-comfortable;
+      //       }
+      //     }
+      //   }
+
+      //   &.temperature--cold {
+      //     .icon--temperature {
+      //       background-image: url(/assets/img/webapp/cold-temp-icon.png);
+      //     }
+
+      //     .text-wrapper {
+      //       .title.title--celcius {
+      //         color: $color-cold;
+      //       }
+      //     }
+      //   }
+
+      //   &.temperature--hot {
+      //     .icon--temperature {
+      //       background-image: url(/assets/img/webapp/hot-temp-icon.png);
+      //     }
+
+      //     .text-wrapper {
+      //       .title.title--celcius {
+      //         color: $color-hot;
+      //       }
+      //     }
+      //   }
+
+      //   &.temperature--damp {
+      //     .icon--temperature {
+      //       background-image: url(/assets/img/webapp/damp-hum-icon.png);
+      //     }
+
+      //     .icon-wrapper {
+      //       background-color: $color-damp;
+      //     }
+
+      //     .text-wrapper {
+      //       .title.title--celcius {
+      //         color: $color-damp;
+      //       }
+      //     }
+      //   }
+
+      //   &.temperature--offline {
+      //     .icon--temperature {
+      //       background-image: url(/assets/img/webapp/offline-temp-icon.png);
+      //     }
+
+      //     .text-wrapper {
+      //       .title.title--celcius {
+      //         color: $color-offline;
+      //       }
+      //     }
+      //   }
+
+      //   &.humidity--dry {
+      //     .icon--temperature {
+      //       background-image: url(/assets/img/webapp/dry-hum-icon.png);
+      //     }
+
+      //     .text-wrapper {
+      //       .title.title--celcius {
+      //         color: $color-dry;
+      //       }
+      //     }
+      //   }
+
+      //   &.humidity--comfortable {
+      //     .icon--temperature {
+      //       background-image: url(/assets/img/webapp/comfortable-hum-icon.png);
+      //     }
+
+      //     .text-wrapper {
+      //       .title.title--celcius {
+      //         color: $color-comfortable;
+      //       }
+      //     }
+      //   }
+
+      //   &.humidity--damp {
+      //     .icon--temperature {
+      //       background-image: url(/assets/img/webapp/damp-hum-icon.png);
+      //     }
+
+      //     .text-wrapper {
+      //       .title.title--celcius {
+      //         color: $color-damp;
+      //       }
+      //     }
+      //   }
+
+      //   &.humidity--offline {
+      //     .icon--temperature {
+      //       background-image: url(/assets/img/webapp/offline-hum-icon.png);
+      //     }
+
+      //     .text-wrapper {
+      //       .title.title--celcius {
+      //         color: $color-offline;
+      //       }
+      //     }
+      //   }
+      // }
+
+      // .icon {
+      //   width: 45px;
+      //   height: 45px;
+      //   border-radius: 50%;
+      //   background-color: transparent;
+      //   display: flex;
+      //   justify-content: center;
+      //   align-items: center;
+      //   flex: 0 0 auto;
+      //   margin: 0 13px 0 0;
+      //   background-repeat: no-repeat;
+      //   background-size: cover;
+      //   image-rendering: -moz-crisp-edges;
+      //   /* Firefox */
+      //   image-rendering: -o-crisp-edges;
+      //   /* Opera */
+      //   image-rendering: -webkit-optimize-contrast;
+      //   /* Webkit (non-standard naming) */
+      //   image-rendering: crisp-edges;
+      //   -ms-interpolation-mode: nearest-neighbor;
+      //   /* IE (non-standard property) */
+      // }
+
       .text-wrapper {
         .title.title--celcius {
           font-family: Roboto;
@@ -388,6 +683,7 @@
           line-height: 140.62%;
           margin: 0;
         }
+
         .text {
           font-family: Roboto;
           font-style: normal;
@@ -396,6 +692,7 @@
           line-height: 140.62%;
           color: $color-secondary-black;
         }
+
         .time-stamp {
           font-family: Roboto;
           font-style: normal;
@@ -405,6 +702,7 @@
           color: $color-secondary-grey;
         }
       }
+
       .button--analys {
         display: flex;
         justify-content: center;
@@ -416,9 +714,11 @@
         font-size: 14px;
         line-height: 140.62%;
         color: $color-white;
+
         &:hover {
           color: $color-white;
         }
+
         i.fas {
           position: absolute;
           @include absolute(top 50% right 15px);
@@ -427,6 +727,248 @@
       }
     }
   }
+
+  &.card--room-details {
+    padding: 0;
+    border: 1px solid $color-white;
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 30px;
+
+    .card-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: $color-white-grey;
+      width: 100%;
+      padding: 14px 20px;
+      border: none;
+
+      .title {
+        font-family: Merriweather;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 140.62%;
+        color: $color-secondary-black;
+        margin: 0;
+      }
+
+      .subtitle {
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 140.62%;
+        color: $color-secondary-grey;
+        margin: 0;
+      }
+
+      .button {
+        width: 36px;
+        height: 36px;
+
+        i {
+          font-size: 18px;
+        }
+      }
+    }
+
+    .card-body {
+      width: 100%;
+      padding: 30px 1rem;
+
+      .card-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .title {
+          font-family: Roboto;
+          font-style: normal;
+          font-weight: bold;
+          font-size: 20px;
+          line-height: 140.62%;
+          color: $color-secondary-black;
+          margin: 0;
+        }
+      }
+
+      .summary-content {
+        .image-wrapper {
+          width: 100px;
+          height: 100px;
+          margin: 0 auto;
+          overflow: hidden;
+
+          .img {
+            width: 100%;
+            object-fit: cover;
+            image-rendering: -moz-crisp-edges;
+            /* Firefox */
+            image-rendering: -o-crisp-edges;
+            /* Opera */
+            image-rendering: -webkit-optimize-contrast;
+            /* Webkit (non-standard naming) */
+            image-rendering: crisp-edges;
+            -ms-interpolation-mode: nearest-neighbor;
+            /* IE (non-standard property) */
+          }
+        }
+
+        .list-unstyled {
+          .list-item {
+            margin-bottom: 10px;
+
+            &:last-child {
+              margin-bottom: 0;
+            }
+
+            .text {
+              font-family: Roboto;
+              font-style: normal;
+              font-weight: normal;
+              font-size: 14px;
+            }
+          }
+        }
+      }
+    }
+
+    .card-footer {
+      width: 100%;
+      border: none;
+      background-color: $color-white;
+      padding: 16px;
+
+      .temperature-section {
+        display: flex;
+        justify-content: space-between;
+        margin: 0;
+      }
+
+      .icon {
+        width: 61.58px;
+        height: 61.58px;
+        border-radius: 50%;
+        background-color: transparent;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex: 0 0 auto;
+        margin: 0 13px 0 0;
+        background-repeat: no-repeat;
+        background-size: cover;
+        image-rendering: -moz-crisp-edges;
+        /* Firefox */
+        image-rendering: -o-crisp-edges;
+        /* Opera */
+        image-rendering: -webkit-optimize-contrast;
+        /* Webkit (non-standard naming) */
+        image-rendering: crisp-edges;
+        -ms-interpolation-mode: nearest-neighbor;
+        /* IE (non-standard property) */
+      }
+
+      .text-wrapper {
+        .title.title--celcius {
+          font-family: Roboto;
+          font-style: normal;
+          font-weight: bold;
+          font-size: 24px;
+          line-height: 140.62%;
+          margin: 0;
+        }
+
+        .text {
+          font-family: Roboto;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 14px;
+          line-height: 140.62%;
+          color: $color-secondary-black;
+        }
+
+        .time-stamp {
+          font-family: Roboto;
+          font-style: normal;
+          font-weight: 300;
+          font-size: 12px;
+          line-height: 180.62%;
+          color: $color-secondary-grey;
+        }
+      }
+
+      .button--analys {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 140.62%;
+        color: $color-white;
+
+        &:hover {
+          color: $color-white;
+        }
+
+        i.fas {
+          position: absolute;
+          @include absolute(top 50% right 15px);
+          transform: translateY(-50%);
+        }
+      }
+    }
+  }
+
+  &.card--room-line {
+    padding: 0;
+    border: 1px solid $color-white;
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 30px;
+
+    .card-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: $color-white;
+      width: 100%;
+      padding: 10px 20px;
+      border: none;
+      border-bottom: 1px solid #E0E0E0;
+
+      .title {
+        font-family: Merriweather;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 140.62%;
+        color: $color-secondary-black;
+        margin: 0;
+      }
+    }
+
+    .card-body {
+      width: 100%;
+      padding: 20px;
+
+      .text {
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 140.62%;
+        color: $color-secondary-black;
+        margin: 0;
+      }
+    }
+  }
+
   &__description {
     font-family: Roboto;
     font-style: normal;

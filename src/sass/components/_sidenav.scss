@@ -16,13 +16,7 @@
   @include for-size(desktop) {    
     width: 300px;
     transform: translateX(0px);
-  }
-  @include for-size(ipad-pro) {
-    width: 300px;
-    left: auto;
-    right: 0;
-    transform: translateX(300px);
-  }
+  }  
   &.show--nav {
     transform: translateX(0px);
     ~ .backdrop {
@@ -56,9 +50,7 @@
       &.active {
         .wrapper {
           .icon {
-            .svg-path {
-              fill: $color-green;
-            }
+            color: $color-green !important;
           }
           .title {
             color: $color-green !important;
@@ -72,6 +64,12 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        cursor: pointer;
+        &.collapsed {
+          i.fa-chevron-down {
+            transform: rotate(0deg);
+          }
+        }
         .wrapper {
           display: flex;
           align-items: center;
@@ -89,13 +87,10 @@
             }
           }
         }
-        i.fas {
+        i.fa-chevron-down {
           cursor: pointer;
           transform: rotate(180deg);
-          transition: transform 400ms ease-in-out;
-          &.collapsed {
-            transform: rotate(0deg);
-          }
+          transition: transform 400ms ease-in-out;          
         }
       }
       .menu-sublist {
@@ -103,6 +98,11 @@
         border-left: 3px solid $color-green;
         &__item {
           padding: 16px 21px;
+          &.active {
+            .link {
+              color: $color-green;
+            }
+          }
           .link {
             font-family: Roboto;
             font-style: normal;

@@ -57,7 +57,13 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0 15px 30px;
+  margin: 0 0 30px;
+  @include for-size(tablet) {
+    margin: 0 0 30px;
+  }
+  @include for-size(desktop) {
+    margin: 0 15px 30px;
+  }  
   .text {
     font-family: Roboto;
     font-style: normal;
@@ -84,4 +90,7 @@
 }
 .btn:focus {
   box-shadow: none;
+}
+.alert-section.active {
+  display: none;
 }
