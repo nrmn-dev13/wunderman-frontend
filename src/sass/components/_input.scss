@@ -1,0 +1,33 @@
+.chart-filter {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+
+  .left {
+    display: flex;
+
+    &>* {
+      margin-right: 10px;
+    }
+  }
+
+  .right {
+    i {
+      margin-right: 5px;
+    }
+  }
+}
+
+// .date {
+//   input {
+//     border-right: 0;
+//   }
+
+//   .icon {
+//     background: #fff;
+
+//     i {
+//       color: $color-secondary-grey;
+//     }
+//   }
+// }
