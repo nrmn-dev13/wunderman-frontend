@@ -248,6 +248,21 @@
             }            
           }
         }
+        .input-wrapper {
+          position: relative;
+          &--has-icon {
+            .form-control {
+              padding-right: 30px;
+            }
+            .icon.fas.fa-eye {
+              position: absolute;
+              transform: translateY(-50%);
+              right: 7px;
+              top: 50%;
+              cursor: pointer;
+            }
+          }
+        }
       }
     }
     .label-title {
