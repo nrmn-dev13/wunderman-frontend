@@ -5,7 +5,7 @@
   height: 100%;
   @include for-size(desktop) {
     align-items: flex-end;
-  }  
+  }
   &--room-page {
     .aside {
       .sidenav {
@@ -31,19 +31,19 @@
     @include for-size(desktop) {
       padding-top: 0;
       width: calc(100% - 300px);
-    }    
+    }
   }
   .content {
     margin: 31px 18px;
     @include for-size(desktop) {
       margin: 48px 23px;
-    }    
+    }
   }
   .card {
     margin: 0 0 30px;
     @include for-size(desktop) {
       margin: 0 15px 30px;
-    }    
+    }
   }
   .content-list {
     display: flex;
@@ -85,7 +85,7 @@
       }
     }
   }
-  .header-navigation {    
+  .header-navigation {
     display: flex;
     align-items: center;
     margin: 0 0 30px;
@@ -100,7 +100,7 @@
       line-height: 140.62%;
       color: $color-secondary-grey;
       margin: 0;
-    } 
+    }
   }
   .form.form--section {
     background-color: $color-white;
@@ -110,6 +110,13 @@
       margin-bottom: 15px;
       .form__field {
         margin-bottom: 25px;
+        &--has-border {
+          padding: 15px;
+          background: $color-white;
+          border: 1px solid #d5d5d5;
+          box-sizing: border-box;
+          border-radius: 4px;
+        }
         .form__label--inline-radio {
           &:last-child {
             margin-bottom: 0;
@@ -142,7 +149,7 @@
           }
           @include for-size(desktop) {
             flex-direction: row;
-          }          
+          }
           .text {
             margin: 0 0 15px;
             @include for-size(tablet) {
@@ -150,7 +157,7 @@
             }
             @include for-size(desktop) {
               margin: 0;
-            }            
+            }
           }
           .button {
             width: 100%;
@@ -159,7 +166,7 @@
             }
             @include for-size(desktop) {
               width: max-content;
-            }            
+            }
           }
         }
         &.form__field--has-radio {
@@ -171,7 +178,7 @@
                   border: 7px solid $color-green;
                 }
                 .form__custom-radio-title {
-                  color: $color-green;                
+                  color: $color-green;
                 }
               }
             }
@@ -179,8 +186,8 @@
               border: 1px solid $color-secondary-black;
               .form__custom-radio-title {
                 font-size: 16px;
-                line-height: 140.62%; 
-              }              
+                line-height: 140.62%;
+              }
             }
           }
           &.form__field--multiple-row {
@@ -197,14 +204,14 @@
             padding: 0;
             border: none;
             .form__input--checkbox {
-              &:checked ~ .form__custom-checkbox-wrapper {      
+              &:checked ~ .form__custom-checkbox-wrapper {
                 border: 1px solid $color-green;
                 .form__text-label {
                   color: $color-green;
                 }
-              } 
+              }
             }
-            .form__custom-checkbox-wrapper {        
+            .form__custom-checkbox-wrapper {
               border: 1px solid $color-secondary-black;
               padding: 16px 13px;
               width: 100%;
@@ -220,32 +227,32 @@
         }
         &.form__field--has-inline-button {
           flex-direction: column;
-          @include for-size (tablet) {
+          @include for-size(tablet) {
             flex-direction: row;
           }
-          @include for-size (desktop) {
+          @include for-size(desktop) {
             flex-direction: row;
-          }          
+          }
           .form__input {
             margin-right: 0;
             margin-bottom: 14px;
-            @include for-size (tablet) {
+            @include for-size(tablet) {
               margin-right: 15px;
               margin-bottom: 0;
             }
-            @include for-size (desktop) {
+            @include for-size(desktop) {
               margin-right: 15px;
               margin-bottom: 0;
-            }            
+            }
           }
           .button {
             justify-content: center;
-            @include for-size (tablet) {
+            @include for-size(tablet) {
               justify-content: flex-start;
             }
-            @include for-size (desktop) {
+            @include for-size(desktop) {
               justify-content: flex-start;
-            }            
+            }
           }
         }
         .input-wrapper {
@@ -261,6 +268,18 @@
               top: 50%;
               cursor: pointer;
             }
+          }
+        }
+        .text {
+          font-family: Roboto;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 16px;
+          line-height: 140.62%;
+          color: $color-secondary-black;
+          .bold {
+            color: #777777;
+            font-weight: bold;
           }
         }
       }
@@ -297,7 +316,7 @@
       }
       @include for-size(desktop) {
         width: max-content;
-      }      
+      }
     }
   }
 }
