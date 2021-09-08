@@ -167,7 +167,7 @@
           display: block;
 
           &.cold {
-            background-color: rgba(205, 98, 118, 0.5);
+            background-color: rgba(89, 162, 201, 0.5);
           }
 
           &.comfortable {
@@ -175,7 +175,7 @@
           }
 
           &.hot {
-            background-color: rgba(89, 162, 201, 0.5);
+            background-color: rgba(205, 98, 118, 0.5);
           }
         }
 
@@ -797,10 +797,12 @@
 
       .summary-content {
         .image-wrapper {
-          width: 100px;
-          height: 100px;
+          width: 150px;
+          height: auto;
           margin: 0 auto;
           overflow: hidden;
+          max-height: 100%;
+
 
           .img {
             width: 100%;
