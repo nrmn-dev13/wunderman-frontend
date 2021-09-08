@@ -477,3 +477,18 @@
   opacity: 1;
   pointer-events: none;
 }
+.form-control.form-control--error {  
+  border: 1px solid #DC3545;
+  margin-bottom: 24px;
+  ~ .icon.fas {
+    top: 30% !important;
+  }
+  ~ .form__invalid-message {
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    display: block;
+    margin: 0;
+  }
+}
