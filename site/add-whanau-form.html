@@ -63,7 +63,7 @@
       </div>
     </div>
   </div>  
-</nav>
+</nav>  
 </header>
 <main class="webapp webapp--room-page">
   <aside class="aside">
@@ -192,89 +192,51 @@
   </div>
   <div class="backdrop"></div>
 </aside>
-  <section class="section section--add-whanau">
+  <section class="section section--add-whanau-form">
     <div class="container-fluid">      
       <div class="content">
-        <div class="row">          
-          <div class="col-md-6 col-lg-4 col-xl-4">
-            <div class="card card--dashed">
-              <div class="card-body">
-                <div class="wrapper">
-                  <i class="fas fa-plus-circle"></i>
-                  <h2 class="title">Add Someone to Whare</h2>                  
-                </div>
-              </div>
-            </div>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="header-navigation">
+              <a href="#" class="button button--grey-outline">
+                <i class="fas fa-arrow-left"></i>
+              </a>
+              <h4 class="title">Add Whānau</h4>
+            </div> 
           </div>
-          <div class="col-md-6 col-lg-4 col-xl-4">
-            <div class="card card--whanau">
-              <div class="card-body">
-                <div class="text-wrapper">
-                  <i class="fas fa-envelope"></i>
-                  <p class="text">satria.rama99@gmail.com</p>
+          <div class="col-md-12">
+            <form class="form form--section">
+              <div class="form-group alert-section">
+                <div class="alert alert-danger m-0" role="alert">
+                  <p class="text">Sorry, this is not a valid email address.</p>
+                  <button type="button" class="btn btn-close btn-close--alert"><i class="fas fa-times"></i></button>
                 </div>
-                <button class="button button--red" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fas fa-trash-alt"></i></button>
               </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 col-xl-4">
-            <div class="card card--whanau">
-              <div class="card-body">
-                <div class="text-wrapper">
-                  <i class="fas fa-envelope"></i>
-                  <p class="text">satria.rama99@gmail.com</p>
+              <div class="form-group alert-section">
+                <div class="alert alert-danger m-0" role="alert">
+                  <p class="text">Sorry, we are unable to connect to Manawa.nz please check your internet connection and try again.</p>
+                  <button type="button" class="btn btn-close btn-close--alert"><i class="fas fa-times"></i></button>
                 </div>
-                <button class="button button--red" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fas fa-trash-alt"></i></button>
               </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 col-xl-4">
-            <div class="card card--whanau">
-              <div class="card-body">
-                <div class="text-wrapper">
-                  <i class="fas fa-envelope"></i>
-                  <p class="text">satria.rama99@gmail.com</p>
+              <div class="form-group">
+                <div class="form__field">                  
+                  <label class="label-title" for="">Email</label>
+                  <div class="input-wrapper">
+                    <input type="email" class="form-control" id="" placeholder="Eg. satria.rama99@gmail.com">
+                  </div>
                 </div>
-                <button class="button button--red" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fas fa-trash-alt"></i></button>
               </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 col-xl-4">
-            <div class="card card--whanau">
-              <div class="card-body">
-                <div class="text-wrapper">
-                  <i class="fas fa-envelope"></i>
-                  <p class="text">satria.rama99@gmail.com</p>
-                </div>
-                <button class="button button--red" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fas fa-trash-alt"></i></button>
-              </div>
-            </div>
+              <button class="button button--black button--update">Save</button>
+            </form>
           </div>
         </div>
       </div>
     </div>
-    <button class="button button--green button--fab"><i class="fas fa-plus"></i></button>
   </section>
 </main>
 
 <!-- Modal -->
-<div class="modal modal--confirmation fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Delete Whare</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><i class="fas fa-times"></i></button>
-      </div>
-      <div class="modal-body">        
-        <p class="text">Are you sure you want to remove - <span class="bold">satria.rama99@gmail.com?</span></p>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="button button--soft-black" data-bs-dismiss="modal">Yes</button>
-        <button type="button" class="button button--black-outline">Cancel</button>
-      </div>
-    </div>
-  </div>
-</div>
+
 
 
 
