@@ -18,6 +18,10 @@
       @include for-size(phone-xs) {
         margin-bottom: 5px;
       }
+
+      @include for-size(phone) {
+        margin-bottom: 5px;
+      }
     }
   }
 
