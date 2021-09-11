@@ -109,7 +109,7 @@
     .form-group {
       margin-bottom: 15px;
       .form__field {
-        margin-bottom: 25px;
+        margin-bottom: 30px;
         &--has-border {
           padding: 15px;
           background: $color-white;
@@ -123,6 +123,7 @@
           }
           .label-sub-title {
             margin: 0 0 15px;
+            font-style: italic;
           }
         }
         .form__label--inline-radio {
@@ -289,6 +290,16 @@
             color: #777777;
             font-weight: bold;
           }
+        }
+      }
+      &--has-divider {
+        position: relative;
+        padding-top: 30px;
+        border-top: 1px solid #D5D5D5;
+        &::before {
+          content: '';
+          @include absolute(top 0 left 0 right 0);
+          width: 100%;
         }
       }
     }
