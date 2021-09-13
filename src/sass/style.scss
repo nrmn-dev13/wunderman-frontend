@@ -25,10 +25,11 @@
 "components/sidenav",
 "components/modal",
 "components/input",
-"components/datepicker";
+"components/datepicker",
+"components/chart";
 
 // 6. Page-specific styles
-@import "pages/home", "pages/auth", "pages/step-guide", "pages/installation", "pages/webapp/add-whanau";
+@import "pages/home", "pages/auth", "pages/step-guide", "pages/installation", "pages/webapp/add-whanau", "pages/report";
 
 // 7. Themes
 @import "themes/default";
