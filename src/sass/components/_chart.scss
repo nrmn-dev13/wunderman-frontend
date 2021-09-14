@@ -16,17 +16,33 @@
         width: 25px;
         height: 12.5px;
         display: block;
+        content: "";
 
         &.cold {
           background-color: rgba(89, 162, 201, 0.5);
+
+          @media print {
+            background-color: rgba(89, 162, 201, 0.5) !important;
+            -webkit-print-color-adjust: exact;
+          }
         }
 
         &.comfortable {
           background-color: rgba(77, 157, 46, 0.5);
+
+          @media print {
+            background-color: rgba(77, 157, 46, 0.5) !important;
+            -webkit-print-color-adjust: exact;
+          }
         }
 
         &.hot {
           background-color: rgba(205, 98, 118, 0.5);
+
+          @media print {
+            background-color: rgba(205, 98, 118, 0.5) !important;
+            -webkit-print-color-adjust: exact;
+          }
         }
       }
 

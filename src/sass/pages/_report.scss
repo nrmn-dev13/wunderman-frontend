@@ -58,15 +58,15 @@
     }
   }
 
-  .chart-wrapper {
-    canvas {
-      height: 150px !important;
-      width: 100% !important;
+  // .chart-wrapper {
+  //   canvas {
+  //     height: 150px !important;
+  //     width: 100% !important;
 
-      @include for-size(desktop) {
-        height: 200px !important;
-        width: 100% !important;
-      }
-    }
-  }
+  //     @include for-size(desktop) {
+  //       height: 200px !important;
+  //       width: 100% !important;
+  //     }
+  //   }
+  // }
 }
