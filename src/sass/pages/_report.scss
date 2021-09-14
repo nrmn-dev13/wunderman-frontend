@@ -12,6 +12,11 @@
     padding: 30px;
     background-color: #f9f9f9;
 
+    @media print {
+      background-color: #f9f9f9 !important;
+      -webkit-print-color-adjust: exact;
+    }
+
     .logo-wrapper {
       height: 50px;
       width: 100%;
