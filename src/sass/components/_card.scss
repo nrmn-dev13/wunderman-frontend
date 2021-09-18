@@ -407,6 +407,16 @@
     display: flex;
     flex-direction: column;
     margin: 0 0 30px;
+    &.card--not-choosen {
+      .card-footer {
+        .temperature-section {
+          display: none;
+        }
+        .helper-container {
+          display: flex;
+        }
+      }
+    }
 
     .card-header {
       display: flex;
@@ -416,6 +426,7 @@
       width: 100%;
       padding: 4px 9px;
       border: none;
+      min-height: 44px;
 
       .title {
         font-family: Merriweather;
@@ -491,6 +502,7 @@
         display: flex;
         justify-content: space-between;
         margin: 0 0 18px;
+        height: 56px;
       }
 
       // move dibuat global
@@ -633,7 +645,13 @@
       //   -ms-interpolation-mode: nearest-neighbor;
       //   /* IE (non-standard property) */
       // }
-
+      .helper-container {
+        display: none;        
+        align-items: center;
+        justify-content: center;
+        height: 56px;
+        margin: 0 0 18px;
+      }
       .text-wrapper {
         .title.title--celcius {
           font-family: Roboto;
