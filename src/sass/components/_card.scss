@@ -147,8 +147,6 @@
     }
   }
 
-
-
   .sensor-wrapper {
     .item {
       margin-bottom: 25px;
@@ -945,6 +943,43 @@
         line-height: 140.62%;
         color: $color-secondary-black;
         margin: 0;
+      }
+    }
+  }
+
+  &.card--tutor {
+    border: 1px solid #D5D5D5;
+    box-sizing: border-box;
+    border-radius: 6px;
+    padding: 0;
+    margin: 0;
+    .card-body {
+      padding: 10px;
+      font-family: Roboto;
+      font-style: normal;
+      .title {
+        line-height: 140.62%;
+        font-weight: bold;
+        font-size: 20px;
+        color: $color-secondary-grey;
+        margin: 0;
+      }
+      .text {        
+        line-height: 140.62%;
+        font-weight: bold;
+        font-size: 14px;        
+        color: $color-secondary-black;
+        margin: 0;
+      }
+      .link {
+        color: $color-green;
+      }
+      .image-wrapper {
+        width: 100%;
+        margin: 20px auto 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
       }
     }
   }
