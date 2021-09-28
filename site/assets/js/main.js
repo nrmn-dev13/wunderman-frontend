@@ -63,6 +63,11 @@ $(document).ready(function () {
       $('.alert-section').addClass('active');
     })
   }
+  function handleFlash() {
+    $('.icon--close-flash').click(function () {
+      $('.flash').addClass('close');
+    })
+  }
 
   handleFormStep();
   handleGuideStep();
@@ -71,6 +76,7 @@ $(document).ready(function () {
   handleToggleNav();
   handleVideo();
   handleAlert()
+  handleFlash()
 });
 
 // temp chart
