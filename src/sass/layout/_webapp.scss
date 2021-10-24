@@ -102,6 +102,18 @@
       margin: 0;
     }
   }
+  .page-title {
+    margin-bottom: 30px;
+    .title {
+      font-family: Merriweather;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 20px;
+      line-height: 140.62%;
+      color: $color-black;
+      margin: 0;
+    }
+  }
   .form.form--section {
     background-color: $color-white;
     border-top: 6px solid $color-green;
@@ -295,9 +307,9 @@
       &--has-divider {
         position: relative;
         padding-top: 30px;
-        border-top: 1px solid #D5D5D5;
+        border-top: 1px solid #d5d5d5;
         &::before {
-          content: '';
+          content: "";
           @include absolute(top 0 left 0 right 0);
           width: 100%;
         }

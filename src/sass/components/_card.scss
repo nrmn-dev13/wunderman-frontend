@@ -247,22 +247,22 @@
   }
 
   &.card--dashed {
-    border: 2px dashed #D5D5D5;
+    border: 2px dashed #d5d5d5;
     padding: 0;
     display: none;
 
     @include for-size(phone-landscape) {
-      border: 3px dashed #D5D5D5;
+      border: 3px dashed #d5d5d5;
       display: block;
     }
 
     @include for-size(tablet) {
-      border: 3px dashed #D5D5D5;
+      border: 3px dashed #d5d5d5;
       display: block;
     }
 
     @include for-size(desktop) {
-      border: 3px dashed #D5D5D5;
+      border: 3px dashed #d5d5d5;
       display: block;
     }
 
@@ -315,6 +315,15 @@
         color: $color-black;
         margin: 0;
       }
+      .text {
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 140.62%;
+        color: $color-secondary-grey;
+        margin: 5px 0 0;
+      }
     }
 
     .card-body {
@@ -322,6 +331,31 @@
       margin: 0 0 15px;
       width: 100%;
       position: relative;
+      &--prev-address {
+        padding-top: 0;
+        .wrapper {
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          align-items: flex-start;
+          .title {
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 140.62%;
+            color: $color-secondary-black;
+          }
+          .text {
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 12px;
+            line-height: 140.62%;
+            color: $color-secondary-grey;
+          }
+        }
+      }
 
       &::after {
         content: "";
@@ -329,6 +363,7 @@
         border-bottom: 1px solid #d5d5d5;
         width: 100%;
       }
+      
     }
 
     .card-footer {
@@ -342,6 +377,7 @@
 
       .card-cta {
         margin-left: 15px;
+        position: relative;
 
         .btn--sm {
           padding: 5px 10px;
@@ -350,8 +386,10 @@
         }
 
         .dropdown-menu {
-          inset: -30px auto auto 0px !important;
-
+          inset: 0px !important;
+          transform: translate3d(-82%,-75%,0)!important;
+          width: max-content;
+          height: max-content;          
           li {
             margin: 0 0 11px 0;
 
@@ -644,7 +682,7 @@
       //   /* IE (non-standard property) */
       // }
       .helper-container {
-        display: none;        
+        display: none;
         align-items: center;
         justify-content: center;
         height: 56px;
@@ -778,7 +816,6 @@
           margin: 0 auto;
           overflow: hidden;
           max-height: 100%;
-
 
           .img {
             width: 100%;
@@ -918,7 +955,7 @@
       width: 100%;
       padding: 10px 20px;
       border: none;
-      border-bottom: 1px solid #E0E0E0;
+      border-bottom: 1px solid #e0e0e0;
 
       .title {
         font-family: Merriweather;
@@ -948,7 +985,7 @@
   }
 
   &.card--tutor {
-    border: 1px solid #D5D5D5;
+    border: 1px solid #d5d5d5;
     box-sizing: border-box;
     border-radius: 6px;
     padding: 0;
@@ -964,10 +1001,10 @@
         color: $color-secondary-grey;
         margin: 0;
       }
-      .text {        
+      .text {
         line-height: 140.62%;
         font-weight: bold;
-        font-size: 14px;        
+        font-size: 14px;
         color: $color-secondary-black;
         margin: 0;
       }
