@@ -91,6 +91,13 @@
     margin: 0 0 30px;
     .button {
       margin-right: 14px;
+      width: 36px;
+      height: 36px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex: 0 0 auto;
+      padding: 5px;
     }
     .title {
       font-family: Roboto;
@@ -100,6 +107,15 @@
       line-height: 140.62%;
       color: $color-secondary-grey;
       margin: 0;
+    }
+    .text {
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 140.62%;
+      color: $color-secondary-black;
+      margin: 4px 0 0;
     }
   }
   .page-title {
