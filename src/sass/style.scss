@@ -13,24 +13,13 @@
 @import "base/base", "base/fonts", "base/typography", "base/helpers";
 
 // 4. Layout-related sections
-@import "layout/header", "layout/footer", "layout/form", "layout/webapp";
+@import "layout/header", "layout/footer", "layout/form";
 
 // 5. Components
-@import "components/button",
-"components/flash",
-"components/badge",
-"components/navbar",
-"components/fontello",
-"components/icon",
-"components/card",
-"components/sidenav",
-"components/modal",
-"components/input",
-"components/datepicker",
-"components/chart";
+@import "components/button";
 
 // 6. Page-specific styles
-@import "pages/home", "pages/auth", "pages/step-guide", "pages/installation", "pages/webapp/add-whanau", "pages/report";
+@import "pages/installation";
 
 // 7. Themes
 @import "themes/default";
