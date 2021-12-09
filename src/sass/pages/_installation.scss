@@ -3,11 +3,10 @@
 // -----------------------------------------------------------------------------
 .installation-guide {
   height: 100%;
-  background: linear-gradient(180deg, #fdff8c 0%, rgba(253, 255, 140, 0.6) 0.01%, #ffffff 73.44%);
   .sidebar {
     @include fixed(top 0 bottom 0 left 0 right 0);
     transform: translateX(-100%);
-    background-color: $color-green;
+    background-color: $color-blue;
     z-index: 3;
     padding: 59px 29px;
     transition: transform 200ms ease-in-out;
@@ -20,7 +19,7 @@
     @include for-size(desktop) {
       width: 25%;
       transform: translateX(0%);
-      padding: 33px 32px;
+      padding: 30px;
     }    
     &.show--nav {
       transform: translateX(0%);
@@ -93,6 +92,7 @@
     border: none;
     max-width: 100%;
     width: 100%;
+    position: relative;
     @include for-size(tablet) {
       padding: 0 27px;
     }
@@ -216,15 +216,11 @@
     }
   }
   .navigation {
-    @include fixed(bottom 0 left 0 right 0);
+    @include absolute(bottom 0 left 0 right 0);
     display: flex;
     z-index: 1;
     background-color: #f5f6f8;
     box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.15);
-    @include for-size(desktop) {
-      position: relative;
-      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
-    }    
     &__title {
       color: $black;
       font-family: Roboto;
