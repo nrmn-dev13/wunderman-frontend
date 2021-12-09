@@ -7,12 +7,15 @@
     height: 100%;
     .container-fluid {
       height: 100%;
-      @include for-size(desktop) {
-        padding: 0;
-      }
+      margin: 0;
       .row {
         height: 100%;
         margin-bottom: 0;
+        .step-app {
+          @include for-size(desktop) {
+            padding: 0
+          }
+        }
       }
     }
   }
@@ -218,6 +221,23 @@
         pointer-events: none;
         opacity: 0.5;
       }
+      .content-header {
+        margin-top: 30px;
+        .text {
+          font-style: normal;
+          font-weight: normal;
+          font-size: 20px;
+          line-height: 140.62%;
+          margin-bottom: 15px;
+        }
+        .title {
+          font-style: normal;
+          font-weight: bold;
+          font-size: 24px;
+          line-height: 140.62%;
+          margin: 0;
+        }
+      }
     }
     &__sub-list {
       list-style-type: disc;
@@ -232,7 +252,7 @@
     @include absolute(bottom 0 left 0 right 0);
     display: flex;
     z-index: 1;
-    background-color: #F5F5F5;
+    background-color: #f5f5f5;
     box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.15);
     margin: 0 -12px;
     @include for-size(desktop) {
@@ -319,7 +339,7 @@
           line-height: 140.62%;
           margin: 0;
           display: none;
-          @include for-size (desktop) {
+          @include for-size(desktop) {
             display: block;
           }
         }
