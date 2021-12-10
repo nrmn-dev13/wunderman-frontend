@@ -8,6 +8,9 @@ $(document).ready(function () {
     $('.toggle--nav').click(function () {
       $('.sidebar').toggleClass('show--nav');
     })
+    $('.sidebar__item').click(function () {
+      $('.sidebar').removeClass('show--nav');
+    })
   }
   handleGuideStep();
   handleToggleNav();
