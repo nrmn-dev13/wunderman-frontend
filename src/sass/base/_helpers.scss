@@ -53,35 +53,6 @@
   position: absolute;
   width: 1px;
 }
-.alert {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 0 0 30px;
-  @include for-size(tablet) {
-    margin: 0 0 30px;
-  }
-  @include for-size(desktop) {
-    margin: 0 15px 30px;
-  }  
-  .text {
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 140.62%;
-  }
-  &.alert-success {
-    .btn {
-      color: inherit;
-    }
-  }
-  &.alert-danger {
-    .btn {
-      color: inherit;
-    }
-  }
-}
 .bold {
   font-weight: bold;
 }
