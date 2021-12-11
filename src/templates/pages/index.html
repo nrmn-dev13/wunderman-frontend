@@ -1,28 +1,19 @@
 <!-- index.html -->
-{% extends "layout.html" %}
+{% extends "layout.html" %} {% block content %}
 
-{% block content %}
-
-
-<main class="auth">
-  <section class="auth__section">
-    <div class="container">
-      <div class="auth__row row">
-        <div class="col-md-5">
-          <div class="auth__content">
-            <div class="auth__content-wrapper">
-              <h2 class="auth__sub-title">Content :</h2>              
-              <ul class="auth__list">
-                <li class="auth__item">
-                  <a href="onboarding_guide.html" class="auth__link">Onboarding Guide</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
+<main class="index">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <h2 class="auth__sub-title">Content :</h2>
+        <ul class="auth__list">
+          <li class="auth__item">
+            <a href="onboarding_guide.html" class="auth__link">Onboarding Guide</a>
+          </li>
+        </ul>
       </div>
     </div>
-  </section>
+  </div>
 </main>
 
 {% endblock %}
