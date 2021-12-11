@@ -1,7 +1,7 @@
 // -----------------------------------------------------------------------------
-// This file contains styles that are specific to the Installation page.
+// This file contains styles that are specific to the onboarding page.
 // -----------------------------------------------------------------------------
-.installation-guide {
+.onboarding-guide {
   height: 100%;
   &__section {
     height: 100%;
@@ -884,7 +884,7 @@
       }
     }
   }
-  .col-installation {
+  .col-onboarding {
     display: flex;
     justify-content: center;
     @include for-size(desktop) {

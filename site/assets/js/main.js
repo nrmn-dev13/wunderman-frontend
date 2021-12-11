@@ -1,6 +1,6 @@
 $(document).ready(function () {
   function handleGuideStep() {
-    $("#guideStep").steps({
+    $("#onboardingStep").steps({
       transitionEffect: "slideLeft",
     });
   }
