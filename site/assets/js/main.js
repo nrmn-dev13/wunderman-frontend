@@ -1,16 +1,32 @@
 $(document).ready(function () {
   function handleGuideStep() {
     $("#guideStep").steps({
-      transitionEffect: "slideLeft"
+      transitionEffect: "slideLeft",
     });
   }
   function handleToggleNav() {
-    $('.toggle--nav').click(function () {
-      $('.sidebar').toggleClass('show--nav');
-    })
-    $('.sidebar__item').click(function () {
-      $('.sidebar').removeClass('show--nav');
-    })
+    // Toggle sidenav
+    $(".toggle--nav").click(function () {
+      $(".sidebar").toggleClass("show--nav");
+    });
+    $(".sidebar__item").click(function () {
+      $(".sidebar").removeClass("show--nav");
+    });
+    // Radio Button Event
+    $("input.form-control--support:radio").change(function () {
+      if (this.value == "yes") {
+        $(".invitation-wrapper").addClass("active");
+      } else {
+        $(".invitation-wrapper").removeClass("active");
+      }
+    });
+    $("input.form-control--hauora:radio").change(function () {
+      if (this.value == "yes") {
+        $(".organize-wrapper").addClass("active");
+      } else {
+        $(".organize-wrapper").removeClass("active");
+      }
+    });
   }
   handleGuideStep();
   handleToggleNav();

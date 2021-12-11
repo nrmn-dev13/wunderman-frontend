@@ -30,9 +30,17 @@
     .text {
       font-style: normal;
       font-weight: normal;
-      font-size: 16px;
-      line-height: 140.62%;
       margin: 0;
+      font-size: 12px;
+      line-height: 40px;
+      @include for-size(tablet) {
+        font-size: 16px;
+        line-height: 140.62%;
+      }
+      @include for-size(desktop) {
+        font-size: 16px;
+        line-height: 140.62%;
+      }
     }
   }
   .check-wrapper {
@@ -67,10 +75,16 @@
       .text {
         font-style: normal;
         font-weight: normal;
-        font-size: 16px;
+        font-size: 14px;
         line-height: 140.62%;
         margin: 0;
         color: $color-black;
+        @include for-size (tablet) {
+          font-size: 16px;
+        }
+        @include for-size (desktop) {
+          font-size: 16px;
+        }
       }
     }
   }
@@ -109,7 +123,7 @@
       font-weight: bold;
       font-size: 20px;
       line-height: 28px;
-      margin: 0 0 32px 0;
+      margin: 0 0 41px 0;
     }
     &__list {
       padding: 0;
@@ -134,7 +148,7 @@
       display: flex;
       align-items: center;
       text-decoration: none;
-      color: $white;
+      color: #b9d1df;
       .icon.icon--list {
         font-size: 16px;
         margin-right: 15px;
@@ -159,13 +173,13 @@
     }
   }
   .slide-content {
-    padding: 0 3px;
+    padding: 0 8px;
     border: none;
     max-width: 100%;
     width: 100%;
     position: relative;
     @include for-size(tablet) {
-      padding: 0 27px;
+      padding: 0 18px;
     }
     @include for-size(desktop) {
       padding: 0 30px;
@@ -285,6 +299,10 @@
           font-size: 20px;
           line-height: 140.62%;
           margin-bottom: 15px;
+          display: none;
+          @include for-size(desktop) {
+            display: block;
+          }
         }
         .title {
           font-style: normal;
@@ -297,7 +315,10 @@
       .form-group {
         margin-top: 40px;
         &--sm {
-          width: 33%;
+          width: 100%;
+          @include for-size(desktop) {
+            width: 33%;
+          }
           .list {
             padding: 0 0 0 18px;
             margin: 0;
@@ -318,36 +339,84 @@
               }
             }
           }
+          &.form-group--list {
+            @include for-size(tablet) {
+              width: 50% !important;
+            }
+          }
         }
         &--md {
-          width: 66%;
+          width: 100%;
+          @include for-size(desktop) {
+            width: 66%;
+          }
         }
         &--md-l {
-          width: 75%;
+          width: 100%;
+          @include for-size(desktop) {
+            width: 75%;
+          }
         }
         &--invite {
-          width: 45%;
+          width: 100%;
+          margin-top: 30px;
+          padding-top: 30px;
+          @include for-size(desktop) {
+            width: 45%;
+          }
           .button--black-outline {
-            min-width: 100px;
+            max-width: none;
+            width: 100%;
+            @include for-size(tablet) {
+              max-width: 100px;
+            }
+            @include for-size(desktop) {
+              max-width: 100px;
+            }
           }
         }
         &--organize {
-          width: 45%;
+          width: 100%;
+          @include for-size(desktop) {
+            width: 45%;
+          }
           .form-field {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            margin-bottom: 60px !important;
+            flex-wrap: wrap;
+            margin-bottom: 30px !important;
+            @include for-size(tablet) {
+              margin-bottom: 60px !important;
+            }
+            @include for-size(desktop) {
+              margin-bottom: 06 px!important;
+            }
             &:last-child {
               margin-bottom: 0 !important;
             }
             .form-label {
               flex: 0 0 auto;
-              margin-bottom: 0 !important;
+              margin-bottom: 15px !important;
+              width: 100%;
+              @include for-size(tablet) {
+                width: auto;
+                margin-bottom: 0 !important;
+              }
+              @include for-size(desktop) {
+                width: auto;
+                margin-bottom: 0 !important;
+              }
             }
             .input-wrapper {
               flex: 1 1 auto;
-              max-width: 50%;
+              max-width: 100%;
+              @include for-size(tablet) {
+                max-width: 50%;
+              }
+              @include for-size(desktop) {
+                max-width: 50%;
+              }
               .form-select {
                 width: 100%;
               }
@@ -361,9 +430,23 @@
           }
           &--inline {
             display: flex;
+            flex-wrap: wrap;
             .check-wrapper {
               display: flex;
               flex: 1 1 auto;
+              width: 100%;
+              margin: 0 0 20px;
+              &:last-child {
+                margin: 0;
+              }
+              @include for-size(tablet) {
+                width: auto;
+                margin: 0;
+              }
+              @include for-size(desktop) {
+                width: auto;
+                margin: 0;
+              }
               &:last-child {
                 .custom-check {
                   margin-right: 0;
@@ -371,16 +454,28 @@
               }
               .custom-check {
                 width: 100%;
-                margin-right: 30px;
+                margin-right: 0px;
+                @include for-size(tablet) {
+                  margin-right: 30px;
+                }
+                @include for-size(desktop) {
+                  margin-right: 30px;
+                }
               }
             }
-            .form-label {
+            .form-label--inline {
               display: flex;
               align-items: center;
               font-weight: bold !important;
-              font-size: 24px !important;
+              font-size: 16px !important;
               line-height: 140.62% !important;
               color: $color-black;
+              @include for-size(tablet) {
+                font-size: 24px !important;
+              }
+              @include for-size(desktop) {
+                font-size: 24px !important;
+              }
               .form-control {
                 max-width: 70px;
                 margin: 0 10px;
@@ -390,13 +485,33 @@
           &--has-button {
             .input-wrapper {
               display: flex;
+              flex-direction: column;
+              @include for-size(tablet) {
+                flex-direction: row;
+              }
+              @include for-size(desktop) {
+                flex-direction: row;
+              }
               .form-control {
                 flex: 1 1 auto;
+                margin-bottom: 15px;
+                @include for-size(tablet) {
+                  margin-bottom: 0px;
+                }
+                @include for-size(desktop) {
+                  margin-bottom: 0px;
+                }
               }
               .button {
                 flex: 0 0 auto;
-                margin-left: 30px;
+                margin-left: 0px;
                 min-width: 100px;
+                @include for-size(tablet) {
+                  margin-left: 30px;
+                }
+                @include for-size(desktop) {
+                  margin-left: 30px;
+                }
               }
             }
           }
@@ -455,7 +570,7 @@
           border-top: 1px solid #e0e0e0;
         }
         .card {
-          width: calc(33% - 15px);
+          width: 100%;
           padding: 15px;
           background: $color-white;
           border: 1px solid #e0e0e0;
@@ -465,6 +580,12 @@
           display: flex;
           flex-direction: row;
           align-items: center;
+          @include for-size(tablet) {
+            width: calc(50% - 15px);
+          }
+          @include for-size(desktop) {
+            width: calc(33% - 15px);
+          }
           .card-info {
             flex: 1 1 auto;
             padding-right: 10px;
@@ -502,6 +623,7 @@
               font-size: 14px;
               line-height: 140.62%;
               margin: 0;
+              word-break: break-all;
             }
           }
         }
@@ -522,9 +644,15 @@
           border-radius: 6px;
           .card-header {
             background-color: $color-white;
-            padding: 30px;
+            padding: 15px;
             position: relative;
             border-bottom: 0;
+            @include for-size(tablet) {
+              padding: 30px;
+            }
+            @include for-size(desktop) {
+              padding: 30px;
+            }
             &::after {
               content: "";
               position: absolute;
@@ -538,14 +666,26 @@
             .title {
               font-style: normal;
               font-weight: bold;
-              font-size: 24px;
+              font-size: 16px;
               line-height: 140.62%;
               color: $color-black;
               margin: 0;
+              @include for-size(tablet) {
+                font-size: 24px;
+              }
+              @include for-size(desktop) {
+                font-size: 24px;
+              }
             }
           }
           .card-body {
-            padding: 30px;
+            padding: 15px;
+            @include for-size(tablet) {
+              padding: 30px;
+            }
+            @include for-size(desktop) {
+              padding: 30px;
+            }
             .card-field {
               display: flex;
               margin-bottom: 15px;
@@ -558,10 +698,16 @@
               .text {
                 font-style: normal;
                 font-weight: normal;
-                font-size: 16px;
+                font-size: 12px;
                 line-height: 140.62%;
                 margin: 0;
                 color: $color-black;
+                @include for-size(tablet) {
+                  font-size: 16px;
+                }
+                @include for-size(desktop) {
+                  font-size: 16px;
+                }
                 &--label {
                   min-width: 150px;
                 }
@@ -579,12 +725,40 @@
                 }
               }
               .card-list {
+                margin: 0;
+                padding: 0;
+                &::before {
+                  border: none;
+                }
                 .card {
                   box-shadow: none;
                 }
               }
             }
           }
+        }
+      }
+      .invitation-wrapper {
+        display: none;
+        width: 100%;
+        position: relative;
+        &:before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          width: 100%;
+          border-top: 1px solid #e0e0e0;
+        }
+        &.active {
+          display: block;
+        }
+      }
+      .organize-wrapper {
+        display: none;
+        &.active {
+          display: block;
         }
       }
     }
@@ -604,9 +778,10 @@
     z-index: 1;
     background-color: #f5f5f5;
     box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.15);
-    width: 75%;
+    width: 100%;
     @include for-size(desktop) {
       margin: 0;
+      width: 75%;
     }
     &__title {
       color: $black;
