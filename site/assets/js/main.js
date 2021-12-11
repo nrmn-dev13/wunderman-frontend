@@ -27,6 +27,15 @@ $(document).ready(function () {
         $(".organize-wrapper").removeClass("active");
       }
     });
+    // Toggle password
+    $(".icon--password").click(function () {
+      var password = $(this).prev(".form-control--password");
+      if (password.attr("type") === "password") {
+        password.attr("type", "text");
+      } else {
+        password.attr("type", "password");
+      }
+    });
   }
   handleGuideStep();
   handleToggleNav();
