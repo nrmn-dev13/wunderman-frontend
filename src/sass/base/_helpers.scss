@@ -72,3 +72,13 @@
     }
   }
 }
+.index {
+  .list {
+    &__item {
+      .list__link {
+        text-decoration: none;
+        color: black;
+      }
+    }
+  }
+}
