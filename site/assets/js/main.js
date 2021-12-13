@@ -30,6 +30,7 @@ $(document).ready(function () {
     // Toggle password
     $(".icon--password").click(function () {
       var password = $(this).prev(".form-control--password");
+      $(this).toggleClass('fas fa-eye fas fa-eye-slash')
       if (password.attr("type") === "password") {
         password.attr("type", "text");
       } else {

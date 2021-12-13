@@ -98,9 +98,6 @@
                 ~ .icon--password {
                   top: calc(50% - 12px);
                 }
-                ~ .error-wrapper {
-                  display: flex;
-                }
               }
             }
             .icon--password {
@@ -237,6 +234,11 @@
           @include for-size(desktop) {
             font-size: 16px;
             line-height: 140.62%;
+          }
+          &.error {
+            ~ .error-wrapper {
+              display: flex;
+            }
           }
         }
         .button-wrapper {
