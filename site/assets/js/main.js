@@ -12,6 +12,9 @@ $(document).ready(function () {
     $(".sidebar__item").click(function () {
       $(".sidebar").removeClass("show--nav");
     });
+    $(".backdrop").click(function () {
+      $(".sidebar").removeClass("show--nav");
+    });
     // Radio Button Event
     $("input.form-control--support:radio").change(function () {
       if (this.value == "yes") {
@@ -38,6 +41,17 @@ $(document).ready(function () {
       }
     });
   }
+  function handleReadMore() {
+    $('.button--read-more').click(function () {
+      if ($(this).closest(".alert").hasClass('expanded')) {
+        $(this).html("Read More");
+      } else {
+        $(this).html("Less");
+      }
+      $(this).closest(".alert").toggleClass('expanded');
+    })
+  }
   handleGuideStep();
   handleToggleNav();
+  handleReadMore();
 });
