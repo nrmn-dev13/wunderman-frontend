@@ -1,0 +1,146 @@
+.webapp {
+  width: 100%;
+}
+.section {
+  .headline {
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.01em;
+    color: $color-white;
+    @include for-size(tablet) {
+      font-size: 32px;
+      line-height: normal;
+    }
+    @include for-size(desktop) {
+      font-size: 32px;
+      line-height: normal;
+    }
+  }
+  .title {
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 30px;
+    color: #029fe4;
+  }
+  .subtitle {
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 38px;
+    color: #000000;
+  }
+  .text {
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.01em;
+    color: $color-white;
+  }
+  .card {
+    border: none;
+    box-sizing: border-box;
+    width: 100%;
+    &--slider {
+      max-width: 30%;
+    }
+  }
+  &--hero {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    height: calc(100vh - 58px);
+    .hero {
+      background-image: url(/assets/img/hero-img.jpg);
+      background-position: center center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      height: 100%;
+      width: 100%;
+      position: relative;
+    }
+    .content {
+      background-color: $color-blue;
+      padding: 40px 40px 70px;
+      position: relative;
+      &::before {
+        content: "";
+        width: 0;
+        height: 0;
+        border-bottom: 100px solid $color-blue;
+        border-right: 100vw solid transparent;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translateY(-99%);
+        z-index: 1;
+      }
+      &::after {
+        content: "";
+        width: 0;
+        height: 0;
+        border-bottom: 90px solid $color-lite-blue;
+        border-left: 60vw solid transparent;
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: translateY(-99%);
+        z-index: 0;
+      }
+    }
+  }
+  &--who-we-are {
+    padding: 48px 0 69px;
+    .slider--about {
+      display: flex;
+      justify-content: space-between;
+      .card {
+        min-height: 250px;
+        .text {
+          font-size: 14px;
+          line-height: 24px;
+          color: #777777;
+        }
+      }
+    }
+  }
+  &--our-values {
+    background-color: #f8f8f8;
+    padding: 58px 0 0;
+    .title {
+      margin-bottom: 24px;
+    }
+    .text {
+      color: #777777;
+    }
+    .card {
+      padding-left: 44px;
+      .title {
+        font-size: 24px;
+        line-height: 38px;
+        color: #000000;
+        margin-bottom: 6px;
+        position: relative;
+        &::before {
+          content: '';
+          position: absolute;
+          border-top: 2px solid #747474;
+          width: 26px;
+          top: 50%;
+          left: -44px;
+          transform: translateY(-50%);
+        } 
+      }
+    }
+    .svg-wrapper {
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+      .img-svg {
+        width: 50%;
+      }
+    }
+  }
+  &--the-perks {
+    background-color: #509FDD;
+  }
+}
