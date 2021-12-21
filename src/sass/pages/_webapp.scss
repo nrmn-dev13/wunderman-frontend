@@ -1,5 +1,7 @@
 .webapp {
   width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 .section {
   .headline {
@@ -36,12 +38,34 @@
     letter-spacing: 0.01em;
     color: $color-white;
   }
+  .slider {
+    display: flex;
+    justify-content: space-between;
+    .card {
+      min-height: 250px;
+      .text {
+        font-size: 14px;
+        line-height: 24px;
+        color: #777777;
+      }
+    }
+    &--perks {
+      .card--slider {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  }
   .card {
     border: none;
     box-sizing: border-box;
     width: 100%;
     &--slider {
       max-width: 30%;
+      .text {
+        text-align: center;
+      }
     }
   }
   &--hero {
@@ -71,8 +95,8 @@
         position: absolute;
         top: 0;
         left: 0;
-        transform: translateY(-99%);
         z-index: 1;
+        transform: translateY(-99%);
       }
       &::after {
         content: "";
@@ -90,18 +114,6 @@
   }
   &--who-we-are {
     padding: 48px 0 69px;
-    .slider--about {
-      display: flex;
-      justify-content: space-between;
-      .card {
-        min-height: 250px;
-        .text {
-          font-size: 14px;
-          line-height: 24px;
-          color: #777777;
-        }
-      }
-    }
   }
   &--our-values {
     background-color: #f8f8f8;
@@ -121,14 +133,14 @@
         margin-bottom: 6px;
         position: relative;
         &::before {
-          content: '';
+          content: "";
           position: absolute;
           border-top: 2px solid #747474;
           width: 26px;
           top: 50%;
           left: -44px;
           transform: translateY(-50%);
-        } 
+        }
       }
     }
     .svg-wrapper {
@@ -141,6 +153,57 @@
     }
   }
   &--the-perks {
-    background-color: #509FDD;
+    background-color: #509fdd;
+    .inner-container {
+      background-color: $color-white;
+      margin: 35px 0 45px;
+      padding: 35px;
+    }
+  }
+}
+.footer {
+  background-color: #07477a;
+  padding: 35px 0;
+  position: relative;
+  &::before {
+    content: "";
+    width: 0;
+    height: 0;
+    border-bottom: 150px solid #08385F;
+    border-right: 100vw solid transparent;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+  }
+  &::after {
+    content: "";
+    width: 0;
+    height: 0;
+    border-bottom: 125px solid #14619D;
+    border-left: 100vw solid transparent;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+  }
+  .container {
+    position: relative;
+    z-index: 2;
+  }
+  .link {
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 48px;
+    color: $color-white;
+  }
+  .contact-box {
+    background-color: $color-white;
+    padding: 25px;
+  }
+  .list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }
