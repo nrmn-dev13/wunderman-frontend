@@ -69,6 +69,11 @@
       @include for-size(desktop) {
         max-width: 30%;
       }
+      .img-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
     }
   }
   &--hero {
@@ -122,17 +127,17 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        @include for-size (tablet) {
+        @include for-size(tablet) {
           display: none;
         }
-        @include for-size (desktop) {
+        @include for-size(desktop) {
           display: none;
         }
         .slider-nav__counter {
           font-weight: 500;
           font-size: 16px;
           line-height: 38px;
-          color: #B6B6B6;
+          color: #b6b6b6;
           .current-number {
             font-size: 24px;
             color: #303030;
@@ -149,21 +154,17 @@
             align-items: center;
             justify-content: center;
             cursor: pointer;
+            background-color: #1ba0e1;
             .svg-arrow {
               width: 20px;
               height: 15px;
+              fill: $color-white;
             }
-            &.next-arrow {
-              background-color: #1ba0e1;
-              .svg-arrow {
-                fill: $color-white;
-              }
-            }
-            &.prev-arrow {
+            &.slick-disabled {
               background-color: #f1f1f1;
               .svg-arrow {
                 fill: #b6b6b6;
-              }
+              } 
             }
           }
         }
@@ -214,10 +215,22 @@
       margin: 35px 0 45px;
       padding: 35px;
       .slider-wrapper {
+        .slick-slide {
+          width: 100%;
+        }
         .slider-arrow {
           display: flex;
           align-items: center;
+          justify-content: space-between;
+          pointer-events: none;
+          @include for-size(tablet) {
+            display: none;
+          }
+          @include for-size(desktop) {
+            display: none;
+          }
           .slider-arrow__item {
+            pointer-events: auto;
             width: 20px;
             height: 15px;
             display: flex;
@@ -228,16 +241,14 @@
             .svg-arrow {
               width: 100%;
               height: 100%;
+              fill: #3d46a2;
             }
-            &.next-arrow--perks {
+            &.slick-disabled {
               .svg-arrow {
-                fill: #3D46A2;
-              }
-            }
-            &.prev-arrow--perks {
-              .svg-arrow {
-                fill: #D2D2D2;
-              }
+                width: 100%;
+                height: 100%;
+                fill: #d2d2d2;
+              } 
             }
           }
         }
