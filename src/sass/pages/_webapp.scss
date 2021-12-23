@@ -81,6 +81,7 @@
     flex-direction: column;
     align-items: stretch;
     height: calc(100vh - 58px);
+    overflow: hidden;
     .hero {
       background-image: url(/assets/img/hero-img.jpg);
       background-position: center center;
@@ -216,7 +217,27 @@
       padding: 35px;
       .slider-wrapper {
         .slick-slide {
-          width: 100%;
+          .card--slider {
+            .subtitle {
+              display: none;
+            }
+            .text-wrapper {
+              display: none;
+              position: relative;
+              z-index: 1;
+            }
+          }
+          &.slick-current {
+            .card--slider {
+              .subtitle {
+                display: block;
+              }
+              .text-wrapper {
+                display: block;
+                margin: 0 -60px;
+              }
+            }
+          }
         }
         .slider-arrow {
           display: flex;
@@ -260,6 +281,7 @@
   background-color: #07477a;
   padding: 35px 0;
   position: relative;
+  overflow: hidden;
   &::before {
     content: "";
     width: 0;

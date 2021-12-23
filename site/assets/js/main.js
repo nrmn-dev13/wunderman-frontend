@@ -15,6 +15,8 @@ $(document).ready(function () {
      ]
     });
     $(".slider--perks").slick({
+      centerMode: true,
+      centerPadding: '60px',
       slidesToShow: 1,
       slidesToScroll: 1,
       prevArrow: $(".prev-arrow--perks"),
