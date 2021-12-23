@@ -76,6 +76,18 @@
       }
     }
   }
+  .icon {
+    display: flex;
+    flex: 0 0 auto;
+    &--scroll {
+      background-image: url(/assets/img/scroll-icon.png);
+      background-position: center center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      height: 16px;
+      width: 19px;
+    }
+  }
   &--hero {
     display: flex;
     flex-direction: column;
@@ -165,7 +177,7 @@
               background-color: #f1f1f1;
               .svg-arrow {
                 fill: #b6b6b6;
-              } 
+              }
             }
           }
         }
@@ -215,26 +227,128 @@
       background-color: $color-white;
       margin: 35px 0 45px;
       padding: 35px;
+      .text--perks {
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 24px;
+        color: #303030;
+        width: 100%;
+        margin: 0 auto 16px;
+        text-align: center;
+        @include for-size(tablet) {
+          width: 50%;
+        }
+        @include for-size(desktop) {
+          width: 50%;
+        }
+      }
       .slider-wrapper {
-        .slick-slide {
-          .card--slider {
-            .subtitle {
-              display: none;
+        .slider--perks {
+          position: relative;
+          &::before {
+            content: "";
+            width: 60px;
+            /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ffffff+0,ffffff+100&1+0,0+100 */
+            background: -moz-linear-gradient(
+              left,
+              rgba(255, 255, 255, 1) 0%,
+              rgba(255, 255, 255, 0) 100%
+            ); /* FF3.6-15 */
+            background: -webkit-linear-gradient(
+              left,
+              rgba(255, 255, 255, 1) 0%,
+              rgba(255, 255, 255, 0) 100%
+            ); /* Chrome10-25,Safari5.1-6 */
+            background: linear-gradient(
+              to right,
+              rgba(255, 255, 255, 1) 0%,
+              rgba(255, 255, 255, 0) 100%
+            );
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 121px;
+            z-index: 1;
+          }
+          &::after {
+            content: "";
+            width: 60px;
+            /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ffffff+0,ffffff+100&1+0,0+100 */
+            background: -moz-linear-gradient(
+              right,
+              rgba(255, 255, 255, 1) 0%,
+              rgba(255, 255, 255, 0) 100%
+            ); /* FF3.6-15 */
+            background: -webkit-linear-gradient(
+              right,
+              rgba(255, 255, 255, 1) 0%,
+              rgba(255, 255, 255, 0) 100%
+            ); /* Chrome10-25,Safari5.1-6 */
+            background: linear-gradient(
+              to left,
+              rgba(255, 255, 255, 1) 0%,
+              rgba(255, 255, 255, 0) 100%
+            );
+            position: absolute;
+            top: 0;
+            right: 0;
+            height: 121px;
+            z-index: 1;
+          }
+          @include for-size(tablet) {
+            &::before {
+              background: transparent;
             }
-            .text-wrapper {
-              display: none;
-              position: relative;
-              z-index: 1;
+            &::after {
+              background: transparent;
             }
           }
-          &.slick-current {
+          @include for-size(desktop) {
+            &::before {
+              background: transparent;
+            }
+            &::after {
+              background: transparent;
+            }
+          }
+          .card--slider {
+            .img-wrapper {
+              width: 121px;
+              height: 121px;
+              margin: 0 auto 10px;
+              .img-slider {
+                width: 100%;
+                height: 100%;
+              }
+            }
+          }
+          .slick-slide {
             .card--slider {
+              .img-wrapper {
+                transform: scale(0.7);
+              }
               .subtitle {
-                display: block;
+                display: none;
               }
               .text-wrapper {
-                display: block;
-                margin: 0 -60px;
+                display: none;
+                position: relative;
+                z-index: 1;
+              }
+            }
+            &.slick-current {
+              .card--slider {
+                .img-wrapper {
+                  transform: scale(1);
+                  transition: transform 400ms ease-in-out;
+                }
+                .subtitle {
+                  display: block;
+                }
+                .text-wrapper {
+                  display: block;
+                  margin: 0 -60px;
+                }
               }
             }
           }
@@ -269,7 +383,7 @@
                 width: 100%;
                 height: 100%;
                 fill: #d2d2d2;
-              } 
+              }
             }
           }
         }
