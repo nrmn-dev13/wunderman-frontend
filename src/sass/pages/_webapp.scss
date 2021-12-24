@@ -6,8 +6,8 @@
 .section {
   .headline {
     font-weight: normal;
-    font-size: 16px;
-    line-height: 24px;
+    font-size: 36px;
+    line-height: 34px;
     letter-spacing: 0.01em;
     color: $color-white;
     @include for-size(tablet) {
@@ -17,6 +17,21 @@
     @include for-size(desktop) {
       font-size: 32px;
       line-height: normal;
+    }
+  }
+  .line-break {
+    display: inline;
+    &::before {
+      content: "\a ";
+      white-space: pre;
+      @include for-size(tablet) {
+        content: "";
+        white-space: normal;
+      }
+      @include for-size(desktop) {
+        content: "";
+        white-space: normal;
+      }
     }
   }
   .title {
@@ -92,15 +107,27 @@
     display: flex;
     flex-direction: column;
     align-items: stretch;
-    height: calc(100vh - 58px);
+    height: auto;
+    @include for-size(tablet) {
+      height: calc(100vh - 58px);
+    }
+    @include for-size(desktop) {
+      height: calc(100vh - 58px);
+    }
     .hero {
       background-image: url(/assets/img/hero-img.jpg);
       background-position: center center;
       background-size: cover;
       background-repeat: no-repeat;
-      height: 100%;
+      height: 250px;
       width: 100%;
       position: relative;
+      @include for-size(tablet) {
+        height: 100%;
+      }
+      @include for-size(desktop) {
+        height: 100%;
+      }
     }
     .content {
       background-color: $color-blue;
@@ -135,6 +162,13 @@
   &--who-we-are {
     padding: 48px 0 69px;
     .slider-wrapper {
+      padding: 0 20px;
+      @include for-size(tablet) {
+        padding: 0;
+      }
+      @include for-size(desktop) {
+        padding: 0;
+      }
       .slider-nav {
         display: flex;
         align-items: center;
@@ -194,6 +228,7 @@
     }
     .card {
       padding-left: 44px;
+      background-color: #f8f8f8;
       .title {
         font-size: 24px;
         line-height: 38px;
@@ -215,8 +250,24 @@
       width: 100%;
       display: flex;
       justify-content: flex-end;
+      height: 190px;
+      @include for-size(tablet) {
+        height: auto;
+      }
+      @include for-size(desktop) {
+        height: auto;
+      }
       .img-svg {
-        width: 50%;
+        width: 100%;
+        height: 100%;
+        @include for-size(tablet) {
+          width: 50%;
+          height: auto;
+        }
+        @include for-size(desktop) {
+          width: 50%;
+          height: auto;
+        }
       }
     }
   }
@@ -226,6 +277,18 @@
       background-color: $color-white;
       margin: 35px 0 45px;
       padding: 35px;
+      .title {
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 28px;
+        text-align: left;
+        @include for-size (tablet) {
+          text-align: center;
+        }
+        @include for-size (desktop) {
+          text-align: center;
+        }
+      }
       .text--perks {
         font-weight: 300;
         font-size: 14px;
@@ -233,12 +296,14 @@
         color: #303030;
         width: 100%;
         margin: 0 auto 16px;
-        text-align: center;
+        text-align: left;
         @include for-size(tablet) {
           width: 50%;
+          text-align: center;
         }
         @include for-size(desktop) {
           width: 50%;
+          text-align: center;
         }
       }
       .slider-wrapper {
@@ -320,6 +385,10 @@
                 height: 100%;
               }
             }
+            .subtitle {
+              font-size: 15px;
+              line-height: 24px;
+            }
           }
           .slick-slide {
             .card--slider {
@@ -398,27 +467,48 @@
     content: "";
     width: 0;
     height: 0;
-    border-bottom: 150px solid #08385f;
+    border-bottom: 253px solid #08385f;
     border-right: calc(100vw - 18px) solid transparent;
     position: absolute;
     bottom: 0;
     left: 0;
     z-index: 0;
+    @include for-size(tablet) {
+      border-bottom: 150px solid #08385f;
+    }
+    @include for-size(desktop) {
+      border-bottom: 150px solid #08385f;
+    }
   }
   &::after {
     content: "";
     width: 0;
     height: 0;
-    border-bottom: 125px solid #14619d;
+    border-bottom: 200px solid #14619d;
     border-left: 100vw solid transparent;
     position: absolute;
     bottom: 0;
     right: 0;
     z-index: 1;
+    @include for-size(tablet) {
+      border-bottom: 125px solid #08385f;
+    }
+    @include for-size(desktop) {
+      border-bottom: 125px solid #08385f;
+    }
   }
   .container {
     position: relative;
     z-index: 2;
+  }
+  .logo-bottom {
+    margin-bottom: 30px;
+    @include for-size (tablet) {
+      margin-bottom: 0;
+    }
+    @include for-size (desktop) {
+      margin-bottom: 0;
+    }
   }
   .link {
     font-weight: normal;
@@ -429,11 +519,27 @@
   .contact-box {
     background-color: $color-white;
     padding: 25px;
+    margin-bottom: 30px;
+    @include for-size (tablet) {
+      margin-bottom: 0;
+    }
+    @include for-size (desktop) {
+      margin-bottom: 0;
+    }
   }
   .list {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
+    margin-bottom: 80px;
+    @include for-size (tablet) {
+      align-items: center;
+      margin-bottom: 0;
+    }
+    @include for-size (desktop) {
+      align-items: center;
+      margin-bottom: 0;
+    }
   }
   .form-select {
     font-size: 14px;
